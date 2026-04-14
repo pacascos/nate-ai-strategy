@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nate B Jones — Video Catalog</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232735;
+    --border: #2e3348;
+    --text: #e2e4ed;
+    --text-dim: #8b8fa3;
+    --accent: #6c7aff;
+    --accent-light: #8b96ff;
+    --red: #ff6b6b;
+    --green: #51cf66;
+    --yellow: #ffd43b;
+    --orange: #ff922b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { font-size: 1.8rem; margin-bottom: .3rem; }
+  header p { color: var(--text-dim); font-size: .95rem; }
+  header a { color: var(--accent-light); text-decoration: none; }
+  header a:hover { text-decoration: underline; }
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .toolbar .count {
+    font-weight: 600;
+    color: var(--accent-light);
+    font-size: 1.05rem;
+  }
+  .toolbar button {
+    padding: .5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface2);
+    color: var(--text);
+    cursor: pointer;
+    font-size: .85rem;
+    transition: all .2s;
+  }
+  .toolbar button:hover { background: var(--accent); border-color: var(--accent); }
+  .toolbar button.export-btn { background: var(--accent); border-color: var(--accent); font-weight: 600; }
+  .toolbar button.export-btn:hover { background: var(--accent-light); }
+
+  .category {
+    margin-bottom: 1.5rem;
+  }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .8rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .category-header:hover { background: var(--surface2); }
+  .category-header .arrow { transition: transform .2s; font-size: .8rem; color: var(--text-dim); }
+  .category-header .arrow.collapsed { transform: rotate(-90deg); }
+  .category-header h2 { font-size: 1.1rem; flex: 1; }
+  .category-header .cat-count { color: var(--text-dim); font-size: .85rem; }
+  .category-header .select-cat {
+    padding: .3rem .7rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: .75rem;
+  }
+  .category-header .select-cat:hover { color: var(--accent-light); border-color: var(--accent); }
+
+  .video-list {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+  .video-list.hidden { display: none; }
+
+  .video-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 70px 70px 90px;
+    align-items: center;
+    padding: .65rem 1rem;
+    border-bottom: 1px solid var(--border);
+    transition: background .15s;
+  }
+  .video-row:last-child { border-bottom: none; }
+  .video-row:hover { background: var(--surface2); }
+  .video-row.checked { background: rgba(108, 122, 255, 0.08); }
+
+  .video-row input[type="checkbox"] {
+    width: 18px; height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+  .video-row .title a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: .92rem;
+  }
+  .video-row .title a:hover { color: var(--accent-light); text-decoration: underline; }
+  .video-row .title .num { color: var(--text-dim); margin-right: .4rem; font-size: .8rem; }
+  .video-row .duration { color: var(--text-dim); font-size: .85rem; text-align: center; }
+  .video-row .views { color: var(--text-dim); font-size: .85rem; text-align: center; }
+  .video-row .date { color: var(--text-dim); font-size: .8rem; text-align: right; }
+
+  .list-header {
+    display: grid;
+    grid-template-columns: 40px 1fr 70px 70px 90px;
+    padding: .5rem 1rem;
+    background: var(--surface2);
+    font-size: .75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 600;
+  }
+  .list-header span:nth-child(3),
+  .list-header span:nth-child(4) { text-align: center; }
+  .list-header span:nth-child(5) { text-align: right; }
+
+  .output-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .output-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: var(--accent-light);
+  }
+  .output-section textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: .8rem;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: .85rem;
+    line-height: 1.5;
+    resize: vertical;
+  }
+  .output-section textarea:focus { outline: none; border-color: var(--accent); }
+  .output-section .copy-hint {
+    margin-top: .5rem;
+    font-size: .8rem;
+    color: var(--text-dim);
+  }
+
+  .note {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: .9rem;
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    body { padding: 1rem; }
+    .video-row { grid-template-columns: 35px 1fr 55px; }
+    .video-row .views, .video-row .date { display: none; }
+    .list-header { grid-template-columns: 35px 1fr 55px; }
+    .list-header span:nth-child(4), .list-header span:nth-child(5) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AI News & Strategy Daily | Nate B Jones</h1>
+  <p><a href="https://www.youtube.com/@NateBJones" target="_blank">@NateBJones</a> — 226K suscriptores — 807 videos</p>
+  <p style="margin-top:.3rem">Estrategia de IA para builders y ejecutivos — frameworks, workflows y playbooks</p>
+</header>
+
+<div class="toolbar">
+  <span class="count"><span id="selectedCount">0</span> / 88 seleccionados</span>
+  <button onclick="selectAll()">Seleccionar todos</button>
+  <button onclick="deselectAll()">Deseleccionar todos</button>
+  <button class="export-btn" onclick="exportSelected()">Copiar seleccion al portapapeles</button>
+</div>
+
+<div id="catalog"></div>
+
+<div class="output-section">
+  <label>Videos seleccionados (copia este texto):</label>
+  <textarea id="outputField" readonly placeholder="Marca videos con los checkboxes y aparecerán aquí..."></textarea>
+  <div class="copy-hint">Selecciona todo el texto (Cmd+A dentro del campo) y cópialo para pegarlo en el chat.</div>
+</div>
+
+<div class="note">
+  Esta lista cubre los ~ultimos 2 meses del canal (~88 videos, sin shorts).<br>
+  El canal tiene 807 videos en total.
+</div>
+
+<script>
+const data = [
+  {
+    cat: "A",
+    icon: "\ud83e\udde0",
+    name: "Prompting, Context Engineering & AI Skills",
+    videos: [
+      { n:1, t:"Why Every AI Skill You Learned 6 Months Ago Is Already Wrong (And What Is Replacing Them)", d:"28:44", v:"36K", f:"hace 15h" },
+      { n:2, t:"'Prompting' Just Split Into 4 Skills. You Only Know One. Here's Why You Need the Other 3 in 2026", d:"41:12", v:"85K", f:"hace 2 d\u00edas" },
+      { n:3, t:"Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything", d:"29:41", v:"127K", f:"hace 5 d\u00edas" },
+      { n:4, t:"90% of AI Users Are Getting Mediocre Output. Don't Be One of Them (Stop Prompting, Do THIS Instead)", d:"19:06", v:"79K", f:"hace 3 sem" },
+      { n:5, t:"The Skill That Separates AI Power Users From Everyone Else (Why 'Clear' Specs Produce Broken Output)", d:"18:53", v:"45K", f:"hace 1 mes" },
+      { n:6, t:"The AI Prompting Mistake Costing You Hours Every Week (10 Prompts to Fix It)", d:"10:09", v:"11K", f:"hace 2 meses" },
+    ]
+  },
+  {
+    cat: "B",
+    icon: "\ud83e\udd16",
+    name: "AI Coding & Vibe Coding",
+    videos: [
+      { n:7, t:"My 10-Year-Old Vibe Codes. She Also Does Math by Hand. Why That's the Only Strategy That Works", d:"29:41", v:"39K", f:"hace 1 d\u00eda" },
+      { n:8, t:"The 5 Levels of AI Coding (Why Most of You Won't Make It Past Level 2)", d:"42:15", v:"182K", f:"hace 11 d\u00edas" },
+      { n:9, t:"$1,000 a Day in AI Costs. Three Engineers. No Writing Code. No Code Review. But More Output", d:"30:13", v:"87K", f:"hace 9 d\u00edas" },
+      { n:10, t:"90% of People Fail at Vibe Coding. Here's the Actual Reason: You're Skipping the Hard Part", d:"19:10", v:"111K", f:"hace 3 sem" },
+      { n:11, t:"The Ticking Time Bomb in Every Codebase Over 18 Months Old (How to Fix It Before It's Too Late)", d:"24:35", v:"44K", f:"hace 1 mes" },
+      { n:12, t:"Disposable Software: The Trend 90% of People are Getting Wrong\u2014The Hidden Costs", d:"25:21", v:"35K", f:"hace 1 mes" },
+      { n:13, t:"Stop Competing With 400 Applicants. Build This in One Weekend (No code option too!)", d:"25:57", v:"139K", f:"hace 1 mes" },
+      { n:14, t:"Apple Took Years to Catch Up. Kilo Code Took 6 Weeks\u2014and It's Coming for Lovable, Cursor, Replit", d:"10:24", v:"50K", f:"hace 1 mes" },
+    ]
+  },
+  {
+    cat: "C",
+    icon: "\ud83c\udfd7\ufe0f",
+    name: "AI Agents & Agentic Systems",
+    videos: [
+      { n:15, t:"Google Just Proved More Agents Can Make Things WORSE\u2014Here's What Actually Does Work", d:"23:54", v:"26K", f:"hace 1 mes" },
+      { n:16, t:"Task Queues Are Replacing Chat Interfaces. Here's Why (plus a Claude Cowork Demo)", d:"32:19", v:"190K", f:"hace 1 mes" },
+      { n:17, t:"The AI Agent Lie: Why Your Automation Is Failing (And the Simple Fix Everyone Misses)", d:"8:04", v:"7.8K", f:"hace 2 meses" },
+      { n:18, t:"AI Agents That Actually Work: The Pattern Anthropic Just Revealed", d:"13:36", v:"90K", f:"hace 2 meses" },
+      { n:19, t:"Grab the Inside Scoop on How Google, Anthropic, and Manus Built Long-Running AI Agents", d:"20:18", v:"18K", f:"hace 2 meses" },
+      { n:20, t:"The 4 AI Agents Non-Technical People Actually Need (And How to Use Them Today)", d:"18:18", v:"47K", f:"hace 2 meses" },
+      { n:21, t:"The 'Human Throttle' Problem That's Killing Enterprise AI Agent ROI", d:"19:53", v:"12K", f:"hace 2 meses" },
+    ]
+  },
+  {
+    cat: "D",
+    icon: "\ud83d\udcca",
+    name: "AI Models: Benchmarks, Comparisons & Releases",
+    videos: [
+      { n:22, t:"Three Labs Just Stole Claude's Brain. Here's What It Broke (And Why You Should Care)", d:"35:40", v:"86K", f:"hace 4 d\u00edas" },
+      { n:23, t:"Google's New AI Is Smarter Than Everyone's But It Costs HALF as Much", d:"36:37", v:"224K", f:"hace 6 d\u00edas" },
+      { n:24, t:"Anthropic Tested 16 Models. Instructions Didn't Stop Them (When Security is a Structural Failure)", d:"36:00", v:"79K", f:"hace 7 d\u00edas" },
+      { n:25, t:"Codex 5.3 vs Opus 4.6: The Benchmark Nobody Expected (How to STOP Picking the Wrong Agent)", d:"28:22", v:"75K", f:"hace 13 d\u00edas" },
+      { n:26, t:"Claude Opus 4.6: The Biggest AI Jump I've Covered\u2014It's Not Close", d:"30:39", v:"348K", f:"hace 2 sem" },
+      { n:27, t:"LeCun Said LLMs Are a Dead End\u2014Then Revealed Meta Fudged Their Benchmarks", d:"23:03", v:"45K", f:"hace 1 mes" },
+      { n:28, t:"ChatGPT 5.2 vs. Claude Opus 4.5 vs. Gemini 3: What Benchmarks Won't Tell You", d:"16:05", v:"25K", f:"hace 2 meses" },
+      { n:29, t:"NEW ChatGPT 5.2 Complete Breakdown: Tested on Excel, PowerPoint, Massive Data Sets", d:"14:37", v:"33K", f:"hace 2 meses" },
+      { n:30, t:"Codex 5.2 Launch Revealed: How OpenAI Got Non-Engineers Shipping Real Code", d:"1:09:17", v:"9K", f:"hace 2 meses" },
+      { n:31, t:"Anthropic's New Benchmark Changes Everything\u2014Most People Will Miss Why", d:"10:23", v:"41K", f:"hace 2 meses" },
+      { n:32, t:"Claude Code Snuck in 7 Updates in 2 Weeks\u2014Here's What You Need to Know", d:"10:51", v:"36K", f:"hace 2 meses" },
+      { n:33, t:"ChatGPT's '4x Faster' Image Update vs. Google Nano Banana Pro: I Ran 9 Brutal Tests", d:"13:37", v:"11K", f:"hace 2 meses" },
+      { n:34, t:"Why Flash Models, Not Frontier Models, Will Win in 2026", d:"15:41", v:"14K", f:"hace 2 meses" },
+    ]
+  },
+  {
+    cat: "E",
+    icon: "\ud83d\udcbc",
+    name: "AI Career, Jobs & Skills for the Future",
+    videos: [
+      { n:35, t:"Why the Biggest AI Career Opportunity Just Appeared\u2014and Almost Nobody Sees It", d:"30:03", v:"124K", f:"hace 10 d\u00edas" },
+      { n:36, t:"The Job Market Split Nobody's Talking About (It's Already Started)", d:"34:26", v:"129K", f:"hace 2 sem" },
+      { n:37, t:"Going Slower Feels Safer, But Your Domain Expertise Won't Save You Anymore", d:"14:02", v:"137K", f:"hace 2 sem" },
+      { n:38, t:"Why Your Best Employees Quit Using AI After 3 Weeks (And the 6 Skills That Would Have Saved Them)", d:"21:32", v:"162K", f:"hace 1 mes" },
+      { n:39, t:"The Builders Who Figure This Out First Will Be Impossible to Catch", d:"20:16", v:"51K", f:"hace 1 mes" },
+      { n:40, t:"The People Getting Promoted All Have This One Thing in Common (AI Is Supercharging this Mindset)", d:"22:07", v:"62K", f:"hace 1 mes" },
+      { n:41, t:"Why Every Cold Application You Send Is a Waste of Time (And What Actually Works)", d:"15:58", v:"28K", f:"hace 1 mes" },
+      { n:42, t:"The 3-Layer Framework That Predicts Which Jobs AI Will (and Won't) Replace", d:"22:58", v:"46K", f:"hace 1 mes" },
+      { n:43, t:"Why Andrej Karpathy Feels 'Behind' (And What It Means for Your Career)", d:"25:09", v:"60K", f:"hace 1 mes" },
+      { n:44, t:"The Compounding Gap That Makes 2026 the Last Chance to Catch Up", d:"16:49", v:"63K", f:"hace 2 meses" },
+      { n:45, t:"The Skill Gap That Will Separate AI Winners from Everyone Else", d:"11:52", v:"54K", f:"hace 2 meses" },
+      { n:46, t:"The $500K Mistake: 8 Engineers Doing Implementation, 0 Doing Governance", d:"16:48", v:"35K", f:"hace 2 meses" },
+    ]
+  },
+  {
+    cat: "F",
+    icon: "\ud83d\udcb0",
+    name: "AI Business, Industry & Market Analysis",
+    videos: [
+      { n:47, t:"Don't Fall For the Stock Market Hype. The $7,000 Raise AI Is Giving You", d:"32:32", v:"57K", f:"hace 3 d\u00edas" },
+      { n:48, t:"The $285B Sell-Off Was Just the Beginning\u2014The Infrastructure Story Is Bigger", d:"29:14", v:"158K", f:"hace 8 d\u00edas" },
+      { n:49, t:"Why $650 Billion in AI Spending ISN'T Enough. The 4 Skills that Survive", d:"22:53", v:"104K", f:"hace 2 sem" },
+      { n:50, t:"The $285 Billion Crash Wall Street Won't Explain Honestly", d:"23:24", v:"315K", f:"hace 2 sem" },
+      { n:51, t:"Why the Smartest AI Teams Are Panic-Buying Compute: The 36-Month Crisis", d:"26:15", v:"75K", f:"hace 3 sem" },
+      { n:52, t:"Meta Up 10%, Microsoft Down 10%, Tesla Killing Cars. This Week Broke Something", d:"14:50", v:"69K", f:"hace 1 mes" },
+      { n:53, t:"the $125 Billion Secret: Amazon Told Wall Street One Thing and Employees Another", d:"18:37", v:"321K", f:"hace 1 mes" },
+      { n:54, t:"Shopify's AI Memo Changed Hiring Forever\u2014And Why Google, Meta & Nvidia Are Copying It", d:"25:36", v:"30K", f:"hace 1 mes" },
+      { n:55, t:"NVIDIA told us exactly where AI is going\u2014and almost everyone heard it wrong", d:"18:37", v:"67K", f:"hace 1 mes" },
+      { n:56, t:"The Manus Acquisition Explained: Why Meta Paid $2B for a 'Wrapper'", d:"11:21", v:"18K", f:"hace 1 mes" },
+      { n:57, t:"The Nvidia-Groq Deal Is WAY Bigger Than Reported (3 Things Headlines Missed)", d:"25:38", v:"116K", f:"hace 2 meses" },
+      { n:58, t:"Is OpenAI a Bubble? Here's the 2026 Test (Unit Economics + Compute + Enterprise)", d:"26:40", v:"25K", f:"hace 2 meses" },
+      { n:59, t:"Amazon Fired Their AI Chief. Here's Why It Took So Long", d:"10:32", v:"30K", f:"hace 2 meses" },
+      { n:60, t:"Trump Just Gutted State AI Laws, OpenAI Panicked, AI Agents Stole $4.6M", d:"12:03", v:"22K", f:"hace 2 meses" },
+      { n:61, t:"Why AI-Native Companies Are Deleting Software You're Still Paying For ($56K Lesson)", d:"23:23", v:"33K", f:"hace 2 meses" },
+    ]
+  },
+  {
+    cat: "G",
+    icon: "\ud83d\udd27",
+    name: "AI Productivity & Workflows",
+    videos: [
+      { n:62, t:"I Just Did a Full Day of Analyst Work in 10 Minutes. The $120K Job Description Changed", d:"29:20", v:"92K", f:"hace 2 sem" },
+      { n:63, t:"I Built an 11-Tab Financial Model in 10 Minutes. The $20/Month Tool", d:"21:08", v:"183K", f:"hace 1 mes" },
+      { n:64, t:"THIS is Why You're Still Slow Even With AI (The Bottleneck Moved)", d:"30:23", v:"89K", f:"hace 1 mes" },
+      { n:65, t:"Why 2026 Is the Year to Build a Second Brain (And Why You NEED One)", d:"30:06", v:"169K", f:"hace 1 mes" },
+      { n:66, t:"Why 'Pretty Good on First Pass' Is Costing You Thousands\u2014How To Fix It TODAY", d:"13:40", v:"13K", f:"hace 1 mes" },
+      { n:67, t:"They Ignored My Tool Stack and Built Something Better\u2014The 4 Patterns That Work", d:"26:06", v:"56K", f:"hace 1 mes" },
+      { n:68, t:"The AI Trick That Finally Made Me Better at My Job (Not Just Faster)", d:"20:42", v:"27K", f:"hace 2 meses" },
+      { n:69, t:"What I Tell Every CTO Before They Touch Claude Code or the Anthropic API", d:"20:05", v:"28K", f:"hace 2 meses" },
+      { n:70, t:"Stop Treating Image Generation Like a Design Tool\u2014The Hidden Bottleneck", d:"29:19", v:"24K", f:"hace 1 mes" },
+    ]
+  },
+  {
+    cat: "H",
+    icon: "\ud83c\udf10",
+    name: "OpenClaw & AI Autonomy",
+    videos: [
+      { n:71, t:"The OpenClaw Saga: Zuckerberg Begged This Developer to Join Meta. He Said No", d:"26:51", v:"103K", f:"hace 12 d\u00edas" },
+      { n:72, t:"OpenClaw: 160,000 Developers Are Building Something OpenAI & Google Can't Stop", d:"25:13", v:"245K", f:"hace 2 sem" },
+      { n:73, t:"OpenClaw Agents Are Hiring Each Other. Transferring Crypto. Building Societies", d:"9:09", v:"57K", f:"hace 3 sem" },
+      { n:74, t:"Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything", d:"22:02", v:"286K", f:"hace 3 sem" },
+    ]
+  },
+  {
+    cat: "I",
+    icon: "\ud83e\udded",
+    name: "AI Leadership, Strategy & Mindset",
+    videos: [
+      { n:75, t:"OpenAI Is Slowing Hiring. Anthropic's Engineers Stopped Writing Code", d:"23:56", v:"184K", f:"hace 3 sem" },
+      { n:76, t:"Anthropic's CEO Bet the Company on This Philosophy. The Data Says He Was Right", d:"19:09", v:"71K", f:"hace 3 sem" },
+      { n:77, t:"Why the Smartest AI Bet Right Now Has Nothing to Do With AI", d:"23:24", v:"70K", f:"hace 1 mes" },
+      { n:78, t:"What Sam Altman and Dario Amodei Disagree About (And Why It Matters for You)", d:"23:10", v:"33K", f:"hace 1 mes" },
+      { n:79, t:"The Fork Most Leaders Don't See: Visibility vs. Execution", d:"13:25", v:"12K", f:"hace 1 mes" },
+      { n:80, t:"The AI Failure Mode Nobody Warned You About (And how to prevent it)", d:"18:45", v:"17K", f:"hace 1 mes" },
+      { n:81, t:"Most People Want Validation, Not Perspective (Why This Matters Now)", d:"13:50", v:"9.6K", f:"hace 1 mes" },
+      { n:82, t:"If This Can Happen to an Ex-DeepMind Leader, It Can Happen to You", d:"9:31", v:"53K", f:"hace 2 meses" },
+      { n:83, t:"I Stopped Blaming Myself for Bad Days After Learning This Math", d:"15:09", v:"7.2K", f:"hace 2 meses" },
+      { n:84, t:"NeurIPS 2025 in 12 Minutes: The 6 Shifts Most People Will Miss", d:"10:41", v:"38K", f:"hace 2 meses" },
+      { n:85, t:"Your AI Can't See 16% of Humanity. Here's the 5-Minute Check", d:"20:18", v:"4.2K", f:"hace 2 meses" },
+      { n:86, t:"3 Startups Deep in 30 Days: How Nano Banana Pro Triggered a Billion-Dollar Chain Reaction", d:"9:53", v:"30K", f:"hace 2 meses" },
+      { n:87, t:"I Tracked Every AI Win & Failure in 2025. Here's What Actually Worked", d:"13:52", v:"12K", f:"hace 2 meses" },
+      { n:88, t:"OpenAI, Google, and Anthropic Agree on One Thing (Finally)", d:"12:42", v:"70K", f:"hace 1 mes" },
+    ]
+  }
+];
+
+function ytSearch(title) {
+  return "https://www.youtube.com/results?search_query=" + encodeURIComponent("NateBJones " + title);
+}
+
+function render() {
+  const container = document.getElementById("catalog");
+  let html = "";
+  data.forEach(cat => {
+    html += `<div class="category" data-cat="${cat.cat}">`;
+    html += `<div class="category-header" onclick="toggleCat('${cat.cat}')">`;
+    html += `<span class="arrow" id="arrow-${cat.cat}">\u25bc</span>`;
+    html += `<h2>${cat.icon} ${cat.cat}. ${cat.name}</h2>`;
+    html += `<span class="cat-count">${cat.videos.length} videos</span>`;
+    html += `<button class="select-cat" onclick="event.stopPropagation(); toggleCatSelection('${cat.cat}')">Sel. categor\u00eda</button>`;
+    html += `</div>`;
+    html += `<div class="video-list" id="list-${cat.cat}">`;
+    html += `<div class="list-header"><span></span><span>T\u00edtulo</span><span>Dur.</span><span>Views</span><span>Fecha</span></div>`;
+    cat.videos.forEach(v => {
+      html += `<div class="video-row" id="row-${v.n}">`;
+      html += `<input type="checkbox" id="cb-${v.n}" onchange="updateCount(); updateRowStyle(${v.n})">`;
+      html += `<div class="title"><span class="num">#${v.n}</span><a href="${ytSearch(v.t)}" target="_blank">${v.t}</a></div>`;
+      html += `<div class="duration">${v.d}</div>`;
+      html += `<div class="views">${v.v}</div>`;
+      html += `<div class="date">${v.f}</div>`;
+      html += `</div>`;
+    });
+    html += `</div></div>`;
+  });
+  container.innerHTML = html;
+}
+
+function toggleCat(cat) {
+  const list = document.getElementById("list-" + cat);
+  const arrow = document.getElementById("arrow-" + cat);
+  list.classList.toggle("hidden");
+  arrow.classList.toggle("collapsed");
+}
+
+function toggleCatSelection(cat) {
+  const catData = data.find(c => c.cat === cat);
+  const cbs = catData.videos.map(v => document.getElementById("cb-" + v.n));
+  const allChecked = cbs.every(cb => cb.checked);
+  cbs.forEach(cb => { cb.checked = !allChecked; });
+  catData.videos.forEach(v => updateRowStyle(v.n));
+  updateCount();
+}
+
+function updateRowStyle(n) {
+  const cb = document.getElementById("cb-" + n);
+  const row = document.getElementById("row-" + n);
+  if (cb.checked) row.classList.add("checked");
+  else row.classList.remove("checked");
+}
+
+function updateCount() {
+  const total = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  document.getElementById("selectedCount").textContent = total;
+  updateOutputField();
+}
+
+function updateOutputField() {
+  const selected = [];
+  data.forEach(cat => {
+    cat.videos.forEach(v => {
+      if (document.getElementById("cb-" + v.n).checked) {
+        selected.push(v.n + ". " + v.t + " (" + v.d + ")");
+      }
+    });
+  });
+  document.getElementById("outputField").value = selected.length
+    ? "Videos seleccionados para transcribir:\n\n" + selected.join("\n")
+    : "";
+}
+
+function selectAll() {
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => { cb.checked = true; });
+  for (let i = 1; i <= 88; i++) updateRowStyle(i);
+  updateCount();
+}
+function deselectAll() {
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+  for (let i = 1; i <= 88; i++) updateRowStyle(i);
+  updateCount();
+}
+
+function exportSelected() {
+  const selected = [];
+  data.forEach(cat => {
+    cat.videos.forEach(v => {
+      if (document.getElementById("cb-" + v.n).checked) {
+        selected.push(`${v.n}. ${v.t} (${v.d})`);
+      }
+    });
+  });
+  if (selected.length === 0) {
+    alert("No has seleccionado ning\u00fan video.");
+    return;
+  }
+  const text = "Videos seleccionados para transcribir:\n\n" + selected.join("\n");
+  navigator.clipboard.writeText(text).then(() => {
+    alert(`\u2705 ${selected.length} videos copiados al portapapeles.\nP\u00e9galos en el chat para comenzar la transcripci\u00f3n.`);
+  }).catch(() => {
+    // Fallback
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+    alert(`\u2705 ${selected.length} videos copiados al portapapeles.`);
+  });
+}
+
+render();
+</script>
+</body>
+</html>

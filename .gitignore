@@ -1,0 +1,8 @@
+.DS_Store
+/tmp/
+*.vtt
+*.pyc
+__pycache__/
+.claude/
+*.pptx
+transcripts/test.md
