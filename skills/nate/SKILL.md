@@ -1,14 +1,14 @@
 ---
 name: nate
 description: |
-  AI strategy knowledge base from Nate B Jones (@NateBJones), distilled from 69 videos. Covers: 5 levels of AI coding, 4 prompting disciplines, edge automation, agent architecture, career bifurcation, specification engineering, domain translators, level 201 skills gap, CTO playbook, coordination tax, agentic management, evaluation architecture, rejection as skill, convergent agent patterns, Jevons paradox in AI, middleware trap, frontier operations, foundation before leverage, contextual stewardship, agent-readable business, 4 agent species, skills as infrastructure, 12 agent primitives, token economy, bitter lesson for LLMs, 7 AI career skills, agent velocity mandates, intelligence arbitrage, 5 durable verticals, management unbundling, dark code, behavioral lock-in, agent infrastructure stack, sovereign memory.
-  Use whenever the user asks about AI strategy for dev teams, AI coding adoption, agent architecture, career advice in the AI era, or organizational change. Also trigger on "Nate", "NateBJones", "dark factory", "domain translator", "edge automation", "coordination tax", "middleware trap", "frontier operations", "contextual stewardship", "agent primitives", "skills infrastructure", "token economy", "intelligence arbitrage", "dark code", "behavioral lock-in", "management unbundling", "sovereign memory", "agent infrastructure stack".
-  MANDATORY TRIGGERS: Nate, NateBJones, AI coding levels, specification engineering, domain translator, AI strategy, agent architecture, middleware trap, contextual stewardship, agent primitives, intelligence arbitrage, dark code, behavioral lock-in
+  AI strategy knowledge base from Nate B Jones (@NateBJones), distilled from 89 videos. Covers: 5 levels of AI coding, 4 prompting disciplines, edge automation, agent architecture, career bifurcation, specification engineering, domain translators, level 201 skills gap, CTO playbook, coordination tax, agentic management, evaluation architecture, rejection as skill, convergent agent patterns, Jevons paradox in AI, middleware trap, frontier operations, foundation before leverage, contextual stewardship, agent-readable business, 4 agent species, skills as infrastructure, 12 agent primitives, token economy, bitter lesson for LLMs, 7 AI career skills, agent velocity mandates, intelligence arbitrage, 5 durable verticals, management unbundling, dark code, behavioral lock-in, agent infrastructure stack, sovereign memory, BYOC (Bring Your Own Context), agent-native primitives vs human scaffolding, Karpathy auto-research loops, world model failure modes, comprehension over generation, agent infrastructure layering, Apple Silicon local inference, agent-callable business / agentic commerce.
+  Use whenever the user asks about AI strategy for dev teams, AI coding adoption, agent architecture, career advice in the AI era, or organizational change. Also trigger on "Nate", "NateBJones", "dark factory", "domain translator", "edge automation", "coordination tax", "middleware trap", "frontier operations", "contextual stewardship", "agent primitives", "skills infrastructure", "token economy", "intelligence arbitrage", "dark code", "behavioral lock-in", "management unbundling", "sovereign memory", "agent infrastructure stack", "BYOC", "Karpathy loop", "auto-agent", "world model", "agent-callable", "agentic commerce", "agent-native primitives", "comprehension over generation", "personal AI computer", "Apple Silicon AI".
+  MANDATORY TRIGGERS: Nate, NateBJones, AI coding levels, specification engineering, domain translator, AI strategy, agent architecture, middleware trap, contextual stewardship, agent primitives, intelligence arbitrage, dark code, behavioral lock-in, BYOC, Karpathy loop, agent-callable business, agentic commerce, comprehension over generation
 ---
 
 # Nate B Jones — AI Strategy Knowledge Base
 
-This skill contains the distilled knowledge from 69 videos by Nate B Jones ([@NateBJones](https://www.youtube.com/@NateBJones), channel "AI News & Strategy Daily"), one of the most insightful voices on AI strategy for development teams and organizations.
+This skill contains the distilled knowledge from 89 videos by Nate B Jones ([@NateBJones](https://www.youtube.com/@NateBJones), channel "AI News & Strategy Daily"), one of the most insightful voices on AI strategy for development teams and organizations.
 
 When the user invokes this skill, draw on the frameworks and insights below to provide strategic advice grounded in Nate's analysis. Always cite the specific video number when referencing a concept so the user can go deeper.
 
@@ -17,7 +17,7 @@ For the full study guide organized by topic with video links, read `references/s
 
 ---
 
-## The 28 Core Ideas
+## The 30 Core Ideas
 
 These are the foundational ideas that run across all of Nate's content. Use them as the lens for answering questions about AI strategy, development team transformation, and career advice.
 
@@ -103,6 +103,12 @@ Management is a bundle of three distinct jobs that AI disrupts differently: (1) 
 "Dark code" — code generated by AI that was never understood by any human — is multiplying due to structural causes (AI wrote it) and velocity (pressure to ship fast). Three insufficient responses: observability alone (measures what breaks, doesn't explain code), more agentic pipeline layers (adds troubleshooting surface), accepting dark code (works only with extreme eval discipline like Factory.ai). Three-layer solution: (1) Spec-driven development — force understanding before generation; the spec becomes the eval. Amazon rebuilt Kira with this after their December outage. (2) Self-describing systems — structural, semantic, and behavioral context embedded in code. (3) Comprehension gates — automated filters that surface the questions senior engineers would ask, feeding a flywheel that improves evals over time.
 
 ### 28. Behavioral lock-in is the new platform moat (Video N40)
+
+### 29. Comprehension over generation; agent-callable business; BYOC memory (Videos N47, N49, N52, N65)
+Three converging shifts redefine professional value: (a) demonstrating *comprehension* of what you produced beats producing more (N52); (b) businesses must become *agent-callable* — exposing catalog, prices, policies, fulfillment, errors as structured metadata an agent can reason over, not just human pages (N65); (c) your working intelligence (domain encoding + workflow calibration + behavioral relationship + artifact layer) is the fifth type of professional capital and must live in infrastructure you control via MCP (BYOC), not in walled gardens (N49). The eliciation of tacit expertise is the real bottleneck for personal agents (N47): your first agent should be an interviewer, not an assistant.
+
+### 30. Agent-native primitives, auto-research loops, and the personal AI computer (Videos N48, N50, N58, N63, N64)
+Four structural patterns are reshaping how agents and humans co-exist. (a) *Agent-native primitives*: bolting MCP onto a paginated human API isn't agent-native; the cuello de botella ya no es el modelo, es el andamiaje humano del software — invest in primitives where agent speed becomes irrelevant (N48). (b) *Auto-research loops* (Karpathy): a single editable surface + an objective metric + a time budget enables meta-agents that optimize harnesses overnight; the moat is eval/sandbox/traces/governance, not model size (N50). (c) *Personal AI computer / sovereign stack*: own the substrate (hardware + runtime + models + memory + interfaces) so agents come to your work, not your work to others' cloud — Apple Silicon makes inference cost approach zero where it matters most (N58, N63). (d) *Agent infrastructure as systems of record*: incumbents who own state machines (Atlassian, Salesforce, ServiceNow, SAP) win the agentic substrate; greenfield wrappers without records will depend on those who do (N64).
 Conway (from the Claude Code leak) represents a new class of lock-in: not your files or messages, but the accumulated behavioral model of how you work. Previous lock-in was data (Microsoft → files, Salesforce → records, Slack → messages) — painful to migrate but possible. Conway locks in patterns the agent learned by watching you: which emails you respond to in 5 minutes, which you ignore for 3 days; how you reschedule Thursdays. No CSV, no migration consultant, no legal framework for "intelligence portability." Anthropic's CNW.zip extension format over MCP replicates the Google Play Services pattern: open standard as foundation, proprietary layer captures the value. Policies on behavioral context portability must ship before these agents launch.
 
 ---
@@ -414,3 +420,23 @@ When the user says **"Nate cuéntame algo nuevo"** (or similar like "qué hay de
 | N43 | This New Method Just Killed RAM Limitations (TurboQuant) | erV_8yrGMA8 |
 | N44 | I Watched 3 Companies Lay Off Their Managers. All 3 Hit the Same Wall | zhXgkQ3nYeE |
 | N45 | I Looked At Amazon After They Fired 16,000 Engineers. Dark Code | E1idsrv79tI |
+| N46 | 3 Model Drops. $15M/Day in Burn. Five Structural Signals of March 2026 | 0vdlwOK_Qdk |
+| N47 | The Real Problem With AI Agents Nobody's Talking About (tacit elicitation) | 2PWJu6uAaoU |
+| N48 | Your AI Is 50x Faster. You're Getting 2x. Agent-native primitives vs scaffolding | XlfumXPPrLY |
+| N49 | Anthropic And OpenAI Are Fighting Over Your Memory (BYOC, MCP) | 4KAF72BTyCE |
+| N50 | Karpathy's Agent Ran 700 Experiments While He Slept (auto-research loops) | xnG8h3UnNFI |
+| N51 | Block Laid Off Half Its Company for AI. World model failure modes | fm6mYqFAM5c |
+| N52 | Nobody Knows What You're Worth Anymore (comprehension > generation) | -dJ9WrTG6zQ |
+| N53 | Your Prompts Didn't Change. Opus 4.7 Did (frontload intent, no knobs) | tJB_8mfRgCo |
+| N54 | Karpathy's Wiki vs. Open Brain (write-time vs query-time memory) | dxq7WtWxi44 |
+| N55 | Your Apps Don't Need an API Anymore. Codex Just Proved It (GUI-driving) | 2d9ZmA-4QzU |
+| N56 | Claude Design In 30 Min: prototypes are production code; one-pizza teams | KlPxWaY91rE |
+| N57 | ChatGPT Images Just Replaced Three People (image gen in reasoning stack) | brBPsPPyuQM |
+| N58 | Apple Just Positioned Itself for the Next Trillion Dollars (local inference) | RaAFquzj5B8 |
+| N59 | OpenAI Gave Every Team A Free Employee (Workspace Agents vs Zapier) | QrvVkm-8Jx4 |
+| N60 | GPT-5.5 vs Claude vs Gemini: AI use is routing, not single-model | 9aIYhjeYxzM |
+| N61 | Salesforce Killed The Browser. Agent infra > model quality (5-Q filter) | dQK_pTXrGDk |
+| N62 | Microsoft Tests Claude Against Copilot. How to win the IT conversation | JvCtGjrn_N0 |
+| N63 | RTX 5090, Mac Studio, or DGX Spark? Personal AI computer 6-layer stack | iUSdS-6uwr4 |
+| N64 | Anthropic Might Buy Atlassian For $40B. Issue trackers as agent substrate | FDkvRl1RlT0 |
+| N65 | Stripe, Visa, Mastercard, Microsoft, Meta. Agentic commerce / agent-callable business | XGvDbeoSN3E |

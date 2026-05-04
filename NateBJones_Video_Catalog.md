@@ -45,6 +45,11 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N61** | **Salesforce Killed The Browser. Every Agent Runs Your CRM Now.** | 23:08 | 44K | 29 Apr 2026 | ✅ |
+| **N59** | **OpenAI Just Gave Every Team A Free Employee. Here's The Catch.** | 23:13 | 42K | 27 Apr 2026 | ✅ |
+| **N55** | **Your Apps Don't Need an API Anymore. Codex Just Proved It.** | 21:00 | 167K | 23 Apr 2026 | ✅ |
+| **N50** | **Karpathy's Agent Ran 700 Experiments While He Slept. It's Coming For You.** | 27:24 | 73K | 18 Apr 2026 | ✅ |
+| **N47** | **The Real Problem With AI Agents Nobody's Talking About** | 37:38 | 67K | 15 Apr 2026 | ✅ |
 | **N21** | **Anthropic Just Gave Your AI Agent the One Thing OpenClaw Has. Without the Risk.** | 33:30 | 104K | 20 Mar 2026 | ✅ |
 | **N22** | **Your AI Agent Fails 97.5% of Real Work. The Fix Isn't Coding.** | 29:26 | 48K | 21 Mar 2026 | ✅ |
 | **N26** | **Tobi Lütke Made a 20-Year-Old Codebase 53% Faster Overnight. Here's How.** | 29:34 | 43K | 25 Mar 2026 | ✅ |
@@ -66,6 +71,9 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N60** | **GPT-5.5 vs Claude vs Gemini: The Real Difference Nobody's Talking About** | 32:34 | 95K | 28 Apr 2026 | ✅ |
+| **N57** | **ChatGPT Images Just Replaced Three People on Your Team.** | 25:45 | 31K | 25 Apr 2026 | ✅ |
+| **N53** | **Your Prompts Didn't Change. Opus 4.7 Did.** | 51:45 | 69K | 21 Apr 2026 | ✅ |
 | **N43** | **This New Method Just Killed RAM Limitations** | 22:21 | 79K | 11 Apr 2026 | ✅ |
 | **N33** | **Claude Mythos Changes Everything. Your AI Stack Isn't Ready.** | 31:20 | 116K | 1 Apr 2026 | ✅ |
 | **N32** | **Your iPhone Is About to Control Every AI App You Use. Here's What This Means For You.** | 22:12 | 72K | 31 Mar 2026 | ✅ |
@@ -91,6 +99,8 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N52** | **Nobody Knows What You're Worth Anymore \| The AI Job Market Reality** | 21:29 | 59K | 20 Apr 2026 | ✅ |
+| **N49** | **Anthropic And OpenAI Are Fighting Over Your Memory. You're Going To Lose.** | 29:44 | 45K | 17 Apr 2026 | ✅ |
 | **N27** | **The AI Job Market Split in Two. One Side Pays $400K and Can't Hire Fast Enough.** | 25:39 | 145K | 26 Mar 2026 | ✅ |
 | **N14** | **She quit, picked up AI, and shipped in 30 days what her team planned for Q3.** | 37:39 | 48K | 15 Mar 2026 | ✅ |
 | 35 | Why the Biggest AI Career Opportunity Just Appeared—and Almost Nobody Sees It | 30:03 | 124K | hace 10 días |
@@ -110,6 +120,10 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N65** | **Stripe, Visa, Mastercard, Microsoft, Meta. All Building The Same Thing.** | 31:19 | 25K | 3 May 2026 | ✅ |
+| **N64** | **Anthropic Might Buy Atlassian For $40B. Here's Why It Makes Sense.** | 29:07 | 45K | 2 May 2026 | ✅ |
+| **N58** | **Apple Just Positioned Itself for the Next Trillion Dollars** | 20:56 | 291K | 26 Apr 2026 | ✅ |
+| **N46** | **3 Model Drops. $15M/Day in Burn. One Product Dead. Nobody Connected Them.** | 20:50 | 60K | 14 Apr 2026 | ✅ |
 | **N39** | **A Polymarket Bot Made $438,000 In 30 Days. Your Industry Is Next. Here's What To Do About It.** | 29:29 | 88K | 7 Apr 2026 | ✅ |
 | **N41** | **The $3 Trillion IPO Trap Nobody's Talking About** | 22:49 | 44K | 9 Apr 2026 | ✅ |
 | **N42** | **There Are Only 5 Safe Places to Build in AI Right Now. Are You in One?** | 26:11 | 102K | 10 Apr 2026 | ✅ |
@@ -141,6 +155,8 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N63** | **RTX 5090, Mac Studio, or DGX Spark? I tried all three.** | 32:35 | 76K | 1 May 2026 | ✅ |
+| **N48** | **Your AI Is 50x Faster. You're Getting 2x. You're Fixing the Wrong Thing.** | 19:57 | 48K | 16 Apr 2026 | ✅ |
 | **N28** | **A Markdown File Just Replaced Your Most Expensive Design Meeting. (Google Stitch)** | 29:34 | 100K | 27 Mar 2026 | ✅ |
 | **N34** | **Your Claude Limit Burns In 90 Minutes Because Of One ChatGPT Habit.** | 26:35 | 81K | 2 Apr 2026 | ✅ |
 | **N12** | **One Simple System Gave All My AI Tools a Memory. Here's How.** | 26:54 | 76K | 13 Mar 2026 | ✅ |
@@ -170,6 +186,10 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N62** | **Microsoft Is Testing Claude Against Its Own Copilot. Here's Why.** | 24:48 | 36K | 30 Apr 2026 | ✅ |
+| **N56** | **Claude Design Does In 30 Minutes What Your Team Does In A Sprint** | 23:42 | 59K | 24 Apr 2026 | ✅ |
+| **N54** | **Karpathy's Wiki vs. Open Brain. One Fails When You Need It Most.** | 41:08 | 99K | 22 Apr 2026 | ✅ |
+| **N51** | **Block Laid Off Half Its Company for AI. AI Can't Do the Job.** | 20:21 | 47K | 19 Apr 2026 | ✅ |
 | **N44** | **I Watched 3 Companies Lay Off Their Managers. All 3 Hit the Same Wall.** | 32:52 | 37K | 12 Apr 2026 | ✅ |
 | **N37** | **Your Agent Produces at 100x. Your Org Reviews at 3x. That's the Problem.** | 21:13 | 32K | 5 Apr 2026 | ✅ |
 | **N2** | **Claude Blackmailed Its Developers. Here's Why the System Hasn't Collapsed Yet.** | 32:25 | 55K | 9 Mar 2026 | ✅ |
@@ -190,4 +210,4 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 ---
 
-> **Nota:** Esta lista cubre los ~últimos 2 meses del canal (~97 videos, sin shorts). El canal tiene 833 videos en total. Las entradas marcadas con ✅ (N1-N45) tienen transcripción completa en `transcripts/`. Si quieres que cargue videos más antiguos, dímelo.
+> **Nota:** Esta lista cubre los ~últimos 3 meses del canal (~117 videos, sin shorts). El canal tiene 833 videos en total. Las entradas marcadas con ✅ (N1-N65) tienen transcripción completa en `transcripts/`. Si quieres que cargue videos más antiguos, dímelo.

@@ -1,7 +1,7 @@
 # Nate B Jones — Resumen de Videos Transcritos
 
 **Canal:** [@NateBJones](https://www.youtube.com/@NateBJones) — AI News & Strategy Daily
-**Videos transcritos:** 63 | **Actualizado:** 2026-04-14
+**Videos transcritos:** 83 | **Actualizado:** 2026-05-04
 
 ---
 
@@ -815,4 +815,266 @@ Nate define "dark code" como código que nunca fue comprendido por nadie — gen
 - Spec-driven development: escribe lo suficiente para entender qué quieres construir; el spec se convierte en el eval para agentes.
 - Tres capas de contexto (structural: dónde va el código; semantic: reglas de engagement; comprehension gates: preguntas de senior engineers) hacen el código legible para humanos y agentes.
 - Amazon reconstruyó Kira con spec-driven development tras su outage; si la empresa que aprendió la lección más cara lo bakes into the product, el mercado debería aprender también.
+---
+
+## Nuevos (abril-mayo 2026)
+
+### N46. 3 Model Drops. $15M/Day in Burn. One Product Dead. Nobody Connected Them.
+**Fecha:** 14 abr 2026 | **Duración:** 20:50
+**Ideas principales:** La industria de la IA pasó de la "fase de capacidad" (¿qué se puede construir?) a la "fase económica" (¿qué se sostiene con margen?), y los movimientos estructurales de marzo de 2026 importan más que cualquier model drop.
+
+Nate disecciona cinco señales tapadas por el ruido de Chad GPT 5.4, Gemini 3.1 Ultra y la GTC de Nvidia. Sora se cerró porque quemaba 15M$/día contra 2,1M$ de ingresos de por vida: la métrica clave ya no es FLOPs sino coste de inferencia por unidad de ingreso. Criteo metió ads programáticos en ChatGPT con 1,5x de conversión, abriendo la primera amenaza creíble al modelo de Google en una década. La Casa Blanca quiere preeemptar regulación estatal pero 12 estados bloquean data centers vía zoning, agua y energía. Atlassian despidió 1.600 personas (10%): el pricing por asiento murió y Wall Street lo descuenta. La disputa Anthropic-DoD inaugura "la gran clasificación": la postura de seguridad ya es posicionamiento de mercado.
+
+**Takeaways:**
+- Sustituye "FLOPs de entrenamiento" por "coste de inferencia por unidad de ingreso entregada" como métrica north star de cualquier producto IA en 2026.
+- Si tu negocio depende de visibility en buscador, tu horizonte de planificación cambió en marzo: el funnel se colapsa dentro de la conversación y el adtech sigue los dólares hasta ahí.
+- El cuello de botella en EE.UU. ya no es regulatorio sino físico (NIMBY, agua, red eléctrica); plantea capacidad asumiendo que Asia capta la siguiente ola de capex.
+- La postura de seguridad de tu vendor de IA ya es decisión de negocio: el go-to-market diverge según postura "manos libres" open-license vs lab-controlled.
+---
+
+### N47. The Real Problem With AI Agents Nobody's Talking About
+**Fecha:** 15 abr 2026 | **Duración:** 37:38
+**Ideas principales:** El problema real de los agentes IA no es la instalación (resuelta en 10 minutos) sino la elicitación de conocimiento tácito: cuanto más senior eres, más comprimido y menos articulable es tu propio sistema operativo, y por eso los productos tipo OpenClaw fallan funcionalmente aunque triunfen técnicamente.
+
+Nate ataca el meto landscape de OpenClaw (Manus de Meta, Perplexity Personal Computer, NemoClaw de Nvidia, Claude Dispatch, StartClaw) demostrando que todos compiten en instalación, seguridad y modelos mientras ignoran la verdadera barrera: el humano debe producir un spec utilizable. El caso Brad Mills (40 horas escribiendo soul.markdown, identity.markdown, user.markdown y heartbeat.markdown y aún así micromanaging peor que a un humano) es la mediana, no el outlier. Identifica el patrón: el conocimiento experto se compila a "código máquina" y se vuelve invisible al propio experto. Construye un "open brain interview agent" con 5 capas (operating rhythms, recurring decisions, dependencies, friction points, leverage opportunities) que produce los markdown necesarios y una BD durable de cómo trabajas.
+
+**Takeaways:**
+- Tu primer agente no debe ser tu asistente personal; debe ser un agente entrevistador que extraiga tu conocimiento tácito antes de provisionar nada.
+- Los deployments que funcionan comparten arquitectura: soul.md (rol), identity.md (personalidad), user.md (perfil humano), heartbeat.md (cron) — texto plano de calidad, no IA.
+- Cuanto más senior eres, mayor tu ratio tácito/explícito; los juniors delegan mejor a agentes (de ahí el bet de Shopify por juniors).
+- En un mundo donde todos tienen el mismo modelo, el diferenciador es tu capacidad de articular tu trabajo en specs delegables; los que lo hagan tendrán retornos compuestos.
+---
+
+### N48. Your AI Is 50x Faster. You're Getting 2x. You're Fixing the Wrong Thing.
+**Fecha:** 16 abr 2026 | **Duración:** 19:57
+**Ideas principales:** Aunque los modelos son ya 50x más rápidos que un humano, solo capturamos 2-3x de productividad porque toda la web fue diseñada con "human affordances" (paginación, login, timeouts) que ahora actúan de drag sobre los agentes; el cuello de botella no es la IA, es el andamiaje humano del software.
+
+Citando a Jeff Dean (Google) y Billy Deli (Nvidia) en GTC, Nate explica que la inferencia ya es el 90% del consumo eléctrico de los data centers y va camino de 10-20.000 tokens/segundo por agente. Dean calculó que un modelo infinitamente rápido solo daría 2-3x de mejora porque las llamadas a herramientas humanas se comen los otros 47x. La reconstrucción ocurre en tres capas: optimización de tools (TypeScript 7 reescrito en Go, Rust pro-AI), primitivas agent-native (containers persistentes de OpenAI, branch-fs sub-segundo, KV cache compartido) y sustitución del scaffolding humano (la "lección amarga" aplicada al stack). Para humanos, propone explícitamente cinco roles del futuro: tool-using generalist, pipeline engineer, business closer, "grown-up in the room" y creative type.
+
+**Takeaways:**
+- Mide el wall-clock time de tus agentes: si la mayoría se va en tool calls, el cuello de botella es tu MCP/API humana, no el modelo.
+- "Agent-readable" via MCP sobre una API paginada NO te hace agent-native; cada nuevo modelo amplifica el % de tiempo gastado en tu scaffolding.
+- Optimizar tu framework 3x es estructuralmente incorrecto; invierte en primitivas tan rápidas que la velocidad del agente sea irrelevante.
+- Decide cuál de los 5 roles ocuparás: tool generalist, pipeline engineer, business person, adult-in-the-room o creative — empieza a posicionarte ahora.
+---
+
+### N49. Anthropic And OpenAI Are Fighting Over Your Memory. You're Going To Lose.
+**Fecha:** 17 abr 2026 | **Duración:** 29:44
+**Ideas principales:** La memoria ha reemplazado a los modelos como el moat de 2026, y los profesionales están construyendo el activo más importante de su carrera —su "working intelligence"— dentro de jardines amurallados que no controlan; la solución es tratar el contexto como un quinto tipo de capital profesional portable vía MCP.
+
+Nate descompone el contexto profesional en cuatro capas que hoy se confunden bajo "memoria": (1) domain encoding —vocabulario sectorial, productos, acrónimos absorbidos en cientos de chats—, (2) workflow calibration —cómo quieres tu research, código, drafts—, (3) behavioral relationship —cuándo desafiarte vs ejecutar, aprendido por microcorrecciones invisibles— y (4) artifact layer —el porqué y cómo de los entregables, hoy enterrados en 800 chats. Los model makers no tienen incentivo (memoria = stickiness) y los startups fallan porque es un "candy product" con dolor difuso. Solución triple: (a) extracción estructurada vía prompt, (b) escritura a infraestructura propia (Postgres, Supabase, OpenBrain), (c) exposición vía MCP como "USB-C de la IA" para read/write desde cualquier agente. Tu working intelligence es el quinto tipo de capital profesional pero el primero que vive en servidores ajenos con TOS que no negociaste.
+
+**Takeaways:**
+- Trata tu contexto IA como activo profesional portable: invierte 30 min en un markdown bien hecho como bandaid mínimo, y migra a una BD personal expuesta vía MCP como solución durable.
+- Distingue las 4 capas (domain / workflow / behavioral / artifact) en lugar de hablar de "memoria" genérica; eso te da herramientas concretas para auditar qué llevarte.
+- Las soluciones tipo "screenshot cada 10 segundos" son creepy y equivocadas; el método correcto es elicitar las preferencias implícitas desde el chat con la IA que ya te conoce.
+- 60% de trabajadores ya usan IA personal en el trabajo; IT debe abrir MCP para BYOC, no prohibir, porque la IA que te conoce te hace 2-5x más productivo con el mismo modelo.
+---
+
+### N50. Karpathy's Agent Ran 700 Experiments While He Slept. It's Coming For You.
+**Fecha:** 18 abr 2026 | **Duración:** 27:24
+**Ideas principales:** El "Karpathy loop" (un archivo editable, una métrica, un presupuesto de tiempo) inaugura una era de auto-research donde meta-agentes optimizan harnesses enteros mientras duermes; gana quien construya antes la infraestructura de evals, traces y sandboxing, no quien tenga el modelo más grande.
+
+El 8 de marzo Andrej Karpathy publicó un script de 630 líneas que dejó a un agente optimizar su propio código de entrenamiento: 700 experimentos, 20 mejoras reales y 11% de speedup en una noche. Kevin Goo extendió el patrón con auto-agent, donde un meta-agente reescribe el harness (prompt, tools, orquestación) del task-agent leyendo trazas de fallo, descubriendo emergentemente spot-checking, validadores de formato y handoff. Funciona por minimalismo (un archivo, una métrica, un budget) y por "model empathy" entre meta y task del mismo modelo. Habilita "local hard takeoff": loops cerrados que compounden mejoras más rápido de lo que la organización puede revisarlas, pero solo en orgs con context layer, evals, sandbox y gobernanza ya resueltos.
+
+**Takeaways:**
+- Define el "Karpathy triplet" antes de tocar código: una superficie editable, una métrica objetiva, un presupuesto de tiempo por experimento. Si no puedes definirlos, ese es tu primer proyecto.
+- Las trazas valen tanto como los resultados: un meta-agente sin razonamiento del task-agent solo produce mutaciones aleatorias. Invierte en logging de razonamiento, no solo de outcomes.
+- Separa meta-agente y task-agent y empareja del mismo modelo (Claude meta para Claude task) para aprovechar la "model empathy".
+- No empieces auto-research en sistemas customer-facing o de compliance. Gana el derecho probando donde el fallo es barato; construye eval harness + sandbox antes que cualquier loop "overnight".
+---
+
+### N51. Block Laid Off Half Its Company for AI. AI Can't Do the Job.
+**Fecha:** 19 abr 2026 | **Duración:** 20:21
+**Ideas principales:** El "world model" empresarial (vector DB, ontología estructurada o signal de alta fidelidad) automatiza el flujo de información pero no el juicio editorial que ejercían los managers, y esa frontera invisible es donde la calidad de las decisiones se degrada en silencio.
+
+Jack Dorsey popularizó el concepto y muchos lo confunden con tres arquitecturas distintas que fallan diferente: vector databases nunca dibujan la frontera entre surfacing e interpretación y rankean por similaridad como si supieran qué importa; ontologías estructuradas tipo Palantir son precisas pero ciegas a relaciones emergentes no categorizadas; el enfoque de signal fidelity (transacciones de Block) confunde inputs limpios con conclusiones confiables. A diferencia de los fracasos ruidosos de Zappos con holacracia, el fallo del world model es silencioso: dashboards autoritativos mientras el sistema toma miles de decisiones editoriales no auditadas. La moat es el tiempo: meses de realidad de negocio fluyendo con loops de outcomes son más difíciles de copiar que cualquier arquitectura.
+
+**Takeaways:**
+- Clasifica cada output del sistema como "act on this" (factual, verificado) o "interpret this first" (juicio); haz visible la frontera interpretativa en la UI.
+- Vector DB sirve hasta ~10.000 documentos o equipos pequeños con seniors fuertes; después necesitas capa estructurada o se degrada la calidad sin que nadie lo note.
+- Un world model solo compounde si encoda outcomes (qué pasó, qué se hizo, qué resultó), no solo eventos. Sin loop de resultados, mes 6 = mes 1.
+- Diseña para resistencia: si alimentar el modelo cuesta esfuerzo extra, los empleados con la información más valiosa la retendrán estratégicamente.
+---
+
+### N52. Nobody Knows What You're Worth Anymore | The AI Job Market Reality
+**Fecha:** 20 abr 2026 | **Duración:** 21:29
+**Ideas principales:** Cuando la generación con IA es esencialmente gratuita, la cadena producción → esfuerzo → expertise → valor se rompe; demostrar tu valía en 2026 ya no es producir más, sino comprobar que comprendes profundamente lo que has producido y empaquetarlo en transacciones visibles.
+
+Con 60.000+ despidos tech en Q1 2026 (Oracle 30k, Block 4k, Amazon 16k, Salesforce, Dell), las empresas recalculan cuántas personas + IA necesitan y nadie sabe medir su propio valor. Nate propone cinco principios: (1) comprehension > generation (la nueva vía al taste sustituye al apprenticeship corporativo), (2) explicación como artefacto que viaja con el deliverable (qué es, por qué lo elegí, qué rompe, qué aprendí — el commit message para la era generativa), (3) micro-transacciones laborales > credenciales porque trabajo significativo se hace en semanas, (4) trabajar en abierto porque la observabilidad privada interna se rompió con los despidos, (5) proof-of-work necesita un hogar visible (Talent Board como ejemplo).
+
+**Takeaways:**
+- Sustituye "ship más rápido" por "ship con comprensión verificable": un proyecto que entiendes a fondo enseña más que diez vibe-codeados que no puedes explicar.
+- Acompaña cada deliverable con cuatro respuestas claras: qué es, por qué lo elegí, qué va a romper, qué aprendí. Es el nuevo commit message.
+- Recuerda Amazon: un ingeniero usando IA mandatoria borró producción y causó 13h de downtime de AWS; producción sin comprehension equivale a desastres caros.
+- Trabaja en público aunque sea incómodo: con observabilidad interna rota por layoffs, mostrar tu razonamiento fuera es mejor apuesta que esperar a que tu jefe lo note.
+---
+
+### N53. Your Prompts Didn't Change. Opus 4.7 Did.
+**Fecha:** 21 abr 2026 | **Duración:** 51:45
+**Ideas principales:** Opus 4.7 es el modelo más inteligente y persistente que Anthropic ha publicado, pero combina adaptive thinking sin controles, interpretación más literal y un nuevo tokenizer que infla hasta 35-46% el coste real, convirtiendo lo que parece misma factura en un upgrade caro y direccional, no uniforme.
+
+Anthropic embistió con 4.7 el 16 de abril (y Claude Design al día siguiente) presionados por Codex y el inminente "Spud", a la vez que negocia ronda a $800B y un IPO en octubre. El modelo arregla el "quitting" de 4.6 (Genpark, Ocean, Factory Droids confirman 10-15% más de task completion), sube SWE-bench a 87 y arrasa en knowledge work (GDPval 1753 vs 1674 de GPT 5.4, Harvey 90.19% en BigLaw). Pero retrocede en BrowseComp (83 → 79) y Terminal Bench (-6 vs GPT 5.4). En el shoebox test de Nate (465 archivos sucios) Opus alucinó un audit trail diciendo procesar un TSV que no tocó; GPT 5.4 fue más honesto en self-review. Claude Design generó design system con skill.md nativo pero reinterpretó el logo y costó $42 con 5+ pasadas. Con temperature, top_p, top_k y thinking budget eliminados, Anthropic se queda los knobs y monetiza compute.
+
+**Takeaways:**
+- Frontload intent: 4.7 castiga prompts prolijos pero recompensa contexto inicial denso (quién, para quién, restricciones, qué es "bueno") y confianza en su iniciativa.
+- En Claude Code pon effort en X-high por defecto y max para lo más duro; usa plan mode. En API borra temperature/top_p/top_k (devuelven 400) y testa coste real porque el tokenizer infla 29-46%.
+- Nunca confíes en el self-review de 4.7 para flujos agentic: alucinó haber procesado un TSV. El grader más honesto fue el modelo con SQL directo a sus tablas.
+- Si tu workflow vive en web research o terminal, benchmark antes de migrar — 4.7 retrocedió. Si haces legal/finance/enterprise docs, migra hoy: es el mejor modelo disponible.
+---
+
+### N54. Karpathy's Wiki vs. Open Brain. One Fails When You Need It Most.
+**Fecha:** 22 abr 2026 | **Duración:** 41:08
+**Ideas principales:** Toda arquitectura de memoria con IA debe elegir cuándo hacer el trabajo duro: en la entrada (Wiki de Karpathy, write-time) o en la consulta (Open Brain, query-time). Esa decisión define qué se pierde, qué se compone y qué escala.
+
+Karpathy propuso una Wiki personal donde el agente sintetiza, enlaza y actualiza páginas en Markdown cada vez que entra una fuente nueva: el conocimiento se compila una vez y se mantiene fresco, ideal para investigación profunda en solitario sobre 100-10.000 documentos. Open Brain hace lo contrario: almacena hechos estructurados en SQL con tags y consulta sintetiza al momento, lo que permite queries precisas, acceso multi-agente, escala empresarial y trazabilidad de provenance. La Wiki brilla cuando el valor está en las conexiones entre fuentes, pero rompe en equipos por conflictos de edición y "drift" silencioso. Open Brain rompe en síntesis profunda y en exposición de contradicciones si no se diseñan plugins específicos. Nate plantea un patrón híbrido: Open Brain como fuente de verdad y un grafo wiki compilado encima como vista navegable que nunca contamine el origen.
+
+**Takeaways:**
+- Decide explícitamente si tu stack hace el trabajo cognitivo en write-time (Wiki) o query-time (Open Brain) antes de escoger herramienta; todo lo demás se deriva de esa fork.
+- Para investigación solo y documentos densos (papers, análisis competitivo) usa la Wiki de Karpathy; para operaciones de equipo, multi-agente, alta volumetría usa una base estructurada tipo Open Brain.
+- En equipos, una Wiki desatendida no parece incompleta: parece confiadamente equivocada; cualquier sistema que sintetice contradicciones puede borrar señal estratégica.
+- Construye el patrón híbrido: SQL como source of truth + capa wiki regenerable encima vía plugin/grafo, para que la síntesis nunca contradiga los hechos.
+---
+
+### N55. Your Apps Don't Need an API Anymore. Codex Just Proved It.
+**Fecha:** 23 abr 2026 | **Duración:** 21:00
+**Ideas principales:** El nuevo Codex de OpenAI convierte cualquier app de macOS en superficie automatizable sin APIs: el agente ve la pantalla, hace clic y escribe en background con fiabilidad de producción. Eso amplía la superficie automatizable mucho más allá de lo que el ecosistema MCP puede cubrir a corto plazo.
+
+El release del 16 de abril transforma Codex de CLI de coding a desktop agent completo con computer use, navegador in-app, generación de imágenes, memoria, plugins y agentes paralelos que no roban el cursor. GPT-5.4 supera el baseline humano en OS World y la integración OS-level proviene del equipo de Sky (ex-Workflow/Shortcuts), comprado por OpenAI en octubre 2025. Anthropic apuesta por interfaces estructuradas (MCP, Conway event-driven) que requieren que el ecosistema construya; OpenAI apuesta por GUI-driving que funciona sobre todo lo que ya existe, incluido software legacy sin API. Chronicle (4 días después) captura tu pantalla periódicamente para alimentar al agente con tus patrones. La práctica recomendada es usar ambos: Claude para trabajo de conocimiento bien acotado, Codex para todo lo que vive en software empresarial sin APIs.
+
+**Takeaways:**
+- Si tu workflow toca dashboards legacy, herramientas internas o SaaS sin MCP, prueba Codex hoy: la diferencia con Claude computer use es lo bastante grande para cambiar tu herramienta por defecto.
+- Lanza varios agentes Codex en paralelo en background y diseña tu día alrededor de "encolar 3-4 tareas y volver en 20 min"; el modelo no roba focus.
+- Vigila dos señales para apostar por OpenAI o Anthropic: lanzamiento público de Conway y velocidad real de adopción de MCP en software empresarial durante 2H 2026.
+- Sigue las adquisiciones (Sky, Recept, IO): la ventaja real ya no está en el modelo, sino en equipos pequeños con expertise OS-level difícil de replicar.
+---
+
+### N56. Claude Design Does In 30 Minutes What Your Team Does In A Sprint
+**Fecha:** 24 abr 2026 | **Duración:** 23:42
+**Ideas principales:** Claude Design completa el stack de Anthropic (code + co-work + design) y mata el mockup como entregable separado: el prototipo ya es código de producción. La estructura organizativa de "two-pizza teams" se construyó alrededor de un coste de coordinación que los LLMs acaban de borrar.
+
+Anthropic lanzó Claude Design como tercera pieza de un patrón coordinado donde describes en lenguaje natural y obtienes un artefacto trabajable. El output cubre desde pitch decks con chatbots embebidos en vivo, vídeos en código, componentes 3D WebGL, design systems extraídos del repo, web capture y reskin, dashboards interactivos, internal admin tools y prototipos móviles con state transitions reales. La razón estructural: los LLMs se entrenaron con código, no con archivos Figma. Figma sigue dominando el medio del ciclo (production design systems) pero Anthropic ataca el inicio (exploración rápida) y conecta directo al final vía Claude Code. Google Stitch responde con design.markdown open source. Cambia el rol de PMs (prototipo en lugar de PRD), diseñadores (de ejecución a curaduría), ingenieros (de specs a operar pipelines de agentes).
+
+**Takeaways:**
+- PMs: deja de empezar por un PRD y empieza por un prototipo en Claude Design embebido en el ticket de Jira, con todos los estados y llamadas a modelos reales.
+- Diseñadores: tu valor se mueve de la ejecución al brief, la curaduría y la situación del producto en contexto; mide cuántas direcciones exploras por hora.
+- Ingenieros: prepara tu pipeline de agentes para ingerir bundles de Claude Design y dedica el tiempo recuperado a casos extremos y escala.
+- Recalcula la coordinación de tu equipo: si el coste de handoff cae a cero, los two-pizza teams se reescriben como one-pizza teams con stack bien diseñado.
+---
+
+### N57. ChatGPT Images Just Replaced Three People on Your Team.
+**Fecha:** 25 abr 2026 | **Duración:** 25:45
+**Ideas principales:** GPT Image 2 incorpora la generación de imágenes al stack de razonamiento (planifica, busca en web, verifica) y gana 93% de comparaciones a ciegas, colapsando research, copy y layout en un solo prompt. El nuevo cuello de botella ya no es el skill del modelo, sino la calidad de la especificación.
+
+OpenAI suma tres mecanismos sobre el modelo: thinking mode que razona 10-20s antes de pintar, web search dentro del loop de generación que permite visuales con datos en vivo, y devolución coherente de hasta 8 frames con continuidad de personaje, más auto-verificación que corrige typos. Desbloquea workflows reales: campañas multilingües sin vendor de localización, UI specs como target de renderizado dentro de Codex, briefs con datos en vivo y design systems coherentes. La cara oscura: con cuenta gratuita cualquiera puede falsificar recibos, screenshots de Slack, boarding passes o etiquetas farmacéuticas con texto al 99% de precisión, y los content credentials no sobreviven a un screenshot. Frente a Claude Design (output HTML editable) GPT Image 2 mantiene el píxel como primitivo pero añade razonamiento upstream.
+
+**Takeaways:**
+- Activa thinking mode por defecto y reescribe tus briefs en prosa con restricciones explícitas, tipografía, assets de referencia y contexto de marca; los bullets cortos te van a fallar.
+- Marketing: deja de mandar el master creative a vendor de localización para primera pasada en japonés, coreano, hindi o bengalí; el modelo lo hace en minutos con tipografía regional correcta.
+- Trust/Risk/Legal: corre ya un red team produciendo recibos, screenshots e IDs falsos; lo que pase tus controles te define el roadmap de remediación y posiblemente una oportunidad de unicornio en verificación física.
+- Trata GPT Image 2 como primitivo invocable por agentes en tu pipeline (bug reports con repro visual, PR reviews, postmortems anotados), no como reemplazo de tu diseñador.
+---
+
+### N58. Apple Just Positioned Itself for the Next Trillion Dollars
+**Fecha:** 26 abr 2026 | **Duración:** 20:56
+**Ideas principales:** Apple admite que no puede ganar la carrera de software AI a la cadencia de los frontier labs y reorganiza la compañía bajo dos ingenieros de hardware (John Turnis y John Suji) para apostar por un juego distinto: inferencia local sobre Apple Silicon, donde el coste marginal por consulta tiende a cero y el modelo económico del cloud AI se rompe.
+
+El nombramiento de Turnis no es continuidad, es un giro estratégico. La organización funcional de Tim Cook, ideal para integrar iPhone, Watch y AirPods, es estructuralmente incapaz de competir con la velocidad de release de OpenAI o Anthropic. Mientras tanto, los frontier labs pierden dinero incluso en planes de 200$/mes: capital de inversores, suministro limitado de GPU y precios por token que no caen tan rápido como crece la capacidad. Apple repite la jugada del Apple II de los 70: trasladar el cómputo del mainframe metered al dispositivo que el usuario ya pagó. Existe además demanda enorme y desatendida de bufetes, médicos, contables, terapeutas y asesores que no pueden subir datos al cloud por privilegio o HIPAA y están improvisando clusters de Mac Mini en armarios.
+
+**Takeaways:**
+- Si tu organización pierde una carrera por estructura, no optimices la premisa, cámbiala: Apple cambió el juego en lugar de doblar la apuesta perdedora.
+- Construye productos AI-nativos que solo tengan sentido económico cuando la inferencia es gratis (agentes de fondo continuos, contextos masivos, herramientas invocadas miles de veces).
+- Hay una tesis de startup lista: empaquetar Apple Silicon en formato rackable con admin, identidad on-prem y BAA HIPAA para profesionales regulados.
+- Como prosumer, deja de optimizar tokens y empieza a consolidar tu data hygiene (notas, calendario, mensajes); el chip Mxx que tengas empezará a importar de verdad.
+---
+
+### N59. OpenAI Just Gave Every Team A Free Employee. Here's The Catch.
+**Fecha:** 27 abr 2026 | **Duración:** 23:13
+**Ideas principales:** ChatGPT Workspace Agents no es una mejora de los Custom GPTs ni de Projects: es un competidor directo de la capa ligera de automatización (Zapier, Make, n8n, Copilot Studio) y convierte el primer agente útil para un equipo en un proyecto de una tarde, no de seis meses, siempre que el flujo se repita, cruce dos o tres herramientas y tenga un output con criterio claro.
+
+Lanzado el 22 de abril como research preview para planes Business/Enterprise/Education, permite describir un workflow en lenguaje natural y que ChatGPT genere el agente con conectores a Google Drive, Slack, SharePoint, Calendar y MCP custom. El cambio de categoría real es que los flujos que fallaban con Custom GPTs (triage de tickets, RFP response, lead qualification, reporting recurrente) empiezan a funcionar porque el agente puede usar herramientas, seguir múltiples pasos y vivir en Slack. La gobernanza (control admin, version history, suspend, role-based publishing con personal connections) es lo que hará que gane sillas enterprise. Bajo el capó corre Codex en cloud, así que ejecuta, no solo conversa. La ventana gratuita se cierra el 6 de mayo, después arranca pricing por créditos.
+
+**Takeaways:**
+- Antes del 6 de mayo elige UN trabajo semanal de 5-6 horas con output claro y dos o tres herramientas, y constrúyelo: si no puedes describirlo en un párrafo, el agente no te salvará.
+- Aplica least privilege en publicación: usa service accounts, limita audiencia y audita las personal connections, no asumas que el demo escala a toda la empresa.
+- El competidor real no es Claude ni Perplexity: es la capa de Zapier/Make/n8n. Replantea quién en tu equipo diseña, gobierna y mejora agentes.
+- Mide cada agente con tres preguntas: ¿ahorró tiempo vs flujo viejo?, ¿la carga de revisión se mantuvo bajo el tiempo ahorrado?, ¿el equipo lo echaría de menos si lo apagas?
+---
+
+### N60. GPT-5.5 vs Claude vs Gemini: The Real Difference Nobody's Talking About
+**Fecha:** 28 abr 2026 | **Duración:** 32:34
+**Ideas principales:** GPT-5.5 mueve el suelo (no solo el techo) porque es más fuerte en el modo rápido y en el de razonamiento, carga tareas largas y multi-paso sin perder el hilo, y es el primer modelo que captura las trampas semánticas obvias en migraciones de datos sucios. La conclusión práctica no es "5.5 gana siempre", sino que el futuro del uso AI es routing.
+
+El autor prueba 5.5 en tres benchmarks privados diseñados para fallar. Dingo & Co (paquete ejecutivo de 23 deliverables): 5.5 obtiene 87.3 vs 67.0 de Opus 4.7 y 49.8 de Gemini 3.1 Pro, produce artefactos reales (no HTML disfrazado de PowerPoint) y mantiene postura legal/ética coherente. Splash Brothers (migración de 465 ficheros sucios): 5.5 es el primero que rechaza Mickey Mouse, "test customer" y un pago fake de 25.000$, aunque regresa frente a 5.4 en disciplina backend. Artemis 2 (visualización 3D): 5.5 gana en densidad informativa pero Opus 4.7 sigue ganando en composición visual. La fiabilidad también pesa: Anthropic está a una "nueve" de uptime mientras OpenAI está en tres.
+
+**Takeaways:**
+- Default por ejecución compleja multi-paso con archivos, código o herramientas: GPT-5.5 dentro de Codex, no en la ventana de chat.
+- Para taste visual desde cero sigue empezando con Opus 4.7; para UI seria genera el mock con Images 2.0 y luego implementa con 5.5 en Codex.
+- Nunca confíes una migración de datos producción a un solo paso del modelo: añade validators, conserva provenance, audita merges canónicos antes de staging.
+- Deja de testear modelos con prompts fáciles (to-do apps, resúmenes); el frontier solo se mide con briefs multi-artefacto, datos sucios y loops largos.
+---
+
+### N61. Salesforce Killed The Browser. Every Agent Runs Your CRM Now.
+**Fecha:** 29 abr 2026 | **Duración:** 23:08
+**Ideas principales:** La conversación de agentes ha pasado silenciosamente de calidad de modelo a infraestructura, y la pregunta correcta ya no es "¿de qué agente cambio?" sino "¿qué capa apilar para qué tipo de trabajo?". El filtro de cinco preguntas (¿se enchufa a tus tools?, ¿permite que otros agentes construyan encima?, ¿toca data que importa?, ¿hay ecosistema?, ¿puedo apilar agentes?) deja fuera la mayoría de lanzamientos ruidosos.
+
+Aplicando el filtro a cinco lanzamientos: Workspace Agents gana en flujos compartidos recurrentes en ChatGPT/Slack. Salesforce Headless 360 es la jugada infraestructural más subestimada: expone toda la plataforma como API, MCP tool o CLI, con 60+ MCP tools, 30+ coding skills preconfigurados y soporte nativo para Claude Code, Cursor, Codex y Windsurf, convirtiendo Salesforce en infraestructura bajo la economía de agentes. Microsoft Copilot Wave 3 con Co-Work y Work IQ gana en empresas Microsoft 365 nativas pero pierde en apertura. Kimmy K 2.6 (open weights, 300 sub-agentes, 4.000 pasos) es para equipos dev que quieran agente self-hosted. Perplexity Personal Computer en Mac (con Opus 4.7 como orchestrator) gana en research-heavy. La estrategia enterprise de Anthropic es ser el motor embedded dentro de productos ajenos.
+
+**Takeaways:**
+- Aplica el filtro de 5 preguntas a cada lanzamiento antes de invertir tiempo de equipo; la mayoría falla en "¿hay ecosistema?" y "¿puedo apilar agentes encima?".
+- Deja de pensar en switching y empieza a pensar en layering: enruta cada trabajo al wrapper que tenga el data fabric correcto (Salesforce para RevOps, Copilot para Microsoft 365, Perplexity para research).
+- Si tu RevOps vive en Salesforce, Headless 360 convierte cada agente que ya usas en agente CRM-capable; no necesitas adoptar Agentforce para aprovecharlo.
+- Filtra siempre infraestructura sobre features, ecosistemas sobre demos, stackability sobre walled gardens y data access sobre benchmark charts.
+---
+
+### N62. Microsoft Is Testing Claude Against Its Own Copilot. Here's Why.
+**Fecha:** 30 abr 2026 | **Duración:** 24:48
+**Ideas principales:** Las herramientas de IA NO son intercambiables y el default corporativo (típicamente Copilot) está cobrando un impuesto invisible de horas a los individual contributors. La forma de ganar la conversación no es atacar el default, sino traer evidencia medible de un job class concreto donde un especialista recupera tiempo demostrable.
+
+El argumento "Copilot es malo, necesito Claude" suena a preferencia y la organización lo descarta. La táctica que sí funciona consiste en elegir un trabajo recurrente (semanal, +30 min, audiencia real, criterios claros), correrlo en paralelo con el default y un challenger durante una semana, y registrar tiempo, retrabajo, calidad y "would I send it". Después extrapolas a nivel equipo/org y reformulas el ask: no rip-and-replace, sino "dentro de nuestro compromiso con el default, añadamos un especialista para este subset". El altitude del ask cambia según el interlocutor: licencia individual con el manager, piloto con el director, comisionar medición con el ejecutivo. Las cuatro objeciones (sunk cost, shadow IT, estandarización, no aprobaremos otro vendor) tienen respuestas basadas en datos.
+
+**Takeaways:**
+- Mide UN job recurrente comparando default vs especialista durante una semana con 5–15 filas de datos reales y extrapola al tamaño del equipo para convertir frustración personal en business case.
+- No pidas reemplazar el default: pide añadir un especialista solo para el subset donde la evidencia muestra delta. Esa es una mejor política de estandarización, no una violación.
+- Define el success criteria desde el trabajo, no desde el vendor: ¿me ahorró los 30 minutos?, ¿hubiera mergeado este PR?, ¿identificó los deals correctos?
+- Ajusta el altitude del ask: con el manager pide una licencia, con el director un piloto trimestral, con el exec pide comisionar medición porque las tools determinan retención en 2026.
+---
+
+### N63. RTX 5090, Mac Studio, or DGX Spark? I tried all three.
+**Fecha:** 1 may 2026 | **Duración:** 32:35
+**Ideas principales:** El personal AI computer no es una guerra contra el cloud sino una decisión de propiedad: poseer el substrate (hardware, runtime, modelos, memoria, interfaces) para que los agentes lleguen a tu trabajo, en vez de que tu trabajo viva en el cloud de otros. La pregunta correcta no es "¿qué máquina es la mejor?" sino "¿qué workload local quieres poseer?".
+
+El error típico es comprar hardware persiguiendo el modelo más grande del momento; lo durable es el stack, no el modelo. Nate desglosa seis capas: máquina (Mac mini M4 Pro 64GB para entrada, Mac Studio con unified memory para escala, RTX 5090 para CUDA, DGX Spark como appliance Grace Blackwell de 128GB), runtime (llama.cpp como base, Ollama para uso diario, LM Studio, MLX en Apple, vLLM/TensorRT-LLM/NeMo para serving), modelos (portfolio: Llama 4 Scout/Maverick, GPT-OSS, Qwen, Gemma, Mistral, Whisper para voz, embeddings), memoria (la capa más infraconstruida; Open Brain con Postgres+pgvector o SQLite vec, MCP con permisos), interfaces (Open Web UI, Continue, Aider, Raycast, voz local) y workflows (RAG personal, coding privado, captura de reuniones, agentes long-running).
+
+**Takeaways:**
+- Compra para el trabajo diario, no para benchmarks: si haces docs/notas/transcripción, prioriza unified memory en Mac; si es coding agéntico con throughput, asume el coste de mantener CUDA con RTX 5090 o DGX Spark.
+- Construye por capas swappables: si el runtime (Ollama/llama.cpp) es sano, los modelos se intercambian sin migración; si el runtime es frágil, cada nuevo modelo es un proyecto.
+- Trata la memoria como infraestructura propia con datos crudos y embeddings separados en DB para poder reindexar cuando llegue un mejor embedding model: tu conocimiento sobrevive a cualquier app.
+- Trata las herramientas de los agentes como permisos: el writing agent no necesita shell, el coding agent no necesita tus extractos bancarios; controla el attack surface antes de escalar.
+---
+
+### N64. Anthropic Might Buy Atlassian For $40B. Here's Why It Makes Sense.
+**Fecha:** 2 may 2026 | **Duración:** 29:07
+**Ideas principales:** Los issue trackers (Jira, Linear) se construyeron para coordinar humanos y, por accidente, encajan casi perfecto como substrate de agentes: estado durable, ownership, state machine, permisos, dependencias e historia auditable. La UX humana del ticketing puede morir como dijo Karri Saarinen, pero el substrate se promociona, no desaparece.
+
+La contradicción aparente entre el ensayo "Issue tracking is dead" de Linear y Symphony de OpenAI (que usa un board de Linear como control plane para agentes de coding) se resuelve con esta distinción: muere el ritual humano de traducir realidad a tickets, sobrevive el substrate. Los agentes lo necesitan porque la context window no es source of truth: necesitan estado externo, claiming, status, blockers, prioridad y permisos. Por eso Atlassian con su Rovo MCP server (GA en febrero 2026) y la asociación con Anthropic se vuelven estratégicos: poseen una de las mayores instalaciones de workstate agent-readable del mundo. El patrón se replica en CRM (Salesforce), service desk (Zendesk, ServiceNow), ERP (SAP, Workday), source control y calendarios; en cambio, email y Slack tienen verbos demasiado conversacionales para ser buen substrate.
+
+**Takeaways:**
+- Si construyes producto, tu data model es superficie estratégica: expón records, define verbos, haz ownership explícito, preserva historia y abre todo vía API o MCP server antes de bolt-on de chat UI.
+- Para equipos, la elección Jira vs Linear ya no es solo UX: es elección de agent infrastructure, porque buena UX produce datos limpios y los datos limpios son lo que el agente necesita para actuar.
+- Mapea tu agentic substrate stitching ERP+CRM+tickets+voice of customer; las messy operations que antes pagabas con heroicidad humana ahora bloquean a los agentes en los lugares donde más quieres que ayuden.
+- Apuesta por incumbents que poseen systems of record (Atlassian, Salesforce, ServiceNow, SAP, Workday); los wrappers Greenfield sin records propios terminan dependiendo de quien sí los tiene.
+---
+
+### N65. Stripe, Visa, Mastercard, Microsoft, Meta. All Building The Same Thing.
+**Fecha:** 3 may 2026 | **Duración:** 31:19
+**Ideas principales:** Por primera vez en dos décadas, el poder en la economía de internet se está desplazando del seller al buyer porque la intent se forma en el agente del comprador antes de que el seller tenga ocasión de convertir. La gran pregunta competitiva ya no es "¿usamos AI?" sino "¿puede tu negocio ser llamado por agentes?".
+
+Stripe lanzó una pila de productos (Link wallet for agents, Shared Payment Tokens, Machine Payments Protocol, Agentic Commerce Suite, Radar, streaming payments con Metronome y Tempo) que en conjunto son un stack comercial para una economía donde el agente del comprador llega con intent, contexto, permisos y a veces autoridad de pago antes de que el seller convierta. El viejo funnel era una arquitectura institucional para hacer la intent humana observable; ahora la intent se forma fuera de la tienda. La autoridad de pago viaja con la tarea: virtual cards one-time como adapter del web actual, shared tokens hacia un mundo machine-native; coexisten cards y stable coins porque sirven jobs distintos. Brand no desaparece, cambia de ubicación: deja de ser el billboard del seller y pasa a ser una entrada en la memoria operativa del buyer (likes, dislikes, trust history). El test Walmart-ChatGPT (instant checkout convirtiendo 3x peor) muestra que la batalla no es el "buy button" sino dónde se forma la comprensión del producto.
+
+**Takeaways:**
+- Haz tu negocio agent-callable: expón catálogo, precios, políticas, identidad, devoluciones, fulfillment y error handling como metadata estructurada que un agente pueda razonar, no solo páginas para humanos.
+- Diseña para mandates en lugar de checkouts puntuales: budgets acotados, scheduled intent, usage-based, outcome-based; metering y settlement cercanos al consumo (streaming payments) son el shape natural del gasto agéntico.
+- Contén el fraude antes de escalar: en un mundo donde un free user puede quemar tokens dollar-for-dollar, Radar y signals cross-Stripe son la base; sin trust layer la economía agéntica nace muerta.
+- Repensar el brand: ya no persuades en el landing, te conviertes en preferencia recordada del agente. Invierte en experiencias IRL para humanos y en clean contracts machine-readable para agentes.
 ---

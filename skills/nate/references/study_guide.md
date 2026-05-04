@@ -495,7 +495,18 @@ These ideas recur across multiple topics and represent the deepest patterns in t
 | **Dark code** | Topics 2, 3 | AI-generated code nobody understands; fix with spec-driven dev, self-describing systems, comprehension gates |
 | **Five durable verticals** | Topics 4, 6 | Trust, context, distribution, taste, liability survive regardless of model capability |
 | **Sovereign memory** | Topics 3, 4, 6 | Own your context/memory layer; don't let a single provider control your behavioral model |
+| **BYOC (Bring Your Own Context)** | Topics 1, 5, 6 | Working intelligence (domain + workflow + behavioral + artifact) is your fifth capital; portable via MCP, not locked in walled gardens (N49) |
+| **Agent-native primitives vs human scaffolding** | Topics 1, 3, 6 | "Agent-readable" via MCP over a paginated human API isn't agent-native; invest in primitives where agent speed becomes irrelevant (N48) |
+| **Auto-research / Karpathy loop** | Topics 2, 3 | Triplet of editable surface + objective metric + budget enables meta-agents that optimize harnesses overnight; the moat is eval/sandbox/traces (N50) |
+| **World model failure modes** | Topics 3, 5, 6 | "World model" is umbrella for vector DB / ontology / signal fidelity; each automates information flow but not editorial judgment, degrades silently (N51) |
+| **Comprehension over generation** | Topics 2, 5 | When generation is free, value = verifiable comprehension; explanation artifact (what/why/breaks/learned) is the new commit message (N52) |
+| **Routing across models** | Topics 2, 4 | The future of AI use is routing per workload (Codex for execution, Opus for taste, Images for visual reference) — single-model is over (N60, N53) |
+| **Agent infra as systems of record** | Topics 3, 6 | Issue trackers, CRM, ERP become agent substrate by accident; greenfield wrappers without records depend on incumbents who do (N64) |
+| **Agentic commerce / agent-callable business** | Topics 3, 6 | Power shifts from seller to buyer because intent forms inside the buyer's agent before the seller can convert; expose catalog/prices/fulfillment as structured metadata (N65) |
+| **Personal AI computer / sovereign stack** | Topics 4, 6 | Own the substrate (hardware + runtime + models + memory) so agents come to your work; Apple Silicon collapses inference cost where it matters (N58, N63) |
+| **5-question agent filter** | Topics 3 | Integration / openness / data / ecosystem / stackability — most launches fail on 4-5; stop switching, start layering (N61) |
+| **The "in-org" challenger play** | Topics 5 | Win Copilot vs Claude conversation with measured job-level evidence, not preference; ask scope (license / pilot / measurement) by altitude of interlocutor (N62) |
 
 ---
 
-*Generated from 69 transcribed videos from the @NateBJones channel. Updated April 14, 2026.*
+*Generated from 89 transcribed videos from the @NateBJones channel. Updated May 4, 2026.*

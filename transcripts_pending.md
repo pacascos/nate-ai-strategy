@@ -1,6 +1,6 @@
 # Transcripciones pendientes
 
-Todas las transcripciones completadas el 2026-04-14.
+Todas las transcripciones completadas el 2026-05-04.
 
 | ID | Video ID | Titulo | Estado |
 |----|----------|--------|--------|
@@ -52,8 +52,29 @@ Todas las transcripciones completadas el 2026-04-14.
 | N44 | zhXgkQ3nYeE | I Watched 3 Companies Lay Off Their Managers. All 3 Hit the Same Wall. | ✅ |
 | N45 | E1idsrv79tI | I Looked At Amazon After They Fired 16,000 Engineers. Their AI Broke Everything. | ✅ |
 
+| N46 | 0vdlwOK_Qdk | 3 Model Drops. $15M/Day in Burn. One Product Dead. Nobody Connected Them. | ✅ |
+| N47 | 2PWJu6uAaoU | The Real Problem With AI Agents Nobody's Talking About | ✅ |
+| N48 | XlfumXPPrLY | Your AI Is 50x Faster. You're Getting 2x. You're Fixing the Wrong Thing. | ✅ |
+| N49 | 4KAF72BTyCE | Anthropic And OpenAI Are Fighting Over Your Memory. You're Going To Lose. | ✅ |
+| N50 | xnG8h3UnNFI | Karpathy's Agent Ran 700 Experiments While He Slept. It's Coming For You. | ✅ |
+| N51 | fm6mYqFAM5c | Block Laid Off Half Its Company for AI. AI Can't Do the Job. | ✅ |
+| N52 | -dJ9WrTG6zQ | Nobody Knows What You're Worth Anymore \| The AI Job Market Reality | ✅ |
+| N53 | tJB_8mfRgCo | Your Prompts Didn't Change. Opus 4.7 Did. | ✅ |
+| N54 | dxq7WtWxi44 | Karpathy's Wiki vs. Open Brain. One Fails When You Need It Most. | ✅ |
+| N55 | 2d9ZmA-4QzU | Your Apps Don't Need an API Anymore. Codex Just Proved It. | ✅ |
+| N56 | KlPxWaY91rE | Claude Design Does In 30 Minutes What Your Team Does In A Sprint | ✅ |
+| N57 | brBPsPPyuQM | ChatGPT Images Just Replaced Three People on Your Team. | ✅ |
+| N58 | RaAFquzj5B8 | Apple Just Positioned Itself for the Next Trillion Dollars | ✅ |
+| N59 | QrvVkm-8Jx4 | OpenAI Just Gave Every Team A Free Employee. Here's The Catch. | ✅ |
+| N60 | 9aIYhjeYxzM | GPT-5.5 vs Claude vs Gemini: The Real Difference Nobody's Talking About | ✅ |
+| N61 | dQK_pTXrGDk | Salesforce Killed The Browser. Every Agent Runs Your CRM Now. | ✅ |
+| N62 | JvCtGjrn_N0 | Microsoft Is Testing Claude Against Its Own Copilot. Here's Why. | ✅ |
+| N63 | iUSdS-6uwr4 | RTX 5090, Mac Studio, or DGX Spark? I tried all three. | ✅ |
+| N64 | FDkvRl1RlT0 | Anthropic Might Buy Atlassian For $40B. Here's Why It Makes Sense. | ✅ |
+| N65 | XGvDbeoSN3E | Stripe, Visa, Mastercard, Microsoft, Meta. All Building The Same Thing. | ✅ |
+
 ## Datos del catalogo
 
 Canal actualizado: 235K suscriptores, 833 videos.
-Catalogo actualizado: NateBJones_Video_Catalog.md (45 videos con ✅).
-HTML actualizado: NateBJones_Video_Summaries.html (69 videos con resumen).
+Catalogo actualizado: NateBJones_Video_Catalog.md (65 videos con ✅).
+HTML actualizado: NateBJones_Video_Summaries.html (89 videos con resumen).

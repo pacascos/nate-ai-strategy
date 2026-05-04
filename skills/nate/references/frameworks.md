@@ -544,3 +544,142 @@ The ability to think about your own thinking — knowing what you know, what you
 - **Cognitive offloading** → learned helplessness: neural pathways atrophy from non-use
 - **AI companion dependency**: 75% of teens use AI chatbots for emotional support
 - Educators report students can no longer read full chapters or synthesize arguments from multiple sources
+
+---
+
+## BYOC (Bring Your Own Context) — Memory as the Fifth Capital (Video N49)
+
+### The Four Layers of Working Intelligence
+| Layer | What it is | Where it lives today | Failure mode |
+|-------|------------|---------------------|---------------|
+| **Domain encoding** | Sector vocabulary, product names, internal acronyms absorbed across hundreds of chats | Provider memory | Re-explained every session |
+| **Workflow calibration** | How you want research, code, drafts, memos delivered | Tribal in chats | Resets when tools change |
+| **Behavioral relationship** | When to push back vs execute, preamble tolerance, microcorrections | Implicit in provider | Not transferable |
+| **Artifact layer** | The "why" and "how" of past deliverables, currently buried in 800 unfindable chats | Lost | No queryable history |
+
+### Three-Step BYOC Solution
+1. **Elicit** structured preferences via prompt over the AI that already knows you (not screenshot capture).
+2. **Write** to your own infrastructure — Postgres, Supabase, VPS, OpenBrain.
+3. **Expose** via MCP (the "USB-C of AI") for read/write from any agent.
+
+### Why labs won't fix this
+Memory = stickiness. Provider has anti-incentive. Memory startups also fail because it's a "candy product" (diffuse pain), not "opium product" (acute). The owner-of-record must be you.
+
+---
+
+## The Karpathy Loop & Auto-Research Pattern (Video N50)
+
+### The Triplet (define before any code)
+1. **Editable surface** — exactly one file/region the agent can mutate.
+2. **Objective metric** — one number that goes up or down (no committee judgments).
+3. **Time/compute budget** — fixed cap per experiment.
+
+If you can't define all three, that's your real first project.
+
+### Meta-Agent vs Task-Agent Separation
+- Pair both from the *same model* (Claude meta optimizing Claude task) for "model empathy" — meta understands task's reasoning from the inside.
+- Logging traces (reasoning, not just outcomes) is the input that turns mutation into intelligent improvement.
+
+### Risks of Auto-Research
+| Risk | Mitigation |
+|------|------------|
+| Metric gaming | Multi-metric guards, sample manual review |
+| Silent degradation | Baseline pinning + regression alerts |
+| Contamination | Sandboxed eval set never touched by training |
+| Cascading errors | Short loops with checkpoints, version control all artifacts |
+
+Don't run auto-research first on customer-facing or compliance systems. Earn the right where failure is cheap.
+
+---
+
+## Personal AI Computer — The Sovereign Stack (Videos N58, N63)
+
+### Six Layers of Ownership
+1. **Machine** — Mac mini M4 Pro 64GB (entry), Mac Studio (unified memory at scale), RTX 5090 (CUDA), DGX Spark (Grace Blackwell appliance, 128GB).
+2. **Runtime** — llama.cpp (base), Ollama (daily), LM Studio, MLX (Apple), vLLM/TensorRT-LLM/NeMo (serious serving).
+3. **Models** — portfolio: Llama 4 Scout/Maverick, GPT-OSS, Qwen, Gemma, Mistral, Whisper (voice), embeddings.
+4. **Memory** — most under-built layer; Postgres+pgvector or SQLite-vec; raw + embeddings separated so you can re-index when better embeddings arrive.
+5. **Interfaces** — Open Web UI, Continue, Aider, Raycast, local voice.
+6. **Workflows** — personal RAG, private coding, meeting capture, long-running agents.
+
+### Buying Heuristics
+- Buy for the daily job, not benchmarks. Docs/notes/transcripts → unified-memory Mac. Agentic coding throughput → CUDA path.
+- Build with **swappable runtime**: if the runtime is healthy, models swap without migration. If runtime is fragile, every new model is a project.
+- Treat agent tools as **permissions**, not conveniences. Writing agent ≠ shell. Coding agent ≠ bank statements.
+
+### Why Apple Pivoted (N58)
+Frontier labs lose money even at $200/mo. Cloud AI economics don't close. Apple repeats the Apple II move: shift compute from metered mainframe to device the user already paid for. Huge unmet demand from regulated professionals (HIPAA, attorney-client privilege) running Mac Mini clusters in closets.
+
+---
+
+## Agent Infrastructure as Systems of Record (Video N64)
+
+### Why Issue Trackers Become Agent Substrate
+Built to coordinate humans, they accidentally have everything agents need:
+- Durable state (the context window is NOT source of truth)
+- Ownership (who's responsible for which step)
+- State machine (todo → in-progress → review → done)
+- Permissions, dependencies, queryable history
+
+### The Diagnostic (apply to any system)
+1. **Records vs content?** (rows beat documents)
+2. **State machine vs labels?**
+3. **Ownership explicit?**
+4. **Verbs structural?** (claim, transition, assign — not "discuss")
+5. **History queryable?**
+
+### Substrate Map
+- ✅ Issue trackers, CRM (Salesforce), service desk (Zendesk, ServiceNow), ERP (SAP, Workday), source control, calendars
+- ❌ Email, Slack — verbs too conversational
+
+The agentic substrate game favors incumbents who own systems of record. Greenfield wrappers without records depend on those who have them.
+
+---
+
+## Agent-Callable Business / Agentic Commerce (Video N65)
+
+### The Power Shift (first time in two decades)
+Power moves from seller to buyer because intent is formed inside the buyer's agent before the seller can convert. The funnel was institutional architecture for making human intent observable. With agents, intent forms outside the store.
+
+### Stripe's Agentic Stack
+- **Link wallet for agents** + **Shared Payment Tokens** + **Machine Payments Protocol** + **Agentic Commerce Suite** + **Radar** + **streaming payments** (Metronome, Tempo).
+
+### Design Principles for Agent-Callable Business
+1. Expose catalog, prices, policies, identity, returns, fulfillment, error handling as **structured metadata** an agent can reason over.
+2. Design for **mandates**, not checkouts: budgets, scheduled intent, usage-based, outcome-based.
+3. **Streaming settlement** is the natural shape of agentic spending.
+4. **Fraud containment first**: a free user who can burn tokens dollar-for-dollar will. Without trust layer, agentic economy is dead on arrival.
+5. **Brand moves locations**: from seller billboard to buyer-agent memory entry (likes, dislikes, trust history).
+
+### The Walmart-ChatGPT Test
+Instant checkout converts 3x worse — battle is not the buy button, it's where product comprehension forms.
+
+---
+
+## Comprehension Over Generation — The New Professional Compass (Video N52)
+
+### The Broken Chain
+Production → effort → expertise → value collapses when generation is essentially free.
+
+### Five Principles for the AI-Era Career
+1. **Comprehension > generation** — the new path to taste replaces apprenticeship by reps.
+2. **Explanation as artifact** that travels with the deliverable: *what is it, why I chose it, what breaks, what I learned*. The new commit message.
+3. **Transactions > credentials** — micro-transactions matter because meaningful work happens in weeks, not years.
+4. **Work in public** — internal observability broke with layoffs; show reasoning outside.
+5. **Proof-of-work needs a visible home** (Talent Board as one example).
+
+### Why It Matters Now
+60,000+ tech layoffs in Q1 2026 (Oracle 30k, Block 4k, Amazon 16k, Salesforce, Dell). Companies are recalibrating people + AI ratio; nobody knows how to measure their own value. The Amazon engineer who deleted production using a mandated AI tool (13h AWS downtime) is the cautionary tale.
+
+---
+
+## The 5-Question Filter for Agent Stacks (Video N61)
+
+Apply to every new agent product launch before investing team time:
+1. **Does it plug into your tools?**
+2. **Does it let other agents build on top?**
+3. **Does it touch data that matters?**
+4. **Is there an ecosystem?**
+5. **Can you stack agents on top?**
+
+Most launches fail on questions 4 and 5. Stop thinking *switching*; start thinking *layering*. Route each job to the wrapper with the right data fabric (Salesforce for RevOps, Copilot for M365, Perplexity for research). Anthropic's enterprise strategy is being the embedded engine inside others' products — that's why Claude appears direct, embedded, and managed.
