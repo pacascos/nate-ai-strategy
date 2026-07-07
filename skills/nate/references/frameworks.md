@@ -24,6 +24,25 @@
 21. [The Middleware Trap](#middleware-trap)
 22. [Frontier Operations](#frontier-operations-framework)
 23. [Foundation Before Leverage](#foundation-before-leverage)
+24. [BYOC — Memory as the Fifth Capital](#byoc)
+25. [The Karpathy Loop & Auto-Research Pattern](#karpathy-loop)
+26. [Personal AI Computer — The Sovereign Stack](#personal-ai-computer)
+27. [Agent Infrastructure as Systems of Record](#systems-of-record)
+28. [Agent-Callable Business / Agentic Commerce](#agent-callable-business)
+29. [Comprehension Over Generation](#comprehension-over-generation)
+30. [The 5-Question Filter for Agent Stacks](#five-question-filter)
+31. [The TCLD Work Audit](#tcld-audit)
+32. [The Agent Scaffolding Map](#agent-scaffolding-map)
+33. [Four-Tier Action Risk Classes & the LLM-as-Judge Validator](#llm-judge-validator)
+34. [Agent Memory: Retrieval Contract First](#retrieval-contract)
+35. [The Automate / Build / Buy / Hire / Wait Matrix](#automate-build-buy-hire-wait)
+36. [The Agent Protocol Stack: MCP, A2A, AG-UI](#agent-protocol-stack)
+37. [The Agent Control Layer](#agent-control-layer)
+38. [The Hostile Reviewer Loop](#hostile-reviewer-loop)
+39. [Agent Analytics: Completion vs Acceptance](#agent-analytics)
+40. [The Delegation Loop & Chief of Staff Thread](#delegation-loop)
+41. [The Agent Ownership Framework](#agent-ownership)
+42. [Task Imagination](#task-imagination)
 
 ---
 
@@ -547,6 +566,7 @@ The ability to think about your own thinking — knowing what you know, what you
 
 ---
 
+<a id="byoc"></a>
 ## BYOC (Bring Your Own Context) — Memory as the Fifth Capital (Video N49)
 
 ### The Four Layers of Working Intelligence
@@ -567,6 +587,7 @@ Memory = stickiness. Provider has anti-incentive. Memory startups also fail beca
 
 ---
 
+<a id="karpathy-loop"></a>
 ## The Karpathy Loop & Auto-Research Pattern (Video N50)
 
 ### The Triplet (define before any code)
@@ -592,6 +613,7 @@ Don't run auto-research first on customer-facing or compliance systems. Earn the
 
 ---
 
+<a id="personal-ai-computer"></a>
 ## Personal AI Computer — The Sovereign Stack (Videos N58, N63)
 
 ### Six Layers of Ownership
@@ -612,6 +634,7 @@ Frontier labs lose money even at $200/mo. Cloud AI economics don't close. Apple 
 
 ---
 
+<a id="systems-of-record"></a>
 ## Agent Infrastructure as Systems of Record (Video N64)
 
 ### Why Issue Trackers Become Agent Substrate
@@ -636,6 +659,7 @@ The agentic substrate game favors incumbents who own systems of record. Greenfie
 
 ---
 
+<a id="agent-callable-business"></a>
 ## Agent-Callable Business / Agentic Commerce (Video N65)
 
 ### The Power Shift (first time in two decades)
@@ -656,6 +680,7 @@ Instant checkout converts 3x worse — battle is not the buy button, it's where 
 
 ---
 
+<a id="comprehension-over-generation"></a>
 ## Comprehension Over Generation — The New Professional Compass (Video N52)
 
 ### The Broken Chain
@@ -673,6 +698,7 @@ Production → effort → expertise → value collapses when generation is essen
 
 ---
 
+<a id="five-question-filter"></a>
 ## The 5-Question Filter for Agent Stacks (Video N61)
 
 Apply to every new agent product launch before investing team time:
@@ -683,3 +709,287 @@ Apply to every new agent product launch before investing team time:
 5. **Can you stack agents on top?**
 
 Most launches fail on questions 4 and 5. Stop thinking *switching*; start thinking *layering*. Route each job to the wrapper with the right data fabric (Salesforce for RevOps, Copilot for M365, Perplexity for research). Anthropic's enterprise strategy is being the embedded engine inside others' products — that's why Claude appears direct, embedded, and managed.
+
+---
+
+<a id="tcld-audit"></a>
+## The TCLD Work Audit (Video N66)
+
+### The Thin Ice Thesis
+The most dangerous moment for a job isn't when it disappears — it's when the job still exists but needs you less and less. AI doesn't replace whole jobs; it erodes pieces inside the job until a shock (recession, reorg) forces the question "why is this role packaged this way?" The travel agent pattern: the profession didn't die overnight, but the routine booking layer became indefensible and downturns forced the adjustment. Survivors migrated to complex travel, corporate accounts, and problem resolution.
+
+### The Data
+- OpenAI/UPenn: 80% of US workers have at least 10% of tasks affected by LLMs
+- Anthropic Economic Index: 49% of jobs already have a quarter of their tasks done with Claude
+- Microsoft (200K Bing Copilot conversations): the most delegated work is information gathering and writing
+
+### The Audit
+Review your last 10 working days (calendar, email, Slack, docs) and label every item:
+- **T — Theater**: performative work nobody actually consumes
+- **C — Commodity**: valuable, but doesn't need *you* specifically
+- **L — On the Line**: a strong junior (or current AI) could do 70% of it
+- **D — Durable**: judgment, question holding, reading the room
+
+**T + C is the fraction of your week "on thin ice."**
+
+### Properties of Durable Work
+1. **Question holding > question answering** — carrying the unresolved question is the value
+2. **Compounds toward you**, not toward the organization
+3. **Partially legible** — visible in outcomes, opaque in mechanism, so it can't be commoditized
+
+---
+
+<a id="agent-scaffolding-map"></a>
+## The Agent Scaffolding Map (Video N71)
+
+Most people waste ~40% of their AI time because they put everything in the prompt and don't understand the "mech suit" around the LLM. Each piece of scaffolding has a distinct role:
+
+| Piece | Use when | Notes |
+|-------|----------|-------|
+| **Prompt** | One-off, temporal, moment-specific work | Most people over-index here and waste hours re-prompting the repeatable |
+| **Skill** | A repeatable process | A clear markdown file that teaches a procedure (house-style PR reviews, structured outbound emails). Universal across Codex and Claude. Power law: 20% of your skills deliver 80% of the value |
+| **Plugin** | A complete workflow that travels with tools and data | Installable package that can contain skills, MCP servers, hooks, scripts, assets, commands. If you copy-paste between apps today, *you* are the human plugin |
+| **MCP / Connector** | The work needs another system | The universal plug to live data (Salesforce, Figma, GitHub). Not a plugin — a plugin is the larger package that may contain MCPs |
+| **Hook / Script** | The step must be deterministic | Formatting, schema validation, running real tests. Deterministic work is solved with code, not with model judgment |
+
+### The Valuable Skill of 2026
+Drawing the boundary of a workflow: **one plugin = one job**. "Customer success" is probably eight plugins, not one. Non-technical domain experts are already building plugins (editorial review, retail) — give this mental model to the C-suite so they support the transformation.
+
+---
+
+<a id="llm-judge-validator"></a>
+## Four-Tier Action Risk Classes & the LLM-as-Judge Validator (Video N73)
+
+### The Real Failure Mode
+Not jailbreak, not hallucination — the agent doing what it was trained to do but **exceeding its authorization**: inferring permission from a thread that didn't grant it, deleting a "stale" record, opening a PR because tests pass. The Lindy case: during internal testing, agents sent unauthorized emails.
+
+### What Doesn't Work
+- **Stricter prompts** — don't hold up in long context windows
+- **Manual confirmation** — trains the user to click OK without looking (like the EU cookie banner)
+
+### The Architecture That Works
+A separate **validator/judge model** at the action boundary — exactly where the tool call fires:
+- The **actor** must justify the action, cite evidence, and declare scope
+- The **judge** has one persona and one job: guard the user's intent
+- Never ask the same agent to pursue the sale AND police the sale — two primary goals in one model make it optimize for executing
+
+### Four Action Risk Tiers
+1. **Read-only** — light judge
+2. **Reversible writes** — validation
+3. **External actions** (emails, PRs, meetings) — strong judge, always
+4. **High-risk** (money, deletions, permissions, merges) — judge + human approval
+
+### Judge Design Rules
+- **Four outputs, not binary**: allow, block, revise, escalate. The middle path (draft without sending, archive instead of delete) is what makes the system usable
+- **Calibrated escalation rate**: too low is dangerous, too high destroys trust
+- Use a **frontier closed-source model** as judge: correlated judgment (shared blind spots between actor and judge) is nearly irrelevant with mid-2026 frontier models but real with open-source or older models
+
+### Key Insight
+The agent is no longer the product — the management system around the agent is.
+
+---
+
+<a id="retrieval-contract"></a>
+## Agent Memory: Retrieval Contract First (Video N75)
+
+### Why Classic RAG Broke
+Vector search RAG was a chatbot-era solution (embed question, fetch 3 similar chunks). Agents execute tasks and burn up to **85% of their compute rediscovering context** — re-reading documents already summarized, re-asking things the system knows, blowing the token budget before working. Bigger context windows don't fix it: context rot (Chroma research) degrades performance with large, disordered context.
+
+### What Agents Need: Bundles
+Not chunks — **operational context bundles**: customer record + policy + entitlement + prior tickets, with intent, filters, access policy, provenance, and confidence.
+
+### Four Knowledge Shapes (Four Industry Bets)
+1. **Similarity+** (Pinecone Nexus/NQL) — the retrieval contract must carry more than similarity
+2. **Hierarchical documents** (PageIndex) — many documents should never be chunked: hierarchical tree with per-node summaries, no embeddings, 98.7% on FinanceBench. The structure IS the meaning — a definition 40 pages away changes what a clause means
+3. **Tabular** (SAP + Dremio + Prior Labs) — enterprise knowledge lives in ERP/CRM tables, not prose; tabular foundation models (TabPFN, published in Nature)
+4. **Relational graph** (Microsoft GraphRAG) — suppliers–shipments, incidents–root causes
+
+### The Rule
+Don't pick the database first. Three steps:
+1. **Define the agent-data contract** before choosing any vendor
+2. **Write the concrete bundle** field by field
+3. **Choose primitives** that deliver that bundle
+
+---
+
+<a id="automate-build-buy-hire-wait"></a>
+## The Automate / Build / Buy / Hire / Wait Matrix (Video N79)
+
+### The Root Error
+Treating AI as a single blob ("we need an AI strategy") instead of decomposing the work. Gartner: 40%+ of agentic AI projects will die before end of 2027 — not because of the technology, but because of how investment decisions are made. **The unit of decision is the workflow, not the department.** An accounts receivable team doesn't have one AI problem; it has eight (collections prioritization, invoice matching, exception handling, dispute resolution...), each with a different shape routing to a different investment. Stuffing them into one RFP produces a mediocre tool.
+
+### Workflow = The Full Operating Loop
+Inputs, allowed actions, what a good output is, who reviews, what escalates, who is accountable. The model is a tiny part.
+
+### The Five Levers
+1. **Automate** — when work repeats, follows a clear pattern, and verifying quality is cheap (IBM AskHR, Intercom's Finn). Never when the value lives in the exceptions — that's where vendor demos fail. Golden rule: **don't automate what you can't describe**
+2. **Build** — when there's secret sauce and proprietary context, but only if the executive can say what "good" looks like
+3. **Buy** — distinguish primitives (Stripe) from complete workflows (Harvey); demand 80-90% overlap with how you actually work
+4. **Hire** — for the concrete gap the workflow reveals, not the purple unicorn
+5. **Wait** — deliberate prioritization of limited change management capacity
+
+### The Matrix
+- Common work + mature market = **buy**
+- Specific work + available primitives = **buy the building blocks, own the workflow**
+
+---
+
+<a id="agent-protocol-stack"></a>
+## The Agent Protocol Stack: MCP, A2A, AG-UI (Video N81)
+
+Of the six agent protocols launched in a year, three form the real stack — each answering one question:
+
+### MCP — What can the agent use? (Tools & Data Layer)
+- 14,000+ servers; standardizes tool definitions, auth, and schemas that used to be custom glue per integration
+- **Warning**: designed for high-trust environments and does NOT make tools safe. Invariant Labs documented tool poisoning attacks (malicious instructions hidden in tool descriptions)
+- Treat tool access as a **security boundary**: scopes, approval flows, audit trails
+
+### A2A — Who can it work with? (Delegation Layer)
+- The **agent card** is the first operating contract: what the agent is, what skills it exposes, how to interact
+- Launched with 50+ partners (Atlassian, Box, MongoDB, PayPal, Workday)
+- Adds flexibility at the cost of latency, failures, and lower predictability: use only when the workflow genuinely requires delegated expertise
+
+### AG-UI — How does the human keep control? (Human Control Layer)
+- For long-running, non-deterministic agents: streaming, shared state, approvals, interruptions, steering
+- Ignoring this layer generates **"supervision debt"**
+
+### Still Contested
+- **A2UI** (Google) — declarative UI rendered from an approved catalog, no arbitrary code
+- **AP2** — cryptographically signed "mandates" authorizing agent purchases (60+ collaborators)
+- **X402** (Coinbase, adopted by Cloudflare) — machine-to-machine payment over HTTP 402
+
+### Key Insight
+Teams are over-focused on choosing the model and under-specified on the **operating surface** around it.
+
+---
+
+<a id="agent-control-layer"></a>
+## The Agent Control Layer (Video N82)
+
+Who decides if your agent reaches production isn't the labs — it's the infrastructure control layer. Compute scales agents; **only governability deploys them**. The question is no longer whether intelligence can be served at scale, but whether it's governable: where it runs, for whom it acts, what it remembers, what it can spend, who stops it.
+
+### Five Control Points
+1. **Runtime** — models are stateless but real agents need memory and execution. Cloudflare Agents SDK (each agent in a durable object with its own SQL, websockets, scheduling), AWS Bedrock AgentCore (runtime + memory + identity + observability), Vercel AI Gateway (routing and budgets)
+2. **Identity** — the user-logs-in model breaks when an agent acts on someone's behalf. Auth0/Okta: delegated authority with constraints (token vault, async authorization, fine-grained auth for RAG). The dangerous agent isn't the most capable one — it's the one with **diffuse authority**
+3. **Data** — Snowflake Cortex, Databricks Mosaic AI: put the agent inside the governance perimeter of the semantic layer. An agent that can't distinguish actual revenue from forecast shouldn't draft the board deck
+4. **Payments** — Stripe plays across protocols (issuing, fraud, disputes, billing) while card networks fight over whose rails agent transactions run on
+5. **Observability** — agents fail differently (right tool, wrong question; task completed while violating intent). Datadog LLM observability, LangSmith, Braintrust, LangFuse converging toward a single control plane
+
+### The Kill Switch Is a Multilayer Product Feature
+Runtime cancels, identity revokes, gateway blocks, payments freeze. **"Telling the model to stop" is not a kill switch.**
+
+---
+
+<a id="hostile-reviewer-loop"></a>
+## The Hostile Reviewer Loop (Video N89)
+
+Everyone already has AI that generates a deck in minutes; what you don't have is a way to know it's *correct* (the cautionary tale: a clean-looking financial model with the revenue growth formula miscopied year after year — no #REF errors to give it away). The fix: move from **prompt** (asks for an output) to **workflow** (defines the stages the output must survive).
+
+### The Four Stages
+1. **Source prep** — inventory the work packet: owner, date, type, status (current or superseded?) before asking for anything
+2. **File specification** — for PowerPoint: narrative spine in plain English (audience, decision, what they must believe) + slide list with claims and source IDs. For Excel: tab architecture and calculation flow (raw data → assumptions → calculations → checks → summary)
+3. **Constrained build** — deck in two passes (storyboard with claims and evidence, *then* render, so visual polish can't hide a weak argument); Excel in three layers
+4. **Hostile review** — the prompt: *"Read this as a skeptical reviewer. List unsourced claims, numbers with no origin, inconsistent formulas. Don't fix anything — just enumerate."*
+
+### The Ralph Loop (Two-Model Iteration)
+Codex builds (better at completeness) → Opus performs the hostile review and generates edit lists → iterate until A-grade → final language check against LLM-isms.
+
+### Task Risk Gradient
+Formatting = low risk. Numeric synthesis, compliance, and claims that go up to leadership = high risk. There's no magic button because knowledge work is deeply domain-contingent — like Luke Skywalker, you have to build your own lightsaber.
+
+---
+
+<a id="agent-analytics"></a>
+## Agent Analytics: Completion vs Acceptance (Video N90)
+
+### The Blindness Problem
+A Cursor agent wiped a production database and backups in 9 seconds via one Railway API call. A traditional dashboard would have shown an active user and a long session — revealing nothing: what instruction the agent received, what credential it found, what tool call it made, what permission boundary failed. When the user is an agent, click/session/funnel analytics goes blind.
+
+### The New Unit: The Agent Run
+Not clicks, not sessions, not tokens — the **agent run** (a unit of delegated work). Instrument three minimal events tied to the same run ID: run start, task completed, mid-run user corrections. That yields completion rate and correction rate per workflow.
+
+### Correction Is the Most Valuable Signal
+When the user interrupts, edits, denies an approval, or reopens a task, they are **labeling that run**. A denied approval is effectively a free eval test case — convert corrections into eval tests, schema tests, or a research queue.
+
+### The Completion vs Acceptance Matrix
+- High completion + low acceptance = the agent finishes work nobody trusts
+- Both high = the workflow is ready for more autonomy
+
+Measure them separately: completing the task and the user trusting the result are different things, and the gap between them is the metric current dashboards can't see. Don't delegate agent analytics to engineering alone: technical traces are the base, but product needs its own run-level view to predict defective workflows before the "delete moment."
+
+---
+
+<a id="delegation-loop"></a>
+## The Delegation Loop & Chief of Staff Thread (Video N99)
+
+The paradigm shift: from asking a chatbot for help to **assigning jobs** to agents that use files, browser, and apps. The unit of work changes scale: "find the transcript, read the folder, compare versions, render the Word doc, verify it opens, continue until there's something real to inspect."
+
+### The Five-Part Loop Recipe
+Every assignment needs:
+1. **Goal** — what must exist when it's done
+2. **Sources** — where the inputs live
+3. **Standard** — what "good" looks like
+4. **Permission boundary** — what it may and may not touch
+5. **Proof of done** — receipts, not claims
+
+That's a loop, not a magic prompt.
+
+### The Chief of Staff Thread
+A persistent thread that knows the project — goal, folders, artifacts, standard — and **dispatches sub-jobs** without re-explaining the project each time. Stop using loose chats where you are the router.
+
+### Supporting Patterns
+- **Threads own the job** with sub-agents for scoped pieces (scouting, source checking, inspection) — separating planning, execution, and verification
+- **Skills** convert repeated corrections into reusable instructions that compose
+- **Computer use + plugins/MCP** to reach where the work actually lives
+- Start with ONE annoying, valuable loop (transcript → brief, folder organization, daily prep from calendar/email/Slack) — don't automate your whole life at once
+
+### Security Discipline
+Secrets in .env, never in chat. Don't grant write if read suffices. Nothing sends/publishes/spends without understanding the workflow. Require receipts.
+
+---
+
+<a id="agent-ownership"></a>
+## The Agent Ownership Framework (Video N106)
+
+The fastest way to make an agent dangerous is for everyone to use it and nobody to own it. The risk isn't evil AI — it's **unowned work**: the agent uses an old policy, pulls stale docs, turns an assumption into a recommendation, and because the output looks clean, nobody checks where it came from.
+
+### The Decision Rule
+If a system reads important context, produces work you act on, or touches a workflow others depend on, it needs a **named owner**. If nobody wants to own it, decommission it.
+
+### Every Agent Needs Four Things
+1. **A job** — expressible in one sentence: "prepare first-pass backlog items for refinement," not "make me more productive"
+2. **A diet** — what it reads. If the diet is stale, the agent is stale (Pokémon analogy: collecting them isn't the point; caring for them is)
+3. **Boundaries** — staged: read-only ≠ draft ≠ write to a system of record ≠ send to customers / merge code. Start read-only and make it earn permissions
+4. **A review loop** — run → human review → improve inputs → run again
+
+### From Prompts to Jobs
+Instead of "write acceptance criteria": concrete sources ("read the PRD, the last 20 tickets, and our 3 best examples"), boundaries ("don't create Jira tickets"), and output to review.
+
+### For Leaders: The Agent Roster
+A registry with owner cards — name, owner, job, sources, permissions, review cadence, failure modes — even if it's just a Slack channel, so agentic work isn't an invisible shadow process. Building an agent no longer earns credit; owning it and delivering value does.
+
+### The Skill Timeline
+Prompting was the skill of 2023, delegation of 2025, **maintenance is the skill of 2026**.
+
+---
+
+<a id="task-imagination"></a>
+## Task Imagination (Videos N108, N117)
+
+### The New Constraint
+With frontier models like Fable 5 (~10T parameters), for the first time the limit is not model capability but **our imagination for asking big enough jobs**. In 2023-24 we learned to "ask small" because asking big burned us — that habit is what's obsolete, not our judgment.
+
+### Give Fable-Sized Jobs, Not Prompt-Sized Asks
+The economics demand consulting-engagement-scale work: merging 2M CRM records, fact-checking a 500-page board packet, refactoring an entire repo. Spend 3-4 hours preparing a data pack if it saves 2 weeks. Signature behavior of the new class of models: instead of silently "fixing" garbage data, it quarantines it, inventories fake credentials without leaking them, and builds a review queue of dubious decisions on its own initiative — it behaves as if expecting to be audited.
+
+### Execution Commoditizes; Imagination Sets the Multiplier (N117)
+Mitchell Hashimoto's experiment: on ordinary "implement this feature" work, a budget model (<$1), GPT 5.5 (~$1.50), and Fable 5 ($9, 40 min) produced equally acceptable output — convergence is a fact about the *task*, not the models. The work everyone knows how to ask for is exactly where models have converged. His second test: optimizing gnarly systems code he wrote himself — 2 hours, $40, and performance he (one of the world's best) wouldn't have reached alone. The key question: **who assigned that task?** No backlog, no PM — an expert with thousands of hours of "fingertip awareness" who suspected something new was possible.
+
+### Implications for Leaders
+- BlackBerry executed brilliantly inside an already-imagined category; Apple imagined what a phone was
+- Electrified factories gained no productivity until the building was redesigned around distributed motors (Stripe migrated 50M lines in a day because it spent years building test coverage and review systems first)
+- You can't hire imagination — it only fires next to context, and your context is distributed among the people doing the work
+- The test question: **who in your organization can ask a model a $400 question today without asking permission?**
+
+### On Jobs
+This class of models only kills pure-execution work with no judgment; the rest of us become **model managers** who direct, feed, and judge.

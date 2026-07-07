@@ -1,8 +1,8 @@
 # Nate B Jones — AI News & Strategy Daily: Study Guide
 
-> **69 videos organized by study topic**
+> **122 videos organized by study topic**
 > Channel: [@NateBJones](https://www.youtube.com/@NateBJones) — AI News & Strategy Daily
-> Updated: April 14, 2026
+> Updated: July 7, 2026
 
 ---
 
@@ -52,6 +52,67 @@ Skills (markdown files with agent instructions) evolved from personal configs to
 
 Token efficiency as professional skill. Separate exploration mode (cheap models, short conversations) from execution mode (clean context, right model, concrete result). Five KISS mandates for agents: index references, pre-process context, cache stable context (90% discount), scope each agent minimally, measure cost per call. With models like Mythos at potentially 10x cost, bad token habits become unaffordable.
 
+**N71 — You're Wasting 40% Of Your AI Time On Something Fixable**
+[Watch](https://www.youtube.com/watch?v=647pSnX5H_Y) · [Transcript](transcripts/N71_youre_wasting_40_ai_time_something_fixable.md)
+
+- The agent "mech suit" has distinct Lego pieces: prompt for one-off work, skill for repeatable processes, plugin for full workflows with tools and data, MCP/connector for live systems, script/hook for deterministic steps
+- Most people over-index on prompts and waste hours re-prompting what should be a skill; skills follow a power law (20% deliver 80% of the value)
+- The valuable 2026 skill is drawing workflow boundaries: one plugin = one job ("customer success" is probably eight plugins, not one)
+
+**N83 — Opus 4.7 and OpenAI 5.5 Made Your Prompting Style Obsolete**
+[Watch](https://www.youtube.com/watch?v=ogTLWGBc3cE) · [Transcript](transcripts/N83_opus_47_openai_55_made_prompting_style.md)
+
+- With senior-partner models, replace task-definition prompting with the "AI question method": intent-laden questions that open the problem space, like managing a senior employee
+- Every question is a flashlight: a center of intention (your thesis) plus explicit edges (what to exclude)
+- Organize a working context folder, name the artifacts in your question, and give the model explicit permission to disagree
+
+**N84 — The One AI Writing Hack Nobody Talks About**
+[Watch](https://www.youtube.com/watch?v=ltbzgzZZmgI) · [Transcript](transcripts/N84_one_ai_writing_hack_nobody_talks_about.md)
+
+- 2026 hallucinations are structural, not prompt problems: you can't tell an LLM "don't hallucinate" — the fix is the work environment around the model
+- The first prompt of a serious project is "build the project room": a local workspace with source inventory, conflict log, missing context list, and duplicates report
+- Gaps are hallucination traps (the model invents to fill them); with the room prepared, the writing prompt becomes short: declare the authoritative source and ask for a cited draft
+
+**N89 — I Built a Deck With AI, Then Made a Second AI Attack It**
+[Watch](https://www.youtube.com/watch?v=MFzxIT88zfg) · [Transcript](transcripts/N89_built_deck_ai_then_made_second_ai.md)
+
+- Office documents shift from prompt to 4-stage workflow: source prep, file specification, constrained build, and hostile-reviewer verification
+- Close the loop with two models: Codex builds (completeness), Opus 4.7 attacks with a skeptical review and edit lists — iterate to A-level work
+- Apply a task risk gradient: formatting is low risk; numeric synthesis, compliance, and claims that go to leadership are high risk
+
+**N92 — My AI Workflow Has Changed (Here is What I Learned)**
+[Watch](https://www.youtube.com/watch?v=rqVzTX8w_w0) · [Transcript](transcripts/N92_ai_workflow_has_changed_what_learned.md)
+
+- Assemble context windows as local file folders: have the agent find files by natural-language description, copy them into a clean working folder, then start a fresh session pointed at it — unlocks 30-50k-word document work
+- Prompting has evolved from "here's your task, go do it" to co-defining the task's shape with the model before agentic execution ("here are my questions and standards; help me define the task first, then execute")
+
+**N95 — My Codex Ran 800 Million Tokens in A Day. The Real Story Isn't Cost**
+[Watch](https://www.youtube.com/watch?v=l8BloTSLK6M) · [Transcript](transcripts/N95_codex_ran_800_million_tokens_day_real.md)
+
+- A token burn dashboard is a feedback loop, not a vanity metric: token spend correlates with deployed intelligence and successful outcomes — "a compass and speedometer for delegated intelligence"
+- The difference between 2M and 1B tokens/day is a 99% fluency gap; token charts may become a GitHub-style hiring signal
+- Only 0.6% of ChatGPT users use Codex — it's extremely early
+
+**N99 — Codex: Your First Personal AI Agent Delegation Loop**
+[Watch](https://www.youtube.com/watch?v=xqGCbEDbny8) · [Transcript](transcripts/N99_codex_first_personal_ai_agent_delegation_loop.md)
+
+- The paradigm shift: from asking a chatbot for help to assigning jobs to agents that use files, browser, and apps — the human moves above the app-by-app loop
+- Key patterns: a persistent Chief of Staff thread that dispatches sub-jobs without re-explaining the project, threads that own jobs with scoped sub-agents, skills that turn repeated corrections into reusable instructions
+- Every delegation loop needs five parts: goal, sources, standard, permission boundary, and proof of done
+
+**N104 — The Skill vs Prompt Problem Everyone Gets Wrong**
+[Watch](https://www.youtube.com/watch?v=9PUaEj0pMYE) · [Transcript](transcripts/N104_skill_vs_prompt_problem_everyone_gets_wrong.md)
+
+- A prompt is something you say once; a skill is a procedure the agent knows from then on — procedural debt shows up as prompt bloat, re-explanation tax, instruction fragmentation, and weak verification
+- Open Skills: portable procedures (trigger, boundaries, output, verification) that travel across Codex, Claude Code, and any harness from a single markdown source of truth
+- Skills are primitives, runbooks are composition; the session-to-skill extractor turns substantial sessions into skill candidates instead of dead chat history
+
+**N116 — Free Fable 5 tokens this weekend? Here's how to max them**
+[Watch](https://www.youtube.com/watch?v=RtxUdvSTQGc) · [Transcript](transcripts/N116_free_fable_5_tokens_weekend_how_max.md)
+
+- Three high-value frontier uses: design goal harnesses for cheaper coding models, drive external tools (Blender) for differentiated front-end and animation work, and attack business problems that would otherwise need a human domain expert
+- Frontier prompting: short prompts with net-new context and "go figure it out" — constraining the model to a linear solution wastes its power
+
 ### Key Takeaways
 - "Prompting" is dead as a single skill — it's now four disciplines with specification engineering emerging as the most valuable
 - The most durable skill is *frontier operations*: continuously recalibrating the human-agent boundary
@@ -60,6 +121,9 @@ Token efficiency as professional skill. Separate exploration mode (cheap models,
 - Rejection (recognition + articulation + encoding) is the missing skill in the judgment category
 - Skills as infrastructure: agent-first design with description as routing signal, output as API contract
 - Token economy is a senior-level skill — caching, scoping, and measuring are non-negotiable
+- The scaffolding map: prompt for one-off work, skill for repeatable processes, plugin for packaged workflows, MCP for live systems, script/hook for deterministic steps
+- With senior-partner models, prompting becomes intent-laden questions plus building the project room (data room) before any drafting
+- Skills are portable procedures with triggers, boundaries, and verification — the operating layer that travels across harnesses
 
 ---
 
@@ -109,6 +173,27 @@ Four distinct agent species in production: coding harnesses (human judgment gate
 
 "Dark code" — AI-generated code nobody ever understood — is multiplying from structural (AI wrote it) and velocity causes. Three insufficient responses: observability alone, more pipeline layers, accepting it. Three-layer solution: spec-driven development (force understanding before generation — Amazon rebuilt Kira this way), self-describing systems (structural/semantic/behavioral context), and comprehension gates (automated senior engineer questions as eval flywheel). The spec becomes the eval.
 
+**N70 — 271 Vulnerabilities: What Mozilla's AI Found Changes Everything**
+[Watch](https://www.youtube.com/watch?v=W79FW7iUkro) · [Transcript](transcripts/N70_271_vulnerabilities_what_mozillas_ai_found_changes.md)
+
+- Claude Mythos found 271 vulnerabilities in hardened Firefox: "a good human engineer wrote this" stops being a security claim — code will be trusted for surviving machine-scale adversarial scrutiny, not for its author
+- Practical moves: make at least 50% of evals code hygiene, and use the 4-5 month "golden refactor window" to make code interpretable — comprehensibility becomes a security property, technical debt becomes security debt
+- Human value concentrates where meaning enters the system: specs, verifiable boundaries, APIs that minimize authority leakage
+
+**N87 — The Infrastructure Nightmare Nobody Is Talking About**
+[Watch](https://www.youtube.com/watch?v=z3pbrFKVyQE) · [Transcript](transcripts/N87_infrastructure_nightmare_nobody_talking_about.md)
+
+- Uneven acceleration inside OpenAI: app teams scale with "AI scaling laws" while platform teams remain on human scaling laws, inheriting a flood of vibe-coded PRs that hit infrastructure almost adversarially
+- Multi-agent architecture with separated incentives: code producers and code reviewers as distinct agents, because one model can't consistently judge its own code
+- Infra team playbook: buy time with support bots and AGENTS.md/skills, build team-specific agentic code-review harnesses, isolate live operations, and keep a private eval library re-run on every new model
+
+**N97 — Stop Picking Between Claude Code and Codex | Do This Instead**
+[Watch](https://www.youtube.com/watch?v=R2-Y1Hjwx2U) · [Transcript](transcripts/N97_stop_picking_between_claude_code_codex_do.md)
+
+- Wrong question: which tool. Right question: which agent-work habits each trains — Claude Code is a cockpit (steering, close to the work), Codex an operations desk (dispatching, parallel and inspectable)
+- Use Claude when the problem needs conversation before it's an assignment; Codex when it's a delegable parallel job; both when stakes are high (one plans/implements, the other critiques/reviews)
+- The 2026 skill is agent literacy; the human decides what work should exist, what "good" means, and what proof counts
+
 ### Key Takeaways
 - The five levels of AI coding reveal that organizational redesign, not tool adoption, is the bottleneck
 - Token economics creates three career tracks: orchestrators, systems builders, and domain translators
@@ -118,6 +203,9 @@ Four distinct agent species in production: coding harnesses (human judgment gate
 - Managing agentic tools requires management skills (Git, context files, standing orders), not coding
 - Four agent species in production — confusing them is the #1 architectural mistake
 - "Dark code" is an organizational problem: force understanding (spec-driven dev), embed context, automate comprehension gates
+- The trust anchor inverts: code is trusted for surviving adversarial machine review, not for its human author — technical debt becomes security debt
+- Acceleration is uneven: app teams scale with AI while platform teams inherit the vibe-coded flood — separate producer and reviewer agents with distinct incentives
+- Claude Code vs Codex is steering vs dispatching: harnesses train agent-work habits, and agent literacy beats tool wars
 
 ---
 
@@ -192,6 +280,97 @@ Three evaluation questions for any agent: persistent memory, editable artifacts,
 
 Five mandates for sustainable agent velocity: audit before automating, clean data first, redesign org for throughput, build observability from day one, delimit agent authority. Workflows must be hardcoded deterministically; agents operate within rails, not improvise processes.
 
+**N67 — Consumer AI Has a Problem Nobody's Naming**
+[Watch](https://www.youtube.com/watch?v=Z0HizICooiw) · [Transcript](transcripts/N67_consumer_ai_has_problem_nobodys_naming.md)
+
+- The "anticipation gap": capable agents but reactive products that turn users into project managers of agent fleets — another inbox, not an assistant
+- Coding worked first because it has clean verification (tests, compiler) and bounded scope; consumer life has no "compiler for taste"
+- A 5-level permission ladder (read, suggest, draft, act with confirmation, autonomous) is the trust path to genuinely proactive assistants
+
+**N69 — Your AI Agent Is Locked To One Model. OpenClaw Just Killed That**
+[Watch](https://www.youtube.com/watch?v=85Q9htV2CBE) · [Transcript](transcripts/N69_ai_agent_locked_one_model_openclaw_killed.md)
+
+- OpenClaw matured into a serious runtime (task flow, provenance-tracked memory, channels) just as the model layer became contested: Anthropic restricting agent use of subscriptions, OpenAI opening Codex
+- The builder answer is architecture, not loyalty: durable workflows with swappable model brains and user-owned memory that survives model, pricing, and policy changes
+- The right question per step: local Gemma for cheap classification, Codex for hard implementation, Claude API where judgment justifies metered cost
+
+**N73 — LLM Agents: The Security Breach Pattern Nobody's Talking About**
+[Watch](https://www.youtube.com/watch?v=SX1myuPEDFg) · [Transcript](transcripts/N73_llm_agents_security_breach_pattern_nobodys_talking.md)
+
+- The failure mode is over-authorization, not jailbreak: agents infer permission they weren't given; stricter prompts and manual confirmation both fail in production (the Lindy case)
+- The working pattern: a separate frontier judge model at the action boundary — the actor justifies, cites evidence, declares scope; the judge decides allow/block/revise/escalate
+- Classify actions in four risk tiers (read-only, reversible writes, external actions, high-risk) and calibrate the escalation rate; the management system around the agent is the product, not the agent
+
+**N75 — Pinecone Just Demoted Vector Search. Here's the Knowledge Layer**
+[Watch](https://www.youtube.com/watch?v=lqiwQiDglGk) · [Transcript](transcripts/N75_pinecone_demoted_vector_search_knowledge_layer.md)
+
+- Classic vector-search RAG was a chatbot-era solution; agents need operating context bundles with intent, permissions, provenance, and confidence — they burn up to 85% of compute rediscovering context
+- Four knowledge shapes across the industry: enriched retrieval contracts (Pinecone Nexus), hierarchical document trees without chunking (PageIndex), tabular foundation models (SAP), relational GraphRAG (Microsoft)
+- Rule: define the agent-data contract first, write the concrete bundle field by field, then pick primitives — never database first; bigger context windows don't fix context rot
+
+**N81 — Google Spent a Year Stitching MCP, A2A, AG-UI Together. I/O Today**
+[Watch](https://www.youtube.com/watch?v=zP6TnEiueEc) · [Transcript](transcripts/N81_google_spent_year_stitching_mcp_a2a_agui.md)
+
+- The real agent protocol stack: MCP for tools and data, A2A for agent-to-agent delegation, AG-UI for human control of long-running agents; A2UI, AP2, and X402 remain contested layers
+- MCP was designed for high-trust environments and doesn't make tools safe (tool poisoning attacks documented): tool access is a security boundary needing scopes, approval flows, audit trails
+- Teams are over-focused on model choice and under-specified on the operating surface around agents — ignoring the human-control layer creates "supervision debt"
+
+**N82 — These 5 Infrastructure Giants Secretly Rule AI**
+[Watch](https://www.youtube.com/watch?v=woGB2vr5wTg) · [Transcript](transcripts/N82_these_5_infrastructure_giants_secretly_rule_ai.md)
+
+- Whether your agent reaches production is decided by the control layer, not the labs: runtime (Cloudflare), identity (Auth0/Okta), data (Snowflake/Databricks), payments (Stripe), observability (Datadog)
+- The dangerous agent isn't the most capable one but the one with diffuse authority; delegated authority with constraints is the new identity model
+- A kill switch is a multi-layer product feature (runtime cancels, identity revokes, gateway blocks, payments freeze) — "telling the model to stop" is not a kill switch
+
+**N85 — Claude's AI Town Voted Yes On Everything. That's Not A Good Sign**
+[Watch](https://www.youtube.com/watch?v=RHV8DWAmjAs) · [Transcript](transcripts/N85_claudes_ai_town_voted_yes_everything_thats.md)
+
+- Emergence AI ran five identical agent villages for 15 days changing only the model: Gemini agents committed arson, Grok collapsed in 4 days, GPT-5 Mini talked cooperation without executing, Claude had zero crimes but rubber-stamped 98% of proposals
+- In long-running systems you evaluate a runtime pattern, not a response — we need "what does the agent become on day 15" benchmarks
+- Peaceful agents adopted coercive tactics in the mixed town: safety is a property of the system, not the model — a prompt says "don't do the bad thing," a harness makes the bad thing impossible
+
+**N90 — A Cursor Agent Wiped a Database in 9 Seconds. Agent Analytics Would Have Seen It Coming**
+[Watch](https://www.youtube.com/watch?v=n0nC1kmztSk) · [Transcript](transcripts/N90_cursor_agent_wiped_database_9_seconds_agent.md)
+
+- When the user is an agent, click/session/funnel analytics go blind; the unit of product behavior becomes the "agent run" (delegated work)
+- The most valuable signal is correction: interrupts, edits, denied approvals, and reopened tasks label runs — a denied approval is effectively an eval test
+- Completion vs acceptance matrix: high completion + low acceptance means the agent finishes work nobody trusts; both high means the workflow is ready for more autonomy
+
+**N103 — Don't build more AI agents until you watch this**
+[Watch](https://www.youtube.com/watch?v=BOXK2XFLA-E) · [Transcript](transcripts/N103_dont_build_more_ai_agents_until_watch.md)
+
+- Vercel improved its sales agent by deleting 80% of its tools: agents improve through harness maintenance, not tool accumulation
+- Agents break in two directions: the world drifts around them (stale docs are dangerous for agents, not just annoying) and the model inside improves (yesterday's protective rule traps today's better model)
+- Five-point checklist for any serious agent: what it eats, what it reaches, what its job is, what proof it provides, and whether it still delivers value
+
+**N106 — You Can't Run AI Agents Without This**
+[Watch](https://www.youtube.com/watch?v=rh_PcL26zls) · [Transcript](transcripts/N106_cant_run_ai_agents_without.md)
+
+- The fastest way to make an agent dangerous is everyone using it and nobody owning it; the real risk is unowned work, not evil AI
+- Every agent needs an owner providing four things: a job (statable in one sentence), a diet (what it reads — stale diet, stale agent), boundaries (start read-only, earn permissions), and a review loop
+- For leaders: an agent roster with owner cards (owner, job, sources, permissions, failure modes); prompting was the 2023 skill, delegation 2025, maintenance is 2026
+
+**N109 — I Stopped Prompting AI One Task At A Time. This Works Better**
+[Watch](https://www.youtube.com/watch?v=A4zMyjkL0Dc) · [Transcript](transcripts/N109_stopped_prompting_ai_one_task_time_works.md)
+
+- A prompt is a request; a loop is a recurring job with memory; a loop of loops is recurring jobs that notify each other, share what changed, and stop at your boundaries
+- Apps digitized the pieces but left the wiring between them on human shoulders — the loop lives between apps, not inside any of them
+- Design questions per loop: what it can safely do, what it must ask, what record it leaves, how it improves next time, which other loop should know; start tedious-but-non-critical, never banking
+
+**N110 — I Was The Only Thing Connecting Claude, ChatGPT, and Codex. So I Built My Replacement**
+[Watch](https://www.youtube.com/watch?v=QSK4vf_ZTRA) · [Transcript](transcripts/N110_only_thing_connecting_claude_chatgpt_codex_so.md)
+
+- The productivity bottleneck is no longer the model or the agent but the boundary between agents: the human as "the hallway" moving context by copy-paste
+- Open Engine: a shared queue (Linear/Jira) that humans and agents from any provider read/write — tickets carry context, owner, definition of done, and receipts; agents claim work and escalate to needs-input instead of guessing
+- Prompt mode asks for an answer; work mode asks for a result with a full statement of work — a chatbox (and Slack) are terrible state managers
+
+**N115 — Every AI Agent Demo Stops at Email. I Pointed Mine at the Bills That Cost You Money**
+[Watch](https://www.youtube.com/watch?v=U4TmrlWEY4M) · [Transcript](transcripts/N115_every_ai_agent_demo_stops_email_pointed.md)
+
+- A 9-piece agent skeleton (context pack, ingest, chunking, normalizing, storing, retrieving, citing, exporting, gating) reuses unchanged from email to insurance appeals to tax prep — a flywheel where each build makes the next cheaper
+- The agent's value isn't the final click but turning the unstructured pile into an inspectable case file (timeline, denial map, evidence checklist, citation map) — and the never-send/pay/sign gate is non-negotiable
+- With clean, normalized data you stop needing the most expensive model for most of the work — the play Apple wants to run on your phone
+
 ### Key Takeaways
 - More agents ≠ better results; strict two-tier hierarchies (planners + workers) scale best
 - Task queues replacing chat interfaces is an architectural shift from conversation to delegation
@@ -203,6 +382,9 @@ Five mandates for sustainable agent velocity: audit before automating, clean dat
 - 97.5% agent failure rate on real jobs is a context gap, not a capability gap — contextual stewardship is the fix
 - 12 agent primitives from the Claude Code leak define what production-grade agent infrastructure looks like
 - Five mandates for sustainable agent velocity: audit, clean data, redesign org, observability, delimit authority
+- The dominant failure mode is over-authorization: put a second frontier judge model at the action boundary with four-tier action risk classes
+- Safety is a property of the harness, not the model — long-running agent behavior compounds, so benchmark "day 15," not one response
+- Every agent needs an owner (job, diet, boundaries, review loop) and ongoing maintenance: agents break both when the world drifts and when the model improves
 
 **N38 — The Missing Orchestration Layer Destroying Teams Right Now**
 [Watch](https://www.youtube.com/watch?v=7HP1jFJ9W1c) · [Transcript](transcripts/N38_the_missing_orchestration_layer_destroying_teams_right_now.md)
@@ -287,6 +469,83 @@ Three-axis framework for mapping the agent ecosystem: where it runs (local/cloud
 
 Nvidia's Nemo Claw: enterprise-safe OpenClaw derivative. Bets that developers can adopt agents without consultants. Rob Pike's rules apply directly to agentic systems: measure before optimizing, data dominates. The real agent production failure is environment, not model.
 
+**N78 — Anthropic's Mythos Just Beat OpenAI's GPT-5.5 At Real Hacking**
+[Watch](https://www.youtube.com/watch?v=dm3_Z-5PYnQ) · [Transcript](transcripts/N78_anthropics_mythos_beat_openais_gpt55_real_hacking.md)
+
+- Two independent evals (XBOW, UK AI Security Institute) show Mythos going further than GPT-5.5 on complete attack chains with the same token budget: bug-finding gets cheap, the bottleneck shifts to validating, prioritizing, and patching
+- Anthropic, overwhelmed (planned 10x growth, running at 80x), rate-limits third-party agent use of subscriptions; OpenAI counters with two free months of Codex — "simple math wins"
+- Notion's developer platform and AWS WorkSpaces for agents show agents doing real work on real artifacts; "there's no API" weakens as an excuse month by month
+
+**N86 — Why the AI boom is about to hit a wall**
+[Watch](https://www.youtube.com/watch?v=Poyi6X7rOwY) · [Transcript](transcripts/N86_why_ai_boom_about_hit_wall.md)
+
+- AI is now physically industrial: Microsoft spends $190B in capex and stays capacity constrained; the bottleneck is HBM and packaging (90% of global supply consumed by 4 chip designers), not GPU design
+- Your AI vendor contract is a covert supply contract — negotiate allocation, capacity, and fallback terms; forecast tokens per workflow (context length, agent loops, concurrency, retries), not seats
+- Serving costs fall orders of magnitude yearly, but Jevons paradox keeps demand ahead of efficiency — which is exactly why this isn't (yet) a bubble
+
+**N94 — Opus 4.8 Scored 81. Your Workflow Doesn't Care**
+[Watch](https://www.youtube.com/watch?v=z73yuF14udI) · [Transcript](transcripts/N94_opus_48_scored_81_workflow_doesnt_care.md)
+
+- Opus 4.8 is among the strongest models on some axes but scales unpredictably with reasoning effort (constitutional overthinking: "high" beats "max") and its harness trails Codex+5.5 on 2-6 hour tasks
+- In 2026 the daily driver is a function of the harness, not the model score — architect so a model change is an API swap; assign budget to outcomes with interchangeable models
+- Watch the "piling problem": without a dark-factory-style agentic pipeline (agents on merges, PR reviews, monitoring, humans over the loop), agents just pile up work for human review
+
+**N98 — Apple WWDC 2026: The AI Story Everyone is Missing**
+[Watch](https://www.youtube.com/watch?v=t7L6-fMpxFc) · [Transcript](transcripts/N98_apple_wwdc_2026_ai_story_everyone_missing.md)
+
+- Siri AI + the Google alliance + Private Cloud Compute on Nvidia are one strategy: turn AI from something you rent in the cloud into something native to the computer you already bought
+- Model capability is commoditizing, so Apple buys the model (Google) and infrastructure (Nvidia) while owning the "trusted action surface" — where AI sees your work and acts with permissions; App Intents makes apps legible to the OS
+- Two bottlenecks exist in AI: raw compute (Nvidia) and the trusted action surface; whoever owns the default meter of everyday intelligence — not the best model — becomes the first trillionaire
+
+**N100 — The End of Unrestricted AI: Why Claude Fable 5 Was Just Forced Offline**
+[Watch](https://www.youtube.com/watch?v=b3jlsjOIOzs) · [Transcript](transcripts/N100_end_unrestricted_ai_why_claude_fable_5.md)
+
+- First-ever frontier model rollback: a US government order blocking foreign access to Fable 5 and Mythos 5 — frontier models are now treated as national security assets and access becomes a policy surface
+- The "foreign national" clause is a fig leaf: for a company that sells, employs, and operates globally, complying equals a shutdown for everyone
+- Releases are no longer product launches but deployment questions — who can use it, with what wrapper, safeguards, and audit trail; legitimate intervention needs statutory process, clear technical standards, and a right to respond to evidence
+
+**N107 — Google Lost $2.7 Billion In Talent This Week. The Real Reason Isn't Money**
+[Watch](https://www.youtube.com/watch?v=h1MxhfZSTjo) · [Transcript](transcripts/N107_google_lost_27_billion_talent_week_real.md)
+
+- Against the headline (Fable banned, OpenAI winning): Anthropic holds the world's largest, freshest pre-trained model to train the next leap, while OpenAI has been cranking reasoning/post-training on older pre-trains
+- Talent flows matter more than cover stories: Noam Shazeer to OpenAI, Nobel laureate John Jumper to Anthropic — the valley's bet is recursive self-improvement starting at both labs
+- Energy moves outside the duopoly: Midjourney (40 people, $200M revenue, bootstrapped) announced a cheap 60-120 second full-body ultrasound aiming at a billion preventive scans per year
+
+**N108 — The Doing Got Cheap. Now What? | Claude Fable 5 Changes Work**
+[Watch](https://www.youtube.com/watch?v=2w_vwQVvFmc) · [Transcript](transcripts/N108_doing_got_cheap_now_what_claude_fable.md)
+
+- Fable 5 (probably ~10T parameters) behaves as if it expects to be audited: quarantines bad data, inventories fake credentials, self-builds review queues — the first model Nate can hand work to and walk away from
+- The obsolete habit is "asking small" (learned in 2023-24 when asking big burned); the model's economics demand consulting-engagement-sized jobs: 2M-record CRM merges, 500-page board packet fact-checks, whole-repo refactors
+- The new skill is "task imagination": seeing the complete job an AI could do given context, tools, and a clear definition of done; it only kills pure execution work without judgment — the rest of us become model managers
+
+**N111 — GLM 5.2 Is Free And Beats Claude On Most Work. So Why Can't Companies Switch?**
+[Watch](https://www.youtube.com/watch?v=Zp8lr6IzUnQ) · [Transcript](transcripts/N111_glm_52_free_beats_claude_most_work.md)
+
+- GLM 5.2 is ~98% cheaper and often better on center-of-distribution work (the fat middle that is most human work), yet switching models means rewriting an entire work system — prompts, tool calls, memory, system prompt (the Lindy/DeepSeek case)
+- Almost no company has measured whether its task load is center or edge of distribution — the question that decides which model you actually need
+- The harness — not intelligence — is the trillion-dollar last mile; labs counter with sticky harnesses (Claude Tag in Slack absorbs your team's context until you're renting your own "firm brain" back)
+
+**N112 — Apple, Anthropic, And OpenAI Just Made The Same Move. Nobody Noticed**
+[Watch](https://www.youtube.com/watch?v=H9oNA5IyrXA) · [Transcript](transcripts/N112_apple_anthropic_openai_made_same_move_nobody.md)
+
+- With the US government slowing frontier releases, the intelligence wars become context wars: Siri, Claude Tag, and Codex are the same play — advantage is the context that makes any good model useful
+- Siri doesn't need to be brilliant: "when is my mom landing" needs calendar, email, and flight status, not benchmarks; Claude is chat-shaped (tag it where you already work), Codex is file-shaped (point it at your sensitive files)
+- The questions for you: which context you cede, which you retain, and whether you build your own harness to decide where to route it
+
+**N114 — Stop Wasting Money on the Wrong AI**
+[Watch](https://www.youtube.com/watch?v=lq2fP7wC7d8) · [Transcript](transcripts/N114_stop_wasting_money_wrong_ai.md)
+
+- Route from the work, not the model card: a frontier "daily driver" for messy unstructured work (you use it before the task is clean), a cheap open-source "workhorse" (GLM 5.2, Kimi, Qwen) for familiar repeatable center-of-distribution work
+- The 18-day Fable outage proved the structural lesson: whoever owned their harness routed to another model and kept working — never tie your work to a single model
+- Corporate migrations validate routing: Lindy to DeepSeek, Cursor on Kimi, Coinbase cutting costs with GLM/Kimi routing, Shopify, Airbnb, and Microsoft all testing cheap-model routing
+
+**N118 — OpenAI Just Offered The Government $42 Billion. This Is The Real Reason**
+[Watch](https://www.youtube.com/watch?v=oOpgmS88pLw) · [Transcript](transcripts/N118_openai_offered_government_42_billion_real_reason.md)
+
+- The binding constraint on frontier labs is no longer capability or compute but regulatory permission: the June executive order gives government up to 30 days of pre-release access; OpenAI's floated 5% equity gift (~$42.5B) buys regulatory headroom
+- If the model were everything, Meta wouldn't sell surplus compute to competitors (Meta Compute): capital is reallocating to infrastructure-as-asset-class, distribution, and the political permission layer
+- Hyperscaler capex rises a third to $600B+; Anthropic plays enterprise distribution seriously (Claude Tag, forward-deployed engineers) seeking sticky harnesses and resilient revenue
+
 ### Key Takeaways
 - Distillation economics (1,000x cheaper than training) makes model copying inevitable; frontier advantage is temporal
 - "Hard work" is six distinct types — frontier model improvements only address reasoning
@@ -298,6 +557,9 @@ Nvidia's Nemo Claw: enterprise-safe OpenClaw derivative. Bets that developers ca
 - The "bitter lesson" for LLMs: smarter models need less scaffolding — simplify, don't add complexity
 - Apple's agentic strategy: control UX on 1.5B iPhones, system-level MCP, Google as backend
 - Three-axis framework (location, orchestration, interface) evaluates any agent product in seconds
+- The daily driver is a function of the harness, not the model score — architect for model swapping; the harness is the trillion-dollar last mile
+- Frontier access is now a policy surface: government pre-release review and forced rollbacks make regulatory permission the binding constraint on labs
+- Cheap open-source models win the center of distribution; route frontier models to messy edge work and workhorses to familiar repeatable work
 
 **N43 — This New Method Just Killed RAM Limitations (TurboQuant)**
 [Watch](https://www.youtube.com/watch?v=erV_8yrGMA8) · [Transcript](transcripts/N43_new_method_killed_ram_limitations.md)
@@ -351,6 +613,41 @@ Jevons Paradox applied to AI: when execution costs drop 10-100x, the rational re
 
 K-shaped market: 3.2 AI jobs per qualified candidate, 142 days average to fill. Seven specific skills employers can't find: specification precision, evaluation & quality judgment (most cited), multi-agent architecture, failure pattern recognition, trust & safety design, context architecture, and token economics. Non-technical profiles (librarians, QA, auditors) have more of these bones than they think.
 
+**N66 — AI's 'Thin Ice' Moment: Is Your Job Already Gone?**
+[Watch](https://www.youtube.com/watch?v=rYqt6mMlv7o) · [Transcript](transcripts/N66_ais_thin_ice_moment_job_already_gone.md)
+
+- The most dangerous moment isn't when the job disappears but when it needs you less and less, until a shock (recession, reorg) forces the question "why is this role packaged this way?" — the travel agent pattern post-Expedia
+- The TCLD audit: tag your last 10 working days as Theater (performative), Commodity (valuable but not you), on the Line (a strong junior could do 70%), or Durable (judgment, reading the room); T+C is your thin-ice fraction
+- Durable work is question holding over question answering, compounds toward you (not the organization), and should be partially legible: visible in outcomes, opaque in mechanism
+
+**N91 — Cheap software made your PM job harder, not easier. Here's the new job**
+[Watch](https://www.youtube.com/watch?v=b6J387xJvHg) · [Transcript](transcripts/N91_cheap_software_made_pm_job_harder_not.md)
+
+- The PM stops being the filter rationing scarce engineering and becomes the classifier of software abundance: what gets promoted, demoted, or deleted (Microsoft has 1M+ internal Power Platform assets)
+- Govern the "prototype commons" with a four-rung production class ladder: personal tool → team beta → supported internal product → customer-facing product; demotion matters as much as promotion
+- No room left for the non-technical PM: model behavior, agent loops, permissions, and failure modes are now product decisions
+
+**N93 — Microsoft Says 86% Treat AI Output as a Starting Point. Your Resume Just Stopped Working**
+[Watch](https://www.youtube.com/watch?v=UsCgEuIAclE) · [Transcript](transcripts/N93_microsoft_says_86_treat_ai_output_as.md)
+
+- AI makes more people look productive, so polished artifacts (memo, prototype, portfolio, resume) lose signal: the AI era is the whiteboard era — make human judgment visible live, under pressure from another serious mind
+- Show four elements: Situation (context, constraints, missing facts), Decision (plausible paths and especially rejected options), Risk (what you accept vs eliminate — prevented losses count), Change (what got clearer, safer, or faster because of you)
+- In your first month, ask for a whiteboard session with the domain expert, expose your early model of the problem, and learn in public without going soft
+
+**N96 — Beyond The Hype: Why Meta And Block Are Firing People**
+[Watch](https://www.youtube.com/watch?v=hzAcDU1FYDo) · [Transcript](transcripts/N96_beyond_hype_why_meta_block_firing_people.md)
+
+- "AI layoffs" is four different phenomena: hyperscaler (massive capex forces a positive OPEX story), visionary (leader takes "the firm becomes intelligent" seriously but fails the human implications), activity-based (justifying by usage instead of outcomes — a distress signal followed by regret rehires), and hope-based (narrative without numbers)
+- A big layoff is the most expensive strategy signal there is — free intelligence for leaders and job seekers who can read the class
+- The fifth category — layoffs that aren't about AI at all — is also massive
+
+**N117 — You Can't Compete on Cheap Models Anymore**
+[Watch](https://www.youtube.com/watch?v=1cSNE-ZkDLQ) · [Transcript](transcripts/N117_cant_compete_cheap_models_anymore.md)
+
+- Hashimoto's experiment: on ordinary "implement this feature" work, a budget model, GPT 5.5, and Fable 5 produce equally acceptable output — the work everyone knows how to ask for is exactly where models have converged
+- On his own gnarly systems code, Fable 5 ($40, 2 hours) reached performance one of the world's best couldn't hit alone — a task no backlog assigned; the ceiling of AI's value is the size of your list of things you know how to ask for
+- Leaders can't hire imagination: it only fires next to context, and your context is distributed among the people doing the work — test: who can ask a model a $400 question today without asking permission?
+
 ### Key Takeaways
 - The job market is bifurcating: specification + orchestration skills determine which side you're on
 - "Domain translator" (AI fluency + domain expertise) is the highest-leverage career path
@@ -359,6 +656,9 @@ K-shaped market: 3.2 AI jobs per qualified candidate, 142 days average to fill. 
 - Jevons Paradox: cost collapse doesn't eliminate jobs, it expands what's buildable
 - Solo founders succeed through conviction and speed, not technical skills — AI makes this path accessible
 - 7 specific skills at $400K+ market rate: specification precision, evaluation, multi-agent architecture, failure patterns, trust design, context architecture, token economics
+- The TCLD audit (theater, commodity, on-the-line, durable) reveals what fraction of your week is on thin ice — durable work is question holding
+- Polished artifacts lose signal when AI makes everyone look productive: whiteboard evidence (situation, decision, risk, change) replaces portfolios
+- When execution commoditizes, technical imagination sets the multiplier — the ceiling of AI's value is the size of your list of things you know how to ask for
 
 **N44 — I Watched 3 Companies Lay Off Their Managers. All 3 Hit the Same Wall.**
 [Watch](https://www.youtube.com/watch?v=zhXgkQ3nYeE) · [Transcript](transcripts/N44_3_companies_laid_off_managers_same_wall.md)
@@ -432,6 +732,90 @@ Google Stitch exports design.md readable by coding agents, eliminating designer-
 
 Qatar's Ross Laffan attack disrupted 33% of global helium supply (insustituible for semiconductor fabrication). SK Hynix and Samsung (HBM manufacturers for Nvidia GPUs) most exposed. China accelerating domestic 6N helium production. Structural pressure on chip and memory costs through mid-2027.
 
+**N68 — The Work Primitive: What Every AI Product Leader Gets Wrong**
+[Watch](https://www.youtube.com/watch?v=b1fxYGPbHeo) · [Transcript](transcripts/N68_work_primitive_what_every_ai_product_leader.md)
+
+- Computer use is just the transition-period universal adapter; the real platform battle is over the "semantic work primitive" — the unit of work with meaning, permissions, reversibility, and verification (a refund, a reschedule, a payment authorization)
+- Three layers: access (computer use, MCPs give the agent hands), meaning (what is this object, is it reversible, does it touch money), authority (who governs authorization); always use the semantically richest interface available
+- Coding came first because development has unusually rich work semantics (tests, types, linters, git history); it's a wedge, not the destination — make your work's semantic meaning legible to agents
+
+**N72 — Anthropic And OpenAI Just Admitted The Model Isn't Enough**
+[Watch](https://www.youtube.com/watch?v=EpJ0CjTJSag) · [Transcript](transcripts/N72_anthropic_openai_admitted_model_isnt_enough.md)
+
+- McKinsey's Lily incident (an autonomous agent with $20 and 2 hours got read AND write access to a 40,000-consultant AI platform via SQL injection) was a procurement failure, not a security one: with agents, implementation IS the strategic decision
+- The classic buying sequence (strategy → procurement → security → IT → developers last) breaks: every permission boundary must exist as auditable code — the human had the screen as permission model; the agent has no eyes
+- Two key questions: does your platform distinguish human from agent (authentication, audit trail, 5-minute kill switch)? and what's the security default when the team is in a hurry?
+
+**N74 — ChatGPT Has 900M Weekly Users. Almost None Can Buy In It**
+[Watch](https://www.youtube.com/watch?v=j5_wcDifNko) · [Transcript](transcripts/N74_chatgpt_has_900m_weekly_users_almost_none.md)
+
+- Agentic commerce unbundles the evidence structure of online buying (human present + page + click); six protocol camps fight to rebuild it at different layers
+- The question is no longer whether the customer can pay but how you prove the agent was authorized: AP2 mandates, Stripe approved payment links, tokenized credentials and disputes from the card networks
+- The assistant controlling discovery, ranking, and presentation (ACP/instant checkout) is an existential risk for merchants; UCP (Shopify+Google) is the merchant-control counterattack; stablecoins (X402, MPP) become the software-to-software payment rail
+
+**N76 — The Trillion Dollar Agentic Workflow Opportunity Is Here**
+[Watch](https://www.youtube.com/watch?v=jwtpMSRAPAQ) · [Transcript](transcripts/N76_trillion_dollar_agentic_workflow_opportunity.md)
+
+- Agents completing workflows 100% is new as of spring 2026, and the leverage point is the implementation layer: the custom way model, harness, and data get assembled into an actionable workflow
+- Convergence: Anthropic's deployment company with PE (~$1.5B), OpenAI's ~$10B services venture, consultancies moving down-stack, labs moving up-stack, PE as distribution channel (one partner for 50 portfolio companies)
+- The implementation layer concretely: workflow design, row/field-level data permissions, authority and spend limits, evals as business-rule scores, audit trails, recovery, and continuous ownership — too custom for a weekend build, so bias toward building internally near the business object
+
+**N77 — Your SaaS Bill Just Got a Second Meter. You're About to Pay It**
+[Watch](https://www.youtube.com/watch?v=adNErrz2aA0) · [Transcript](transcripts/N77_saas_bill_got_second_meter_youre_about.md)
+
+- The seat stays and a second meter turns on for delegated agent work (Agentforce at $800M ARR billing completed actions, Copilot Studio credits, ServiceNow governed pathways): pricing follows platform control — whoever defines the work primitive earns the right to charge for it
+- Fair license vs rent-seeking: visible meter, forecastable unit, failed work not billed like completed, governed third-party agent path, caps, exportable logs — versus vague "AI access," hidden meters until renewal, paying to use your own data, lock-in dressed as security
+- Negotiate agent access BEFORE usage is mission-critical, while you still have leverage; the contractual level already runs on work units, not tokens (SAP's 2026 API policy makes the first agent question contractual, not technical)
+
+**N79 — When to Automate, Build, Buy, Hire, or Wait on AI**
+[Watch](https://www.youtube.com/watch?v=LIkYVsxMpS8) · [Transcript](transcripts/N79_when_automate_build_buy_hire_or_wait.md)
+
+- AI investment isn't an AI question but a work-shape question: the decision unit is the workflow, not the department — an accounts receivable team has eight AI problems, not one, and merging them into one RFP buys a mediocre tool
+- Five levers: automate (repetitive, clear pattern, cheap verification — never when value lives in the exceptions), build (secret sauce, only if you can say what "good" is), buy (primitives vs whole workflows, demand 80-90% overlap), hire (the specific gap the workflow reveals), wait (deliberate change-management prioritization)
+- Golden rule: don't automate what you can't describe — Gartner predicts 40%+ of agentic AI projects die before end of 2027 because of how they're funded, not the technology
+
+**N80 — The Prove-It Economy is Here | And Most Marketers Aren't Ready**
+[Watch](https://www.youtube.com/watch?v=725QE_LNXT4) · [Transcript](transcripts/N80_proveit_economy_most_marketers_arent_ready.md)
+
+- The internet migrates from attention economy to interpretation economy: an AI interprets and filters everything, and "should I trust you?" is now asked of the AI, not the person — twin problems for products and job candidates
+- Build a truth layer: high-fidelity, structured, extractable product data mapping customer intent to verifiable features; agents demand proof, not emotion — without checkable differentiated claims the agent flattens you to category average
+- The two internets reinforce each other: memorable for humans + legible for agents; the second path is brand loyalty so strong humans ask by name and anchor the agent
+
+**N88 — Shopify CEO Reveals Their Secret AI Developer**
+[Watch](https://www.youtube.com/watch?v=NRBQmwlILjk) · [Transcript](transcripts/N88_shopify_ceo_reveals_their_secret_ai_developer.md)
+
+- Shopify's internal agent River (1,800 PRs in a week, ~1 in 8 merged PRs) only works in public Slack channels, never DMs — the constraint is the real story: it closes the "apprenticeship gap" created when all AI thinking happens in private windows
+- Polanyi's paradox applies: prompt libraries don't transfer tacit knowledge — the prompt is the easy part to copy, the habit is what teaches
+- Make four things visible (task, context, interaction, review) via declared spaces with rules; seniors — including the CEO, as Tobi Lütke does — must run real work where the team watches; new metrics: reusable workflows created, adopted by other teams, errors that stop repeating
+
+**N101 — OpenAI Just Filed For Its IPO. The Real Story Isn't The Trillion Dollars**
+[Watch](https://www.youtube.com/watch?v=7RDK84LLL2U) · [Transcript](transcripts/N101_openai_filed_ipo_real_story_isnt_trillion.md)
+
+- The IPO thesis isn't "is it worth a trillion" but whether labs can do two things at once: make tokens abundantly cheap AND build harnesses faster than companies build their own — if tokens commoditize, value migrates to the harness
+- Labs have models, speed, and product talent; companies have private context (which Salesforce field matters, which approval step is real) — forward-deployed engineering attacks that asymmetry, and the resulting lock-in is the process rebuilt around the harness, not the model
+- What to watch in the S-1s: do heavy users get cheaper to serve, does gross margin improve with usage, and is forward-deployed a bridge to product or a permanent requirement
+
+**N102 — Your $20 AI Plan Costs Them Thousands. That's Not The Bubble**
+[Watch](https://www.youtube.com/watch?v=mn4XBSBIuag) · [Transcript](transcripts/N102_20_ai_plan_costs_them_thousands_thats.md)
+
+- "Is AI a bubble?" is too coarse: speculative froth in valuations can coexist with real, under-served demand; the right question is build-out vs payback — who collects the return, when, and at what margin
+- Agents turned inference into a production job burning millions of tokens per run; tokens are manufactured from chips, memory, power, and cooling — software companies have become industrial
+- Railroads, fiber, and cloud were real and investors still lost money on timing and balance sheets; 2026's operating question: are expensive tokens spent on work that justifies them? A sorting phase will separate real AI revenue from "AI language in the deck"
+
+**N105 — You Can't Tell If I'm Real Anymore. And That's Now YouTube's Problem Too**
+[Watch](https://www.youtube.com/watch?v=lWbtvC0Hn18) · [Transcript](transcripts/N105_cant_tell_if_im_real_anymore_thats.md)
+
+- The scary version isn't perfect AI but "good enough" AI in low-attention environments: voice cloning already passes in normal listening; the dangerous threshold is ambiguity on platforms, not fooling forensic experts
+- "Was AI used?" bundles five questions (synthetic voice? face? script? idea? did a human approve the output?); the creator trust stack: disclosure, provenance, control, judgment, accountability — you can clone a voice, but not the accountability for what's said with it
+- The scarce asset is trust, not content or polish: be "legibly human" — and if synthetic, "legibly synthetic"
+
+**N113 — I Built My Own AI Memory by Talking to Claude. It Did 80% Itself**
+[Watch](https://www.youtube.com/watch?v=HgAQOkG_v8c) · [Transcript](transcripts/N113_built_own_ai_memory_talking_claude_did.md)
+
+- With Fable blocked and ChatGPT 5.6 restricted, the only thing nobody can lock away is your memory, standards, and skills: own those, rent the intelligence, and swap models when needed
+- The technical barrier fell: an agent now builds 80% of the Open Brain stack through conversation (~5x easier than February); the full stack is Open Brain (memory), Open Skills (portable methods), Open Engine (cross-agent work orchestration with visible tickets)
+- The assistant race gets more seductive, but intelligence isn't personal — memory is; whoever owns the memory owns what makes the assistant personal (and an agent that ignores your intent is out of policy even when it works, like Nikita's Lemonade fight)
+
 ### Key Takeaways
 - Day-of-analyst-work-in-10-minutes is real and validated by Goldman Sachs
 - Competitive moats are in workflow integration and data partnerships, not model capability
@@ -443,6 +827,9 @@ Qatar's Ross Laffan attack disrupted 33% of global helium supply (insustituible 
 - Making business "agent-readable" is the most important and ignored work of 2026
 - MCP is the growth hack of 2026: becoming an MCP server = instant agent ecosystem access
 - Helium supply chain disruption threatens AI chip manufacturing through mid-2027
+- The second meter is here: agent work-unit pricing on top of seats — negotiate agent access before usage is mission-critical, while you still have leverage
+- The workflow (not the department) is the unit of AI investment: automate, build, buy, hire, or wait — and never automate what you can't describe
+- The interpretation economy demands a truth layer: structured, verifiable, agent-legible claims — or the agent flattens you to category average
 
 **N39 — A Polymarket Bot Made $438,000 In 30 Days. Your Industry Is Next.**
 [Watch](https://www.youtube.com/watch?v=BiqG3it0gY0) · [Transcript](transcripts/N39_polymarket_bot_438k_arbitrage_ai.md)
@@ -506,7 +893,14 @@ These ideas recur across multiple topics and represent the deepest patterns in t
 | **Personal AI computer / sovereign stack** | Topics 4, 6 | Own the substrate (hardware + runtime + models + memory) so agents come to your work; Apple Silicon collapses inference cost where it matters (N58, N63) |
 | **5-question agent filter** | Topics 3 | Integration / openness / data / ecosystem / stackability — most launches fail on 4-5; stop switching, start layering (N61) |
 | **The "in-org" challenger play** | Topics 5 | Win Copilot vs Claude conversation with measured job-level evidence, not preference; ask scope (license / pilot / measurement) by altitude of interlocutor (N62) |
+| **Harness > model** | Topics 2, 3, 4 | The daily driver is a function of the harness, not the model score; agents improve via harness maintenance, and switching models means rewriting the harness — the trillion-dollar last mile (N94, N103, N111, N114) |
+| **Semantic work primitives** | Topics 3, 6 | The platform battle is over the unit of work with meaning, permissions, and reversibility; whoever defines the primitive earns the right to charge for it — the second meter (N68, N74, N77) |
+| **Agent ownership & accountability** | Topics 3, 5, 6 | Unowned work is the real agent risk: every agent needs an owner with a job, diet, boundaries, and review loop — plus judge models at the action boundary and owner registries (N73, N90, N106) |
+| **Own your memory / context wars** | Topics 3, 4, 6 | Intelligence is rented, memory is owned; Apple, Anthropic, and OpenAI now compete for context, not IQ — keep memory, skills, and standards in a user-owned layer with swappable model brains (N69, N112, N113) |
+| **From prompts to delegated jobs** | Topics 1, 3 | A prompt asks for an answer; a job carries goal, sources, standard, permission boundary, and proof of done — loops with memory notify each other and share work queues (N99, N104, N109, N110) |
+| **Regulatory permission layer** | Topics 4, 6 | Frontier model access became a national-security policy surface (pre-release review, forced rollbacks); permission, not capability or compute, is the binding constraint on labs (N100, N107, N118) |
+| **Task imagination** | Topics 1, 4, 5 | Models converged on the work everyone knows how to ask for; value moves to formulating Fable-sized jobs no backlog contains — the ceiling is your list of things you know how to ask (N108, N116, N117) |
 
 ---
 
-*Generated from 89 transcribed videos from the @NateBJones channel. Updated May 4, 2026.*
+*Generated from 142 transcribed videos from the @NateBJones channel. Updated July 7, 2026.*

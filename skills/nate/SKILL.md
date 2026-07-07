@@ -1,14 +1,14 @@
 ---
 name: nate
 description: |
-  AI strategy knowledge base from Nate B Jones (@NateBJones), distilled from 89 videos. Covers: 5 levels of AI coding, 4 prompting disciplines, edge automation, agent architecture, career bifurcation, specification engineering, domain translators, level 201 skills gap, CTO playbook, coordination tax, agentic management, evaluation architecture, rejection as skill, convergent agent patterns, Jevons paradox in AI, middleware trap, frontier operations, foundation before leverage, contextual stewardship, agent-readable business, 4 agent species, skills as infrastructure, 12 agent primitives, token economy, bitter lesson for LLMs, 7 AI career skills, agent velocity mandates, intelligence arbitrage, 5 durable verticals, management unbundling, dark code, behavioral lock-in, agent infrastructure stack, sovereign memory, BYOC (Bring Your Own Context), agent-native primitives vs human scaffolding, Karpathy auto-research loops, world model failure modes, comprehension over generation, agent infrastructure layering, Apple Silicon local inference, agent-callable business / agentic commerce.
-  Use whenever the user asks about AI strategy for dev teams, AI coding adoption, agent architecture, career advice in the AI era, or organizational change. Also trigger on "Nate", "NateBJones", "dark factory", "domain translator", "edge automation", "coordination tax", "middleware trap", "frontier operations", "contextual stewardship", "agent primitives", "skills infrastructure", "token economy", "intelligence arbitrage", "dark code", "behavioral lock-in", "management unbundling", "sovereign memory", "agent infrastructure stack", "BYOC", "Karpathy loop", "auto-agent", "world model", "agent-callable", "agentic commerce", "agent-native primitives", "comprehension over generation", "personal AI computer", "Apple Silicon AI".
-  MANDATORY TRIGGERS: Nate, NateBJones, AI coding levels, specification engineering, domain translator, AI strategy, agent architecture, middleware trap, contextual stewardship, agent primitives, intelligence arbitrage, dark code, behavioral lock-in, BYOC, Karpathy loop, agent-callable business, agentic commerce, comprehension over generation
+  AI strategy knowledge base from Nate B Jones (@NateBJones), distilled from 142 videos. Covers: 5 levels of AI coding, 4 prompting disciplines, edge automation, agent architecture, career bifurcation, specification engineering, domain translators, level 201 skills gap, CTO playbook, coordination tax, agentic management, evaluation architecture, rejection as skill, convergent agent patterns, Jevons paradox in AI, middleware trap, frontier operations, foundation before leverage, contextual stewardship, agent-readable business, 4 agent species, skills as infrastructure, 12 agent primitives, token economy, bitter lesson for LLMs, 7 AI career skills, agent velocity mandates, intelligence arbitrage, 5 durable verticals, management unbundling, dark code, behavioral lock-in, agent infrastructure stack, sovereign memory, BYOC (Bring Your Own Context), agent-native primitives vs human scaffolding, Karpathy auto-research loops, world model failure modes, comprehension over generation, agent infrastructure layering, Apple Silicon local inference, agent-callable business / agentic commerce, TCLD audit (theater/commodity/on-the-line/durable), anticipation gap, semantic work primitives, harness over model, harness maintenance, skills vs prompts (portable operating layer), agent ownership (job/diet/boundaries/review loop), loop of loops, task imagination, context wars, second meter / agent work units pricing, agent protocol stack (MCP/A2A/AG-UI), agent analytics (completion vs acceptance), LLM-as-judge validators, interpretation economy / truth layer, own your memory rent the intelligence, technical imagination.
+  Use whenever the user asks about AI strategy for dev teams, AI coding adoption, agent architecture, career advice in the AI era, or organizational change. Also trigger on "Nate", "NateBJones", "dark factory", "domain translator", "edge automation", "coordination tax", "middleware trap", "frontier operations", "contextual stewardship", "agent primitives", "skills infrastructure", "token economy", "intelligence arbitrage", "dark code", "behavioral lock-in", "management unbundling", "sovereign memory", "agent infrastructure stack", "BYOC", "Karpathy loop", "auto-agent", "world model", "agent-callable", "agentic commerce", "agent-native primitives", "comprehension over generation", "personal AI computer", "Apple Silicon AI", "TCLD audit", "anticipation gap", "work primitives", "second meter", "agent work units", "loop of loops", "task imagination", "context wars", "harness maintenance", "agent owner", "agent protocol stack", "A2A", "AG-UI", "agent analytics", "truth layer", "interpretation economy", "hostile reviewer", "project room", "cheap workhorse", "daily driver model".
+  MANDATORY TRIGGERS: Nate, NateBJones, AI coding levels, specification engineering, domain translator, AI strategy, agent architecture, middleware trap, contextual stewardship, agent primitives, intelligence arbitrage, dark code, behavioral lock-in, BYOC, Karpathy loop, agent-callable business, agentic commerce, comprehension over generation, TCLD audit, anticipation gap, work primitives, harness over model, skills vs prompts, agent ownership, loop of loops, task imagination, context wars, second meter, agent analytics
 ---
 
 # Nate B Jones — AI Strategy Knowledge Base
 
-This skill contains the distilled knowledge from 89 videos by Nate B Jones ([@NateBJones](https://www.youtube.com/@NateBJones), channel "AI News & Strategy Daily"), one of the most insightful voices on AI strategy for development teams and organizations.
+This skill contains the distilled knowledge from 142 videos by Nate B Jones ([@NateBJones](https://www.youtube.com/@NateBJones), channel "AI News & Strategy Daily"), one of the most insightful voices on AI strategy for development teams and organizations.
 
 When the user invokes this skill, draw on the frameworks and insights below to provide strategic advice grounded in Nate's analysis. Always cite the specific video number when referencing a concept so the user can go deeper.
 
@@ -17,7 +17,7 @@ For the full study guide organized by topic with video links, read `references/s
 
 ---
 
-## The 30 Core Ideas
+## The 36 Core Ideas
 
 These are the foundational ideas that run across all of Nate's content. Use them as the lens for answering questions about AI strategy, development team transformation, and career advice.
 
@@ -110,6 +110,24 @@ Three converging shifts redefine professional value: (a) demonstrating *comprehe
 ### 30. Agent-native primitives, auto-research loops, and the personal AI computer (Videos N48, N50, N58, N63, N64)
 Four structural patterns are reshaping how agents and humans co-exist. (a) *Agent-native primitives*: bolting MCP onto a paginated human API isn't agent-native; the cuello de botella ya no es el modelo, es el andamiaje humano del software — invest in primitives where agent speed becomes irrelevant (N48). (b) *Auto-research loops* (Karpathy): a single editable surface + an objective metric + a time budget enables meta-agents that optimize harnesses overnight; the moat is eval/sandbox/traces/governance, not model size (N50). (c) *Personal AI computer / sovereign stack*: own the substrate (hardware + runtime + models + memory + interfaces) so agents come to your work, not your work to others' cloud — Apple Silicon makes inference cost approach zero where it matters most (N58, N63). (d) *Agent infrastructure as systems of record*: incumbents who own state machines (Atlassian, Salesforce, ServiceNow, SAP) win the agentic substrate; greenfield wrappers without records will depend on those who do (N64).
 Conway (from the Claude Code leak) represents a new class of lock-in: not your files or messages, but the accumulated behavioral model of how you work. Previous lock-in was data (Microsoft → files, Salesforce → records, Slack → messages) — painful to migrate but possible. Conway locks in patterns the agent learned by watching you: which emails you respond to in 5 minutes, which you ignore for 3 days; how you reschedule Thursdays. No CSV, no migration consultant, no legal framework for "intelligence portability." Anthropic's CNW.zip extension format over MCP replicates the Google Play Services pattern: open standard as foundation, proprietary layer captures the value. Policies on behavioral context portability must ship before these agents launch.
+
+### 31. The harness matters more than the model (Videos N85, N94, N101, N103, N111, N114)
+In 2026 the daily driver is a function of the harness — files, tools, permissions, memory, evals, routing, definition of done — not the model score (N94). If tokens commoditize, value migrates to whoever controls the harness (N101); GLM 5.2 is ~98% cheaper and often better on center-of-distribution work, but switching means rewriting the entire work system — the harness is the trillion-dollar last mile (N111). Agents break in two directions — the world drifts (stale docs) and the model improves (protective rules become traps) — so harness maintenance is the new discipline: Vercel improved its sales agent by deleting 80% of its tools (N103). And safety is a harness property, not a model property: a prompt says "don't do the bad thing," a harness makes the bad thing impossible (N85). Architect for swappable model brains (N114).
+
+### 32. Skills are the portable operating layer (Videos N71, N104, N99)
+A prompt is something you say once; a skill is a procedure the agent knows from then on. Procedural debt shows up as prompt bloat, the reexplanation tax, instruction fragmentation, and weak verification (N104). The scaffolding map: prompt for one-off work, skill for repeatable process, plugin for a workflow that travels with tools and data, MCP for reaching another system, script/hook for anything that must be deterministic (N71). Skills carry triggers, boundaries, output contracts, and verification ("don't call this done without this evidence"), are portable across Codex, Claude Code, and any harness, and compose into runbooks like Lego. Turn repeated corrections into skills so they compound (N99).
+
+### 33. Every agent needs an owner (Videos N106, N90, N103)
+The fastest way to make an agent dangerous is for everyone to use it and no one to own it. Every agent needs an owner with four things: a job (statable in one sentence), a diet (what it reads — stale diet, stale agent), boundaries (read-only ≠ draft ≠ write to a system of record ≠ send to customers), and a review loop (N106). Steer it with agent analytics: the unit of product behavior is the agent run, and the key matrix is completion vs acceptance — high completion with low acceptance means the agent finishes work nobody trusts (N90). Prompting was the skill of 2023, delegation of 2025, maintenance is the skill of 2026 (N103, N106).
+
+### 34. Own your memory, rent the intelligence (Videos N69, N112, N113)
+With frontier releases now gated by governments (Fable 5 pulled offline, ChatGPT 5.6 restricted), the only thing nobody can lock you out of is your memory, standards, and skills: own those in user-controlled infrastructure and swap models underneath (N113). Durable workflows have swappable model brains and user-owned memory with provenance (observed, inferred, user-confirmed) (N69). The intelligence wars are becoming context wars — Siri, Claude Tag, and Codex are the same move: get close to the part of your brain that understands the work. Beware renting your own context back from a vendor (N112). Intelligence isn't personal; memory is.
+
+### 35. Work primitives make the business agent-legible (Videos N68, N77, N80)
+Computer use is just the universal adapter of the transition period; the real platform battle is who controls the semantic work primitive — the unit of work with meaning (a refund, a reschedule, a payment authorization) with permissions, reversibility, and verification attached (N68). Whoever defines the work primitive earns the right to charge for it: SaaS vendors are lighting up a "second meter" of agent work units alongside seats (Agentforce at $800M ARR billing completed actions; Copilot Studio credits) — negotiate agent access before usage is mission-critical, and distinguish fair licensing from rent-seeking (N77). In the interpretation economy, products and people need an agent-legible truth layer of provable claims to enter the consideration set at all (N80).
+
+### 36. Task imagination is the new ceiling (Videos N108, N109, N110, N117)
+When execution commoditizes, the ceiling on AI's value to you is not the model or the price but the size of your list of things you know to ask for (N117). Fable-class models demand Fable-sized jobs — consulting-engagement-scale asks, not prompt-sized ones; "ask small" was a 2023 habit, not good judgment (N108). Beyond single tasks: organize agents into loops (recurring jobs with memory) and loops of loops that notify each other and stop at your boundaries (N109), with a shared queue so agents hand off work with context, owner, definition of done, and receipts instead of you being the corridor between them (N110). Hashimoto's lesson: the $40 task no backlog contained — assigned by an expert with fingertip awareness — is where the multiplier lives.
 
 ---
 
@@ -440,3 +458,56 @@ When the user says **"Nate cuéntame algo nuevo"** (or similar like "qué hay de
 | N63 | RTX 5090, Mac Studio, or DGX Spark? Personal AI computer 6-layer stack | iUSdS-6uwr4 |
 | N64 | Anthropic Might Buy Atlassian For $40B. Issue trackers as agent substrate | FDkvRl1RlT0 |
 | N65 | Stripe, Visa, Mastercard, Microsoft, Meta. Agentic commerce / agent-callable business | XGvDbeoSN3E |
+| N66 | TCLD audit: theater, commodity, on-the-line, durable work | rYqt6mMlv7o |
+| N67 | Anticipation gap; 5-level trust ladder for proactive consumer agents | Z0HizICooiw |
+| N68 | Semantic work primitives: access, meaning, authority layers | b1fxYGPbHeo |
+| N69 | Durable workflows: swappable model brains, user-owned memory | 85Q9htV2CBE |
+| N70 | AI adversarial code review flips the human-code trust anchor | W79FW7iUkro |
+| N71 | Agent scaffolding map: prompt vs skill vs plugin vs MCP | 647pSnX5H_Y |
+| N72 | Agentic procurement: implementation IS the strategic decision, not downstream | EpJ0CjTJSag |
+| N73 | LLM-as-judge validator at the action boundary; four-tier action risk classes | SX1myuPEDFg |
+| N74 | Agentic commerce stack: six protocol layers fighting over transaction responsibility | j5_wcDifNko |
+| N75 | Agent memory bundles: retrieval contract first, database second; four knowledge shapes | lqiwQiDglGk |
+| N76 | Implementation layer as the leverage point; PE-driven services deployment model | jwtpMSRAPAQ |
+| N77 | Second meter: agent work units pricing; fair license vs rent-seeking clauses | adNErrz2aA0 |
+| N78 | Agents doing real work; cyber capability outpacing patch speed | dm3_Z-5PYnQ |
+| N79 | Workflow-level AI investment: automate, build, buy, hire, or wait | LIkYVsxMpS8 |
+| N80 | Interpretation economy: agent-legible truth layer plus human memory | 725QE_LNXT4 |
+| N81 | Agent protocol stack: MCP tools, A2A delegation, AG-UI human control | zP6TnEiueEc |
+| N82 | Agent control layer: runtime, identity, data, payments, observability, kill switch | woGB2vr5wTg |
+| N83 | AI question method: prompt senior-partner AI with intent-laden questions | ogTLWGBc3cE |
+| N84 | Project room: build the data room before any drafting | ltbzgzZZmgI |
+| N85 | Long-running agent behavior compounds; safety lives in the harness | RHV8DWAmjAs |
+| N86 | AI is industrial: vendor contracts are supply contracts now | Poyi6X7rOwY |
+| N87 | Uneven acceleration: app teams scale with AI, platforms with humans | z3pbrFKVyQE |
+| N88 | Public AI work closes the apprenticeship gap (Shopify's River) | NRBQmwlILjk |
+| N89 | Office docs as pipeline: spec, constrained build, hostile reviewer loop | MFzxIT88zfg |
+| N90 | Agent analytics: agent run as the unit, completion vs acceptance | n0nC1kmztSk |
+| N91 | Production class ladder: classify software abundance, promote and demote | b6J387xJvHg |
+| N92 | Local-folder context assembly and collaborative task shaping | rqVzTX8w_w0 |
+| N93 | Whiteboard evidence: situation, decision, risk, change over portfolios | UsCgEuIAclE |
+| N94 | Daily driver is a function of harness, not model score | z73yuF14udI |
+| N95 | Token burn dashboard as feedback loop for delegated intelligence | l8BloTSLK6M |
+| N96 | Four classes of AI layoffs as strategy signals | hzAcDU1FYDo |
+| N97 | Steering vs dispatching: agent literacy over tool wars | R2-Y1Hjwx2U |
+| N98 | Own the trusted action surface, not the frontier model | t7L6-fMpxFc |
+| N99 | Chief of Staff thread and the five-part delegation loop | xqGCbEDbny8 |
+| N100 | Frontier model access as national security policy surface | b3jlsjOIOzs |
+| N101 | Cheap tokens plus proprietary harnesses: the trillion-dollar bet | 7RDK84LLL2U |
+| N102 | Bubble vs build-out: inference economics is the real question | mn4XBSBIuag |
+| N103 | Harness maintenance: agents break when world drifts or model improves | BOXK2XFLA-E |
+| N104 | Skills vs prompts: portable procedures as an operating layer | 9PUaEj0pMYE |
+| N105 | Creator trust stack: disclosure, provenance, control, judgment, accountability | lWbtvC0Hn18 |
+| N106 | Every agent needs an owner: job, diet, boundaries, review loop | rh_PcL26zls |
+| N107 | Pre-training edge and talent flows decide the model race | h1MxhfZSTjo |
+| N108 | Task imagination: give Fable-sized jobs, not prompt-sized asks | 2w_vwQVvFmc |
+| N109 | Loop of loops: recurring jobs with memory that notify each other | A4zMyjkL0Dc |
+| N110 | Open Engine: a shared queue so agents hand off work | QSK4vf_ZTRA |
+| N111 | Center vs edge of distribution tasks; harness is the trillion-dollar last mile | Zp8lr6IzUnQ |
+| N112 | Context wars: value shifts from frontier intelligence to owned context | H9oNA5IyrXA |
+| N113 | Own your memory, rent the intelligence; agents now build the stack | HgAQOkG_v8c |
+| N114 | Daily driver vs cheap workhorse: match model to work shape | lq2fP7wC7d8 |
+| N115 | Nine-piece agent skeleton reused from email to high-trust paperwork | U4TmrlWEY4M |
+| N116 | Short prompts, new context, freedom: maxing frontier model value | RtxUdvSTQGc |
+| N117 | Execution commoditizes; technical imagination sets the multiplier | 1cSNE-ZkDLQ |
+| N118 | AI value shifts to infrastructure, distribution, and political permission layers | oOpgmS88pLw |

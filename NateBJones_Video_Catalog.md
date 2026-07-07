@@ -1,7 +1,7 @@
 # Catálogo de Videos — Nate B Jones (AI News & Strategy Daily)
 
 **Canal:** [@NateBJones](https://www.youtube.com/@NateBJones)
-**Suscriptores:** 235K | **Total videos:** 833
+**Suscriptores:** 235K | **Total videos:** ~886
 **Temática:** Estrategia de IA para builders y ejecutivos — frameworks, workflows y playbooks
 
 ---
@@ -16,6 +16,9 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N83** | **Opus 4.7 and OpenAI 5.5 Made Your Prompting Style Obsolete.** | 25:03 | 120K | 21 May 2026 | ✅ |
+| **N84** | **The One AI Writing Hack Nobody Talks About.** | 21:50 | 54K | 22 May 2026 | ✅ |
+| **N104** | **The Skill vs Prompt Problem Everyone Gets Wrong** | 17:45 | 27K | 19 Jun 2026 | ✅ |
 | **N1** | **Stop accepting AI output that "looks right." The other 17% is everything and nobody is ready for it.** | 20:55 | 32K | 10 Mar 2026 | ✅ |
 | **N19** | **Why Every AI Skill You Learned 6 Months Ago Is Already Wrong (And What Is Replacing Them)** | 28:44 | 67K | 1 Mar 2026 | ✅ |
 | 2 | 'Prompting' Just Split Into 4 Skills. You Only Know One. Here's Why You Need the Other 3 in 2026 | 41:12 | 85K | hace 2 días |
@@ -29,6 +32,7 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N70** | **271 Vulnerabilities: What Mozilla's AI Found Changes Everything** | 30:41 | 35K | 8 May 2026 | ✅ |
 | **N45** | **I Looked At Amazon After They Fired 16,000 Engineers. Their AI Broke Everything.** | 18:41 | 56K | 13 Apr 2026 | ✅ |
 | **N15** | **Claude Code Wiped 2.5 Years of Data. The Engineer Who Built It Couldn't Stop It.** | 21:30 | 94K | 16 Mar 2026 | ✅ |
 | **N5** | **Claude Code vs Codex: The Decision That Compounds Every Week You Delay That Nobody Is Talking About** | 29:55 | 87K | 6 Mar 2026 | ✅ |
@@ -45,6 +49,21 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N67** | **Consumer AI Has a Problem Nobody's Naming.** | 32:55 | 74K | 5 May 2026 | ✅ |
+| **N73** | **LLM Agents: The Security Breach Pattern Nobody's Talking About** | 19:16 | 37K | 11 May 2026 | ✅ |
+| **N75** | **Pinecone Just Demoted Vector Search. Here's the Knowledge Layer.** | 20:08 | 99K | 13 May 2026 | ✅ |
+| **N81** | **Google Spent a Year Stitching MCP, A2A, AG-UI Together. I/O Today.** | 20:42 | 41K | 19 May 2026 | ✅ |
+| **N82** | **These 5 Infrastructure Giants Secretly Rule AI** | 20:19 | 23K | 20 May 2026 | ✅ |
+| **N85** | **Claude's AI Town Voted Yes On Everything. That's Not A Good Sign.** | 11:15 | 48K | 23 May 2026 | ✅ |
+| **N87** | **The Infrastructure Nightmare Nobody Is Talking About** | 46:36 | 34K | 25 May 2026 | ✅ |
+| **N90** | **A Cursor Agent Wiped a Database in 9 Seconds. Agent Analytics Would Have Seen It Coming.** | 11:51 | 19K | 28 May 2026 | ✅ |
+| **N97** | **Stop Picking Between Claude Code and Codex | Do This Instead** | 16:13 | 53K | 10 Jun 2026 | ✅ |
+| **N103** | **Don't build more AI agents until you watch this** | 18:25 | 65K | 17 Jun 2026 | ✅ |
+| **N106** | **You Can't Run AI Agents Without This** | 14:20 | 21K | 21 Jun 2026 | ✅ |
+| **N109** | **I Stopped Prompting AI One Task At A Time. This Works Better.** | 15:38 | 39K | 24 Jun 2026 | ✅ |
+| **N110** | **I Was The Only Thing Connecting Claude, ChatGPT, and Codex. So I Built My Replacement.** | 22:04 | 32K | 26 Jun 2026 | ✅ |
+| **N113** | **I Built My Own AI Memory by Talking to Claude. It Did 80% Itself.** | 16:16 | 42K | 1 Jul 2026 | ✅ |
+| **N115** | **Every AI Agent Demo Stops at Email. I Pointed Mine at the Bills That Cost You Money.** | 15:44 | 16K | 3 Jul 2026 | ✅ |
 | **N61** | **Salesforce Killed The Browser. Every Agent Runs Your CRM Now.** | 23:08 | 44K | 29 Apr 2026 | ✅ |
 | **N59** | **OpenAI Just Gave Every Team A Free Employee. Here's The Catch.** | 23:13 | 42K | 27 Apr 2026 | ✅ |
 | **N55** | **Your Apps Don't Need an API Anymore. Codex Just Proved It.** | 21:00 | 167K | 23 Apr 2026 | ✅ |
@@ -71,6 +90,14 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N78** | **Anthropic's Mythos Just Beat OpenAI's GPT-5.5 At Real Hacking** | 24:17 | 44K | 16 May 2026 | ✅ |
+| **N94** | **Opus 4.8 Scored 81. Your Workflow Doesn't Care.** | 26:36 | 43K | 3 Jun 2026 | ✅ |
+| **N100** | **The End of Unrestricted AI: Why Claude Fable 5 Was Just Forced Offline** | 10:03 | 89K | 13 Jun 2026 | ✅ |
+| **N107** | **Google Lost $2.7 Billion In Talent This Week. The Real Reason Isn't Money.** | 8:22 | 54K | 22 Jun 2026 | ✅ |
+| **N108** | **The Doing Got Cheap. Now What? | Claude Fable 5 Changes Work** | 18:11 | 42K | 23 Jun 2026 | ✅ |
+| **N111** | **GLM 5.2 Is Free And Beats Claude On Most Work. So Why Can't Companies Switch?** | 17:35 | 125K | 28 Jun 2026 | ✅ |
+| **N114** | **Stop Wasting Money on the Wrong AI** | 14:17 | 15K | 2 Jul 2026 | ✅ |
+| **N116** | **Free Fable 5 tokens this weekend? Here's how to max them** | 3:50 | 22K | 4 Jul 2026 | ✅ |
 | **N60** | **GPT-5.5 vs Claude vs Gemini: The Real Difference Nobody's Talking About** | 32:34 | 95K | 28 Apr 2026 | ✅ |
 | **N57** | **ChatGPT Images Just Replaced Three People on Your Team.** | 25:45 | 31K | 25 Apr 2026 | ✅ |
 | **N53** | **Your Prompts Didn't Change. Opus 4.7 Did.** | 51:45 | 69K | 21 Apr 2026 | ✅ |
@@ -99,6 +126,8 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N66** | **AI's 'Thin Ice' Moment: Is Your Job Already Gone?"** | 34:15 | 40K | 4 May 2026 | ✅ |
+| **N93** | **Microsoft Says 86% Treat AI Output as a Starting Point. Your Resume Just Stopped Working.** | 10:34 | 29K | 31 May 2026 | ✅ |
 | **N52** | **Nobody Knows What You're Worth Anymore \| The AI Job Market Reality** | 21:29 | 59K | 20 Apr 2026 | ✅ |
 | **N49** | **Anthropic And OpenAI Are Fighting Over Your Memory. You're Going To Lose.** | 29:44 | 45K | 17 Apr 2026 | ✅ |
 | **N27** | **The AI Job Market Split in Two. One Side Pays $400K and Can't Hire Fast Enough.** | 25:39 | 145K | 26 Mar 2026 | ✅ |
@@ -120,6 +149,18 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N74** | **ChatGPT Has 900M Weekly Users. Almost None Can Buy In It.** | 18:41 | 30K | 12 May 2026 | ✅ |
+| **N76** | **The Trillion Dollar Agentic Workflow Opportunity Is Here** | 25:52 | 72K | 14 May 2026 | ✅ |
+| **N77** | **Your SaaS Bill Just Got a Second Meter. You're About to Pay It.** | 16:23 | 19K | 15 May 2026 | ✅ |
+| **N80** | **The Prove-It Economy is Here | And Most Marketers Aren't Ready** | 22:23 | 72K | 18 May 2026 | ✅ |
+| **N86** | **Why the AI boom is about to hit a wall** | 23:37 | 64K | 24 May 2026 | ✅ |
+| **N96** | **Beyond The Hype: Why Meta And Block Are Firing People** | 20:18 | 25K | 8 Jun 2026 | ✅ |
+| **N98** | **Apple WWDC 2026: The AI Story Everyone is Missing** | 18:34 | 96K | 11 Jun 2026 | ✅ |
+| **N101** | **OpenAI Just Filed For Its IPO. The Real Story Isn't The Trillion Dollars.** | 11:49 | 24K | 14 Jun 2026 | ✅ |
+| **N102** | **Your $20 AI Plan Costs Them Thousands. That's Not The Bubble.** | 19:24 | 41K | 15 Jun 2026 | ✅ |
+| **N105** | **You Can't Tell If I'm Real Anymore. And That's Now YouTube's Problem Too.** | 9:21 | 22K | 20 Jun 2026 | ✅ |
+| **N112** | **Apple, Anthropic, And OpenAI Just Made The Same Move. Nobody Noticed.** | 17:13 | 46K | 29 Jun 2026 | ✅ |
+| **N118** | **OpenAI Just Offered The Government $42 Billion. This Is The Real Reason.** | 12:36 | 14K | 6 Jul 2026 | ✅ |
 | **N65** | **Stripe, Visa, Mastercard, Microsoft, Meta. All Building The Same Thing.** | 31:19 | 25K | 3 May 2026 | ✅ |
 | **N64** | **Anthropic Might Buy Atlassian For $40B. Here's Why It Makes Sense.** | 29:07 | 45K | 2 May 2026 | ✅ |
 | **N58** | **Apple Just Positioned Itself for the Next Trillion Dollars** | 20:56 | 291K | 26 Apr 2026 | ✅ |
@@ -155,6 +196,11 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N71** | **You're Wasting 40% Of Your AI Time On Something Fixable** | 27:13 | 78K | 9 May 2026 | ✅ |
+| **N89** | **I Built a Deck With AI, Then Made a Second AI Attack It.** | 19:29 | 26K | 27 May 2026 | ✅ |
+| **N92** | **My AI Workflow Has Changed (Here is What I Learned)** | 5:39 | 63K | 30 May 2026 | ✅ |
+| **N95** | **My Codex Ran 800 Million Tokens in A Day. The Real Story Isn't Cost.** | 21:05 | 25K | 5 Jun 2026 | ✅ |
+| **N99** | **Codex: Your First Personal AI Agent Delegation Loop** | 19:36 | 67K | 12 Jun 2026 | ✅ |
 | **N63** | **RTX 5090, Mac Studio, or DGX Spark? I tried all three.** | 32:35 | 76K | 1 May 2026 | ✅ |
 | **N48** | **Your AI Is 50x Faster. You're Getting 2x. You're Fixing the Wrong Thing.** | 19:57 | 48K | 16 Apr 2026 | ✅ |
 | **N28** | **A Markdown File Just Replaced Your Most Expensive Design Meeting. (Google Stitch)** | 29:34 | 100K | 27 Mar 2026 | ✅ |
@@ -175,6 +221,7 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N69** | **Your AI Agent Is Locked To One Model. OpenClaw Just Killed That.** | 26:01 | 61K | 7 May 2026 | ✅ |
 | **N24** | **I Mapped Where Every AI Agent Actually Sits. Most People Pick Wrong.** | 25:11 | 46K | 23 Mar 2026 | ✅ |
 | **N25** | **Nvidia Just Open-Sourced What OpenAI Wants You to Pay Consultants For.** | 26:27 | 256K | 24 Mar 2026 | ✅ |
 | 71 | The OpenClaw Saga: Zuckerberg Begged This Developer to Join Meta. He Said No | 26:51 | 103K | hace 12 días |
@@ -186,6 +233,12 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 | # | Título | Duración | Views | Fecha |
 |---|--------|----------|-------|-------|
+| **N68** | **The Work Primitive: What Every AI Product Leader Gets Wrong** | 23:17 | 32K | 6 May 2026 | ✅ |
+| **N72** | **Anthropic And OpenAI Just Admitted The Model Isn't Enough.** | 20:48 | 91K | 10 May 2026 | ✅ |
+| **N79** | **When to Automate, Build, Buy, Hire, or Wait on AI** | 27:46 | 26K | 17 May 2026 | ✅ |
+| **N88** | **Shopify CEO Reveals Their Secret AI Developer** | 16:24 | 22K | 26 May 2026 | ✅ |
+| **N91** | **Cheap software made your PM job harder, not easier. Here's the new job.** | 12:38 | 19K | 29 May 2026 | ✅ |
+| **N117** | **You Can't Compete on Cheap Models Anymore** | 15:39 | 75K | 5 Jul 2026 | ✅ |
 | **N62** | **Microsoft Is Testing Claude Against Its Own Copilot. Here's Why.** | 24:48 | 36K | 30 Apr 2026 | ✅ |
 | **N56** | **Claude Design Does In 30 Minutes What Your Team Does In A Sprint** | 23:42 | 59K | 24 Apr 2026 | ✅ |
 | **N54** | **Karpathy's Wiki vs. Open Brain. One Fails When You Need It Most.** | 41:08 | 99K | 22 Apr 2026 | ✅ |
@@ -210,4 +263,4 @@ He agrupado los títulos por **categoría temática provisional** para facilitar
 
 ---
 
-> **Nota:** Esta lista cubre los ~últimos 3 meses del canal (~117 videos, sin shorts). El canal tiene 833 videos en total. Las entradas marcadas con ✅ (N1-N65) tienen transcripción completa en `transcripts/`. Si quieres que cargue videos más antiguos, dímelo.
+> **Nota:** Esta lista cubre los ~últimos 5 meses del canal (~170 videos, sin shorts). El canal tiene ~886 videos en total. Las entradas marcadas con ✅ (N1-N118) tienen transcripción completa en `transcripts/`. Última actualización: 2026-07-07. Si quieres que cargue videos más antiguos, dímelo.

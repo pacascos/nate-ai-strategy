@@ -1,6 +1,6 @@
 # Transcripciones pendientes
 
-Todas las transcripciones completadas el 2026-05-04.
+Todas las transcripciones completadas el 2026-07-07.
 
 | ID | Video ID | Titulo | Estado |
 |----|----------|--------|--------|
@@ -73,8 +73,62 @@ Todas las transcripciones completadas el 2026-05-04.
 | N64 | FDkvRl1RlT0 | Anthropic Might Buy Atlassian For $40B. Here's Why It Makes Sense. | ✅ |
 | N65 | XGvDbeoSN3E | Stripe, Visa, Mastercard, Microsoft, Meta. All Building The Same Thing. | ✅ |
 
+| N66 | rYqt6mMlv7o | AI's 'Thin Ice' Moment: Is Your Job Already Gone?" | ✅ |
+| N67 | Z0HizICooiw | Consumer AI Has a Problem Nobody's Naming. | ✅ |
+| N68 | b1fxYGPbHeo | The Work Primitive: What Every AI Product Leader Gets Wrong | ✅ |
+| N69 | 85Q9htV2CBE | Your AI Agent Is Locked To One Model. OpenClaw Just Killed That. | ✅ |
+| N70 | W79FW7iUkro | 271 Vulnerabilities: What Mozilla's AI Found Changes Everything | ✅ |
+| N71 | 647pSnX5H_Y | You're Wasting 40% Of Your AI Time On Something Fixable | ✅ |
+| N72 | EpJ0CjTJSag | Anthropic And OpenAI Just Admitted The Model Isn't Enough. | ✅ |
+| N73 | SX1myuPEDFg | LLM Agents: The Security Breach Pattern Nobody's Talking About | ✅ |
+| N74 | j5_wcDifNko | ChatGPT Has 900M Weekly Users. Almost None Can Buy In It. | ✅ |
+| N75 | lqiwQiDglGk | Pinecone Just Demoted Vector Search. Here's the Knowledge Layer. | ✅ |
+| N76 | jwtpMSRAPAQ | The Trillion Dollar Agentic Workflow Opportunity Is Here | ✅ |
+| N77 | adNErrz2aA0 | Your SaaS Bill Just Got a Second Meter. You're About to Pay It. | ✅ |
+| N78 | dm3_Z-5PYnQ | Anthropic's Mythos Just Beat OpenAI's GPT-5.5 At Real Hacking | ✅ |
+| N79 | LIkYVsxMpS8 | When to Automate, Build, Buy, Hire, or Wait on AI | ✅ |
+| N80 | 725QE_LNXT4 | The Prove-It Economy is Here | And Most Marketers Aren't Ready | ✅ |
+| N81 | zP6TnEiueEc | Google Spent a Year Stitching MCP, A2A, AG-UI Together. I/O Today. | ✅ |
+| N82 | woGB2vr5wTg | These 5 Infrastructure Giants Secretly Rule AI | ✅ |
+| N83 | ogTLWGBc3cE | Opus 4.7 and OpenAI 5.5 Made Your Prompting Style Obsolete. | ✅ |
+| N84 | ltbzgzZZmgI | The One AI Writing Hack Nobody Talks About. | ✅ |
+| N85 | RHV8DWAmjAs | Claude's AI Town Voted Yes On Everything. That's Not A Good Sign. | ✅ |
+| N86 | Poyi6X7rOwY | Why the AI boom is about to hit a wall | ✅ |
+| N87 | z3pbrFKVyQE | The Infrastructure Nightmare Nobody Is Talking About | ✅ |
+| N88 | NRBQmwlILjk | Shopify CEO Reveals Their Secret AI Developer | ✅ |
+| N89 | MFzxIT88zfg | I Built a Deck With AI, Then Made a Second AI Attack It. | ✅ |
+| N90 | n0nC1kmztSk | A Cursor Agent Wiped a Database in 9 Seconds. Agent Analytics Would Have Seen It Coming. | ✅ |
+| N91 | b6J387xJvHg | Cheap software made your PM job harder, not easier. Here's the new job. | ✅ |
+| N92 | rqVzTX8w_w0 | My AI Workflow Has Changed (Here is What I Learned) | ✅ |
+| N93 | UsCgEuIAclE | Microsoft Says 86% Treat AI Output as a Starting Point. Your Resume Just Stopped Working. | ✅ |
+| N94 | z73yuF14udI | Opus 4.8 Scored 81. Your Workflow Doesn't Care. | ✅ |
+| N95 | l8BloTSLK6M | My Codex Ran 800 Million Tokens in A Day. The Real Story Isn't Cost. | ✅ |
+| N96 | hzAcDU1FYDo | Beyond The Hype: Why Meta And Block Are Firing People | ✅ |
+| N97 | R2-Y1Hjwx2U | Stop Picking Between Claude Code and Codex | Do This Instead | ✅ |
+| N98 | t7L6-fMpxFc | Apple WWDC 2026: The AI Story Everyone is Missing | ✅ |
+| N99 | xqGCbEDbny8 | Codex: Your First Personal AI Agent Delegation Loop | ✅ |
+| N100 | b3jlsjOIOzs | The End of Unrestricted AI: Why Claude Fable 5 Was Just Forced Offline | ✅ |
+| N101 | 7RDK84LLL2U | OpenAI Just Filed For Its IPO. The Real Story Isn't The Trillion Dollars. | ✅ |
+| N102 | mn4XBSBIuag | Your $20 AI Plan Costs Them Thousands. That's Not The Bubble. | ✅ |
+| N103 | BOXK2XFLA-E | Don't build more AI agents until you watch this | ✅ |
+| N104 | 9PUaEj0pMYE | The Skill vs Prompt Problem Everyone Gets Wrong | ✅ |
+| N105 | lWbtvC0Hn18 | You Can't Tell If I'm Real Anymore. And That's Now YouTube's Problem Too. | ✅ |
+| N106 | rh_PcL26zls | You Can't Run AI Agents Without This | ✅ |
+| N107 | h1MxhfZSTjo | Google Lost $2.7 Billion In Talent This Week. The Real Reason Isn't Money. | ✅ |
+| N108 | 2w_vwQVvFmc | The Doing Got Cheap. Now What? | Claude Fable 5 Changes Work | ✅ |
+| N109 | A4zMyjkL0Dc | I Stopped Prompting AI One Task At A Time. This Works Better. | ✅ |
+| N110 | QSK4vf_ZTRA | I Was The Only Thing Connecting Claude, ChatGPT, and Codex. So I Built My Replacement. | ✅ |
+| N111 | Zp8lr6IzUnQ | GLM 5.2 Is Free And Beats Claude On Most Work. So Why Can't Companies Switch? | ✅ |
+| N112 | H9oNA5IyrXA | Apple, Anthropic, And OpenAI Just Made The Same Move. Nobody Noticed. | ✅ |
+| N113 | HgAQOkG_v8c | I Built My Own AI Memory by Talking to Claude. It Did 80% Itself. | ✅ |
+| N114 | lq2fP7wC7d8 | Stop Wasting Money on the Wrong AI | ✅ |
+| N115 | U4TmrlWEY4M | Every AI Agent Demo Stops at Email. I Pointed Mine at the Bills That Cost You Money. | ✅ |
+| N116 | RtxUdvSTQGc | Free Fable 5 tokens this weekend? Here's how to max them | ✅ |
+| N117 | 1cSNE-ZkDLQ | You Can't Compete on Cheap Models Anymore | ✅ |
+| N118 | oOpgmS88pLw | OpenAI Just Offered The Government $42 Billion. This Is The Real Reason. | ✅ |
+
 ## Datos del catalogo
 
 Canal actualizado: 235K suscriptores, 833 videos.
-Catalogo actualizado: NateBJones_Video_Catalog.md (65 videos con ✅).
-HTML actualizado: NateBJones_Video_Summaries.html (89 videos con resumen).
+Catalogo actualizado: NateBJones_Video_Catalog.md (118 videos con ✅).
+HTML actualizado: NateBJones_Video_Summaries.html (142 videos con resumen).
